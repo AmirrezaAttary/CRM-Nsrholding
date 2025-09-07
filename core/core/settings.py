@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     
     # created apps
     'accounts',
-    
+    'crm',
     # rest api apps
     'rest_framework',
     "django_filters",
