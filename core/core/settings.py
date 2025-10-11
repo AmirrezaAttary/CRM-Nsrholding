@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    # To convert solar date to Gregorian date
+    'django_jalali',
     # created apps
     'app.accounts',
     'app.crm',

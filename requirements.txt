@@ -4,6 +4,10 @@ django-debug-toolbar==4.2.0
 pillow
 requests
 
+# To convert solar date to Gregorian date
+django-jalali
+django-jalali-date
+
 
 # seo
 django-robots
