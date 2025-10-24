@@ -8,6 +8,8 @@ requests
 django-jalali
 django-jalali-date
 
+# For API documentation
+drf-yasg[validation]
 
 # seo
 django-robots

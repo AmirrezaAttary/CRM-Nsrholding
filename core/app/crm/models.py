@@ -145,7 +145,7 @@ class PurchaseProcess(models.Model):
     # MARKET PLACE Fields
     # --------------------------
     agreement_kotazh = models.CharField(max_length=100, verbose_name=_("Agreement Kotazh"), blank=True, null=True)
-
+    
     cash_user = models.CharField(max_length=100, verbose_name=_("Cash User"), blank=True, null=True)
     cash_password = models.CharField(max_length=100, verbose_name=_("Cash Password"), blank=True, null=True)
     cash_kotazh = models.CharField(max_length=100, verbose_name=_("Cash Kotazh"), blank=True, null=True)
@@ -247,11 +247,11 @@ class MarketPlace(models.Model):
     market_price = models.IntegerField(verbose_name=_("Market Price"), blank=True, null=True)
     purchase_price = models.IntegerField(verbose_name=_("Purchase Price"), blank=True, null=True)
     selling_price = models.IntegerField(verbose_name=_("Selling Price"), blank=True, null=True)
-    profit = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Profit"), blank=True, null=True)
-    unofficial = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Unofficial"), blank=True, null=True)
-    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), blank=True, null=True)
+    profit = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Profit"), null=False, blank=False, default=0)
+    unofficial = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Unofficial"), null=False, blank=False, default=0)
+    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), null=False, blank=False, default=0)
     deposit = models.IntegerField(verbose_name=_("Deposit"), blank=True, null=True)
-    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), blank=True, null=True)
+    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), null=False, blank=False, default=0)
     
     buyer = models.BooleanField(default=False, verbose_name=_("Buyer"))
     seller = models.BooleanField(default=False, verbose_name=_("Seller"))
@@ -276,6 +276,34 @@ class MarketPlace(models.Model):
 
     def __str__(self):
         return f"{self.product_name or 'Unnamed Product'} ({self.selling_price or 0} Rls)"
+    
+    def save(self, *args, **kwargs):
+        # total_amount = weight * selling_price
+        if self.weight is not None and self.selling_price is not None:
+            self.total_amount = self.weight * self.selling_price
+        else:
+            self.total_amount = 0
+
+        # profit = selling_price - purchase_price * weight
+        if self.selling_price is not None and self.purchase_price is not None and self.weight is not None:
+            self.profit = (self.selling_price - self.purchase_price) * self.weight
+        else:
+            self.profit = 0
+
+        # unofficial = selling_price - market_price * weight
+        if self.selling_price is not None and self.market_price is not None and self.weight is not None:
+            self.unofficial = (self.selling_price - self.market_price) * self.weight
+        else:
+            self.unofficial = 0
+
+        # account_remaining = deposit - total_amount
+        if self.deposit is not None:
+            self.account_remaining = self.deposit - self.total_amount
+        else:
+            self.account_remaining = -self.total_amount
+
+        super().save(*args, **kwargs)
+
 
 
 class MarketOutside(models.Model):
@@ -291,9 +319,9 @@ class MarketOutside(models.Model):
     purchase_price = models.IntegerField(verbose_name=_("Purchase Price"), blank=True, null=True)
     selling_price = models.IntegerField(verbose_name=_("Selling Price"), blank=True, null=True)
     profit = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Profit"), blank=True, null=True)
-    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), blank=True, null=True)
+    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), null=False, blank=False, default=0)
     deposit = models.IntegerField(verbose_name=_("Deposit"), blank=True, null=True)
-    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), blank=True, null=True)
+    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), null=False, blank=False, default=0)
     
     buyer = models.BooleanField(default=False, verbose_name=_("Buyer"))
     seller = models.BooleanField(default=False, verbose_name=_("Seller"))
@@ -318,6 +346,27 @@ class MarketOutside(models.Model):
 
     def __str__(self):
         return f"{self.product_name or 'Unnamed Product'} ({self.selling_price or 0} Rls)"
+    
+    def save(self, *args, **kwargs):
+        # total_amount = weight * selling_price
+        if self.weight is not None and self.selling_price is not None:
+            self.total_amount = self.weight * self.selling_price
+        else:
+            self.total_amount = 0
+
+        # profit = selling_price - purchase_price * weight
+        if self.selling_price is not None and self.purchase_price is not None and self.weight is not None:
+            self.profit = (self.selling_price - self.purchase_price) * self.weight
+        else:
+            self.profit = 0
+
+        # account_remaining = deposit - total_amount
+        if self.deposit is not None:
+            self.account_remaining = self.deposit - self.total_amount
+        else:
+            self.account_remaining = -self.total_amount
+
+        super().save(*args, **kwargs)
 
 class Quota(models.Model):
     sale_report = models.OneToOneField(
@@ -331,10 +380,10 @@ class Quota(models.Model):
     weight = models.IntegerField(verbose_name=_("Weight"), blank=True, null=True)
     purchase_price = models.IntegerField(verbose_name=_("Purchase Price"), blank=True, null=True)
     selling_price = models.IntegerField(verbose_name=_("Selling Price"), blank=True, null=True)
-    profit = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Profit"), blank=True, null=True)
-    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), blank=True, null=True)
+    profit = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Profit"), null=False, blank=False, default=0)
+    total_amount = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Total Amount"), null=False, blank=False, default=0)
     deposit = models.IntegerField(verbose_name=_("Deposit"), blank=True, null=True)
-    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), blank=True, null=True)
+    account_remaining = models.DecimalField(max_digits=15, decimal_places=2,verbose_name=_("Account Remaining"), null=False, blank=False, default=0)
     
     buyer = models.BooleanField(default=False, verbose_name=_("Buyer"))
     seller = models.BooleanField(default=False, verbose_name=_("Seller"))
@@ -358,6 +407,27 @@ class Quota(models.Model):
 
     def __str__(self):
         return f"{self.product_name or 'Unnamed Product'} ({self.selling_price or 0} Rls)"
+    
+    def save(self, *args, **kwargs):
+        # total_amount = weight * selling_price
+        if self.weight is not None and self.selling_price is not None:
+            self.total_amount = self.weight * self.selling_price
+        else:
+            self.total_amount = 0
+
+        # profit = selling_price - purchase_price * weight
+        if self.selling_price is not None and self.purchase_price is not None and self.weight is not None:
+            self.profit = (self.selling_price - self.purchase_price) * self.weight
+        else:
+            self.profit = 0
+
+        # account_remaining = deposit - total_amount
+        if self.deposit is not None:
+            self.account_remaining = self.deposit - self.total_amount
+        else:
+            self.account_remaining = -self.total_amount
+
+        super().save(*args, **kwargs)
 
 class Overhead(models.Model):
     sale_report = models.OneToOneField(
@@ -377,9 +447,7 @@ class Overhead(models.Model):
 
     def __str__(self):
         return f"{self.address or 'Unknown Address'} ({self.number or 'No Number'})"
-
-
-
+    
 
 ####################################################################################
 # All Model Cargo Announcement
@@ -504,7 +572,7 @@ class CargoAnnouncement (models.Model):
 
     
     full_name = models.CharField(max_length=100, verbose_name=_("full name"), blank=True, null=True)
-    number = models.IntegerField(verbose_name=_("number"), blank=True, null=True)
+    number = models.IntegerField(verbose_name=_("number"), blank=True, null=True,default=None)
 
 
     name_company = models.CharField (max_length=100, verbose_name=_("name company"), blank=True, null=True)
