@@ -11,6 +11,8 @@ django-jalali-date
 # For API documentation
 drf-yasg[validation]
 
+openpyxl
+
 # seo
 django-robots
 

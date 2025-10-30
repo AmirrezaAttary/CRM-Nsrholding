@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from app.crm.models import FieldActivity, ValidationLevel, CallReport, CargoAnnouncement, ProductType, PortName, CountryName, LoadingTime, TransactionType, PurchaseProcess, SaleReport, MarketPlace, MarketOutside, Quota, Overhead, SupplyStatus
-
+from rest_framework.reverse import reverse
 
 # ─────────────────────────────
 # FieldActivity Serializer
@@ -177,6 +177,20 @@ class CargoAnnouncementSerializer(serializers.ModelSerializer):
         # Generate absolute URL for the post
         request = self.context.get('request')
         return request.build_absolute_uri(obj.pk)
+    
+    def to_representation(self, instance):
+        request = self.context.get('request')
+        rep = super().to_representation(instance)
+
+        if request and "go-to-purchase" in request.path:
+            rep["absolute_url"] = request.build_absolute_uri(
+                f"/crm/api/v1/cargo-announcements/{instance.id}/"
+            )
+
+        if request and request.parser_context.get("kwargs", {}).get("pk"):
+            rep.pop("absolute_url", None)
+
+        return rep
     
 #######################################################################
 
@@ -401,6 +415,7 @@ class SaleReportSerializer(serializers.ModelSerializer):
     quota = QuotaSerializer(required=False)
     overhead = OverheadSerializer(required=False)
     absolute_url = serializers.SerializerMethodField(read_only=True)
+    export = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = SaleReport
@@ -414,12 +429,20 @@ class SaleReportSerializer(serializers.ModelSerializer):
             'quota',
             'overhead',
             'absolute_url',
+            'export',
         ]
 
     def get_absolute_url(self, obj):
         request = self.context.get('request')
         return request.build_absolute_uri(obj.pk)
     
+    def get_export(self, obj):
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(
+                reverse('sale-report-export', kwargs={'pk': obj.pk})  
+            )
+        return None
     
     def create(self, validated_data):
         marketplace_data = validated_data.pop('marketplace', None)
@@ -499,3 +522,21 @@ class SaleReportSerializer(serializers.ModelSerializer):
             rep.pop("quota", None)
 
         return rep
+    
+class SaleReportExportSerializer(serializers.ModelSerializer):
+    sale_type_display = serializers.CharField(source='get_sale_type_display', read_only=True)
+    supply_status_name = serializers.CharField(source='marketplace.supply_status_name', read_only=True)
+    sales_expert_name = serializers.CharField(source='marketplace.sales_expert_name', read_only=True)
+    
+    class Meta:
+        model = SaleReport
+        fields = [
+            "sale_date",
+            "sale_type_display",
+            "profit",
+            "total_amount",
+            "account_remaining",
+            "supply_status_name",
+            "sales_expert_name",
+            "description",
+        ]
