@@ -229,9 +229,29 @@ class PurchaseProcessSerializer(serializers.ModelSerializer):
             return request.build_absolute_uri(f'/crm/api/v1/purchase-process/{obj.id}/go-to-sale-report/')
         
     def to_representation(self, instance):
-        request = self.context.get('request')
+        
         rep = super().to_representation(instance)
+        request = self.context.get('request')
 
+        if request and request.method == 'GET':
+            allowed_fields = ['id', 'load_type', 'call_report_name', 'call_report_number', 'sale_report', 'absolute_url', 'created_at']
+            if instance.load_type == 'market_place':
+                allowed_fields.append('market_place_type')
+                m_type = getattr(instance, 'market_place_type', None)
+                if m_type == 'agreement':
+                    allowed_fields.append('agreement_kotazh')
+                elif m_type == 'cash':
+                    allowed_fields += ['cash_user', 'cash_password', 'cash_kotazh']
+            elif instance.load_type == 'market_outside':
+                allowed_fields += ['yekta_code', 'market_outside_address', 'postal_code', 'market_outside_number', 'buyer_name']
+            elif instance.load_type == 'quota':
+                allowed_fields += ['destination_name', 'quota_number']
+            elif instance.load_type == 'overhead':
+                allowed_fields += ['overhead_address', 'overhead_number']
+
+            rep = {k: v for k, v in rep.items() if k in allowed_fields}
+
+       
         if request and "go-to-purchase" in request.path:
             rep["absolute_url"] = request.build_absolute_uri(
                 f"/crm/api/v1/purchase-process/{instance.id}/"
