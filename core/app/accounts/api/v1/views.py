@@ -9,12 +9,14 @@ from app.crm.api.v1.paginations import CustomPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from app.accounts.api.v1.filters import UserFilter
+from app.accounts.api.v1.permissions import IsModirOrSuperUser, IsSuperUser
 
 
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [IsModirOrSuperUser]
 
     # Add custom pagination
     pagination_class = CustomPagination
@@ -31,14 +33,14 @@ class UserViewSet(viewsets.ModelViewSet):
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsSuperUser]
    
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response(
-            {"message": "ثبت‌نام با موفقیت انجام شد"},
+            {"message": "ثبت‌ نام با موفقیت انجام شد"},
             status=status.HTTP_201_CREATED
         )
 
