@@ -139,6 +139,20 @@ class LoadingTimeAdmin (admin.ModelAdmin):
             "fields": ("name", "parent")
         }),
     )
+
+# admin panel Transaction Type
+class TransactionTypeAdmin (admin.ModelAdmin):
+    list_display = ("name", "parent")
+    list_filter = ("parent",)
+    search_fields = ("name",)
+    ordering = ("parent__name", "name")
+    verbose_name = _("Transaction Type")
+
+    fieldsets = (
+        (_("Transaction Type Information"), {
+            "fields": ("name", "parent")
+        }),
+    )
 ########################################################
 # admin panel Transaction Type 
 class PurchaseProcessAdmin(admin.ModelAdmin):
@@ -356,4 +370,5 @@ admin.site.register(CargoAnnouncement,CargoAnnouncementAdmin)
 admin.site.register(PortName,PortNameAdmin)
 admin.site.register(CountryName,CountryNameAdmin)
 admin.site.register(LoadingTime,LoadingTimeAdmin)
+admin.site.register(TransactionType, TransactionTypeAdmin)
 admin.site.register(PurchaseProcess,PurchaseProcessAdmin)

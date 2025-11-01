@@ -159,7 +159,7 @@ class CargoAnnouncementSerializer(serializers.ModelSerializer):
     loading_time = LoadingTimeSerializer(read_only=True)
     transaction_type = TransactionTypeSerializer(read_only=True)
 
-    number = serializers.IntegerField(required=False, allow_null=True)
+    number = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     absolute_url = serializers.SerializerMethodField(read_only=True)
 
     class Meta:

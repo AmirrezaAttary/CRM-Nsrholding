@@ -572,7 +572,7 @@ class CargoAnnouncement (models.Model):
 
     
     full_name = models.CharField(max_length=100, verbose_name=_("full name"), blank=True, null=True)
-    number = models.IntegerField(verbose_name=_("number"), blank=True, null=True,default=None)
+    number = models.CharField(max_length=100, verbose_name=_("number"), blank=True, null=True)
 
 
     name_company = models.CharField (max_length=100, verbose_name=_("name company"), blank=True, null=True)
