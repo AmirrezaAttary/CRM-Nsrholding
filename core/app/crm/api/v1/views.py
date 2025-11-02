@@ -16,6 +16,7 @@ from app.crm.api.v1.serializer import (
     SaleReportExportSerializer,
 )
 from app.crm.api.v1.paginations import CustomPagination
+from app.crm.api.v1.permissions import CustomIsAuthenticated
 
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -30,6 +31,7 @@ class CallReportViewSet(viewsets.ModelViewSet):
    
     queryset = CallReport.objects.all().order_by('-created_at')
     serializer_class = CallReportSerializer
+    permission_classes = [CustomIsAuthenticated]
 
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = CallReportFilter  
@@ -49,6 +51,7 @@ class CallReportViewSet(viewsets.ModelViewSet):
 class CargoAnnouncementViewSet(viewsets.ModelViewSet):
     queryset = CargoAnnouncement.objects.all()
     serializer_class = CargoAnnouncementSerializer
+    permission_classes = [CustomIsAuthenticated]
 
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
 
@@ -68,6 +71,7 @@ class PurchaseProcessViewSet(viewsets.ModelViewSet):
     search_fields = ['call_report__name', 'call_report__number', 'buyer_name']
     ordering_fields = ['created_at', 'buyer_name', 'call_report__name']
     pagination_class = CustomPagination
+    permission_classes = [CustomIsAuthenticated]
 
     @action(detail=True, methods=['get'], url_path='go-to-sale-report')
     def go_to_sale_report(self, request, pk=None):
@@ -96,10 +100,12 @@ class SaleReportViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = SaleReportFilter
     pagination_class = CustomPagination
+    permission_classes = [CustomIsAuthenticated]
 
 ##################################################
 
 class SaleReportExportView(APIView):
+    permission_classes = [CustomIsAuthenticated]
     def get(self, request, pk):
         sale_report = SaleReport.objects.get(pk=pk)
         serializer = SaleReportSerializer(sale_report, context={'request': request})
@@ -232,8 +238,8 @@ class SaleReportExportView(APIView):
         return response
 
 class SaleReportBulkExportView(APIView):
+    permission_classes = [CustomIsAuthenticated]
     def get(self, request):
-        # === فیلتر کردن queryset بر اساس query params ===
         queryset = SaleReport.objects.all()
         sale_type_filter = request.GET.get("sale_type")
         start_date = request.GET.get("start_date")
@@ -314,12 +320,10 @@ class SaleReportBulkExportView(APIView):
 
         EXCLUDE_FIELDS = ["id", "purchase_process", "sale_report", "supply_status", "export"]
 
-        # === ساخت Excel ===
         wb = Workbook()
         ws = wb.active
         ws.title = "SaleReports"
 
-        # گرفتن اولین رکورد برای ساخت header
         first_record = queryset.first()
         serializer = SaleReportSerializer(first_record, context={'request': request})
         sample_data = serializer.data
@@ -341,24 +345,20 @@ class SaleReportBulkExportView(APIView):
             nested_data = data.get(nested_map.get(sale_type, ""), {})
 
             flat_data = {}
-            # فیلدهای اصلی
             for key, value in data.items():
                 if key not in ["marketplace", "marketoutside", "quota", "overhead", "absolute_url"] + EXCLUDE_FIELDS:
                     flat_data[key] = value
 
-            # فیلدهای nested
             if nested_data:
                 for key, value in nested_data.items():
                     prefixed_key = f"{sale_type}_{key}"
                     if key not in EXCLUDE_FIELDS:
                         flat_data[prefixed_key] = value
 
-            # جمع‌آوری کل کلیدها برای header
             for key in flat_data.keys():
                 if key not in flat_keys:
                     flat_keys.append(key)
 
-        # ساخت header
         headers = ["ردیف"] + [FIELD_LABELS.get(k, k) for k in flat_keys]
         ws.append(headers)
 
@@ -367,7 +367,6 @@ class SaleReportBulkExportView(APIView):
             for cell in row:
                 cell.fill = green_fill
 
-        # اضافه کردن داده‌ها
         row_number = 1
         for record in queryset:
             serializer = SaleReportSerializer(record, context={'request': request})
@@ -396,7 +395,6 @@ class SaleReportBulkExportView(APIView):
             ws.append(row_values)
             row_number += 1
 
-        # تنظیم عرض ستون‌ها
         for column_cells in ws.columns:
             length = max(len(str(cell.value)) for cell in column_cells)
             ws.column_dimensions[column_cells[0].column_letter].width = min(length + 2, 50)

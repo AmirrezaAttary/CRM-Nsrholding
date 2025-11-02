@@ -20,3 +20,4 @@ class IsModirOrSuperUser(permissions.BasePermission):
             raise exceptions.PermissionDenied(detail="اجازه دسترسی ندارید. فقط ادمین اصلی و مدیرعامل مجاز است.")
 
         return True
+
