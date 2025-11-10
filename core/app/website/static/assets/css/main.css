@@ -7074,3 +7074,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.page-item.active .page-link {
+    background-color: #436e62 !important;  
+    border-color: #436e62 !important;
+    color: #fff !important;
+}

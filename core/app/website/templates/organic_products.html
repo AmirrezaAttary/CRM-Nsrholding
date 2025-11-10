@@ -2,21 +2,23 @@
 {% load static %}
 
 {% block content %}
-
   <main class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Purchase of livestock entities</h1>
+        <h1 class="mb-2 mb-lg-0">Organic Products</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Purchase of livestock entities</li>
+            <li class="current">Organic Products</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
+
+
+    </section><!-- /Restaurant Section -->
 
     <!-- Menu Section -->
     <section id="menu" class="menu section">
@@ -29,29 +31,33 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="menu-container isotope-container row gy-4">
-
-            <!-- Regular Menu Items -->
-            {% for purchase_livestock in obj %}
-            <div class="col-lg-6 isotope-item filter-starters">
-              <div class="menu-item d-flex align-items-center gap-4">
-                <img src="{% if purchase_livestock.product_photo %}{{ purchase_livestock.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Starter" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>{{ purchase_livestock.product_name }}</h5>
-                  <div class="price">${{ purchase_livestock.product_price }}</div>
+        <!-- Chef's Specials -->
+        <div class="col-12 mt-5" data-aos="fade-up">
+          <div class="specials-container">
+            <div class="row g-4">
+              {% for organic_products in obj %}
+              <div class="col-md-6">
+                <div class="menu-item special-item">
+                  <div class="menu-item-img">
+                    <img src="{% if organic_products.product_photo %}{{ organic_products.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Dish" class="img-fluid">
+                  </div>
+                  <div class="menu-item-content">
+                    <h4>{{ organic_products.product_name }}</h4>
+                    <p>{{ organic_products.product_title }}</p>
+                  </div>
                 </div>
               </div>
+              {% endfor %} 
             </div>
-            {% endfor %}
+          </div>
         </div>
 
       </div>
 
     </section><!-- /Menu Section -->
-<nav aria-label="Page navigation">
+  
+  <nav aria-label="Page navigation">
+
   <ul class="pagination justify-content-center">
 
     {% if obj.has_previous %}
@@ -79,6 +85,9 @@
     {% endif %}
 
   </ul>
+  
 </nav>
+
   </main>
+
 {% endblock %}

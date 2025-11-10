@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 
-from .models import News, PurchaseLivestock
+from .models import News, PurchaseLivestock, OrganicProducts
 
 # Create your views here.
 
@@ -19,6 +19,17 @@ def location_view(request):
 
 def rooms_view(request):
     return render(request, 'rooms.html')
+
+def organic_products_view(request):
+    organic_products_list = OrganicProducts.objects.all().order_by('-published_date')
+    paginator = Paginator(organic_products_list, 6)  
+    page_number = request.GET.get('page')
+    obj = paginator.get_page(page_number)
+
+    context = {
+        'obj':obj,
+    }
+    return render(request, 'organic_products.html', context)
 
 def purchase_livestock_view(request):
     purchase_livestock_list = PurchaseLivestock.objects.all().order_by('-published_date')

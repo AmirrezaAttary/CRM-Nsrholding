@@ -30,3 +30,16 @@ class PurchaseLivestock (models.Model):
 
     def __str__(self):
         return self.product_name
+    
+class OrganicProducts (models.Model):
+    product_name = models.CharField(max_length=100, verbose_name="نام کالا")
+    published_date = models.DateField(default=timezone.now, verbose_name="تاریخ انتشار")
+    product_photo = models.ImageField(verbose_name="عکس کالا",null=True,blank=True)
+    product_title = models.TextField(verbose_name="عنوان کالا")
+
+    class Meta:
+        verbose_name = "کالا"
+        verbose_name_plural = "محصولات ارگانیک"
+
+    def __str__(self):
+        return self.product_name
