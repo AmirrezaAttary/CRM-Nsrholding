@@ -7,11 +7,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Organic Products</h1>
+        <h1 class="mb-2 mb-lg-0">محصولات ارگانیک</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Organic Products</li>
+            <li><a href="{% url 'home' %}">صفحه خانه</a></li>
+            <li class="current">محصولات ارگانیک</li>
           </ol>
         </nav>
       </div>
@@ -25,9 +25,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Menu</span>
-        <h2>Menu</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>خدمات ارئه شده</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
@@ -39,11 +37,12 @@
               <div class="col-md-6">
                 <div class="menu-item special-item">
                   <div class="menu-item-img">
-                    <img src="{% if organic_products.product_photo %}{{ organic_products.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Dish" class="img-fluid">
+                    <img src="{{ organic_products.product_photo.url }}" alt="Special Dish" class="img-fluid">
                   </div>
                   <div class="menu-item-content">
-                    <h4>{{ organic_products.product_name }}</h4>
+                    <h4><a href="{% url 'organic_products_detail' organic_products.id %}">{{ organic_products.product_name }}</a></h4>
                     <p>{{ organic_products.product_title }}</p>
+                    <div class="price">${{ organic_products.product_price }}</div>
                   </div>
                 </div>
               </div>

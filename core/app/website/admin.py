@@ -41,7 +41,7 @@ class PurchaseLivestockAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('اطلاعات کالا', {
-            'fields': ('product_name', 'product_price','product_photo')
+            'fields': ('product_name', 'product_price','product_photo','product_description')
         }),
         ('زمان انتشار', {
             'fields': ('published_date',)
@@ -53,7 +53,7 @@ class PurchaseLivestockAdmin(admin.ModelAdmin):
     
 @admin.register(OrganicProducts)
 class OrganicProductsAdmin(admin.ModelAdmin):
-    list_display = ('product_name', 'published_date','product_title')
+    list_display = ('product_name', 'published_date','product_title','product_price')
     list_filter = ('published_date',)
     search_fields = ('product_name', 'product_title')
     ordering = ('-published_date',)
@@ -62,7 +62,7 @@ class OrganicProductsAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('مشخصات محصول', {
-            'fields': ('product_name', 'product_title', 'product_photo')
+            'fields': ('product_name', 'product_title', 'product_photo','product_price')
         }),
         ('زمان انتشار', {
             'fields': ('published_date',)

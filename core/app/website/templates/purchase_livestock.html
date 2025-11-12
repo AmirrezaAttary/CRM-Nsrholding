@@ -8,11 +8,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Purchase of livestock entities</h1>
+        <h1 class="mb-2 mb-lg-0">خرید و فروش نهاد های دامی</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Purchase of livestock entities</li>
+            <li><a href="{% url 'home' %}">صفحه خانه</a></li>
+            <li class="current">خرید و فروش نهاد های</li>
           </ol>
         </nav>
       </div>
@@ -23,9 +23,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Menu</span>
-        <h2>Menu</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>نهاده های دامی باکیفیت تضمین کننده رونق تولید</h2>
+        <p>تامین نهاد های دامی با کیفیت ستون فقرات صنعت دامپروری است . ذرت و جو و کنجاله سویا و منابع تغزیه دام نقشه حیاتی در تولید شیر و گوشت با کیفیت دارن . ما با اراِه بهترین نهاد ها به سلامتی دام و رونق کسب و کار شما می اندیشیم</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
@@ -38,19 +37,22 @@
             {% for purchase_livestock in obj %}
             <div class="col-lg-6 isotope-item filter-starters">
               <div class="menu-item d-flex align-items-center gap-4">
-                <img src="{% if purchase_livestock.product_photo %}{{ purchase_livestock.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Starter" class="menu-img img-fluid rounded-3">
+                <img src="{% if purchase_livestock.product_photo %} {{ purchase_livestock.product_photo.url }} {% else %} {% static 'assets/img/DefaultImg/DefaultNews.png' %} {% endif %}" alt="Starter" class="menu-img img-fluid rounded-3">
                 <div class="menu-content">
-                  <h5>{{ purchase_livestock.product_name }}</h5>
+                  <h5><a href="{% url 'purchase_livestock_detail' purchase_livestock.id %}">{{ purchase_livestock.product_name }}</a></h5>
                   <div class="price">${{ purchase_livestock.product_price }}</div>
                 </div>
               </div>
             </div>
             {% endfor %}
-        </div>
 
+          </div>
+
+        </div>
       </div>
 
-    </section><!-- /Menu Section -->
+    </section>
+    
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-center">
 

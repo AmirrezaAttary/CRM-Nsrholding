@@ -22,8 +22,9 @@ class News(models.Model):
 class PurchaseLivestock (models.Model):
     product_name = models.CharField(max_length=100, verbose_name="نام کالا")
     product_price = models.IntegerField(verbose_name="قیمت کالا")
+    product_description = models.TextField(verbose_name="توضیحات کالا")
     published_date = models.DateField(default=timezone.now, verbose_name="تاریخ انتشار")
-    product_photo = models.ImageField(verbose_name="عکس کالا",null=True,blank=True)
+    product_photo = models.ImageField(verbose_name="عکس کالا",default='Default/DefaultImg.png',null=True,blank=True)
     class Meta:
         verbose_name = "کالا"
         verbose_name_plural = "کالا نهاد های دام"
@@ -34,8 +35,9 @@ class PurchaseLivestock (models.Model):
 class OrganicProducts (models.Model):
     product_name = models.CharField(max_length=100, verbose_name="نام کالا")
     published_date = models.DateField(default=timezone.now, verbose_name="تاریخ انتشار")
-    product_photo = models.ImageField(verbose_name="عکس کالا",null=True,blank=True)
+    product_photo = models.ImageField(verbose_name="عکس کالا",default='Default/DefaultImg.png',null=True,blank=True)
     product_title = models.TextField(verbose_name="عنوان کالا")
+    product_price = models.IntegerField(verbose_name="قیمت کالا",default=0)
 
     class Meta:
         verbose_name = "کالا"

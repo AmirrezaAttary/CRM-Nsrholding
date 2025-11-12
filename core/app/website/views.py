@@ -31,6 +31,13 @@ def organic_products_view(request):
     }
     return render(request, 'organic_products.html', context)
 
+def organic_products_detail(request, pk):
+    organic_products = get_object_or_404(OrganicProducts, pk=pk)
+    context = {
+        'organic_products': organic_products
+    }
+    return render(request, 'organic_products_detail.html', context)
+
 def purchase_livestock_view(request):
     purchase_livestock_list = PurchaseLivestock.objects.all().order_by('-published_date')
     paginator = Paginator(purchase_livestock_list, 6)  
@@ -42,7 +49,12 @@ def purchase_livestock_view(request):
     }
     return render(request, 'purchase_livestock.html', context)
 
-
+def purchase_livestock_detail(request, pk):
+    purchase_livestock = get_object_or_404(PurchaseLivestock, pk=pk)
+    context = {
+        'purchase_livestock': purchase_livestock
+    }
+    return render(request, 'purchase_livestock_detail.html', context)
 
 def news_list(request):
     news_list = News.objects.filter(is_active=True).order_by('-published_date')
