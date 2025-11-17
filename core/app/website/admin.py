@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (News, PurchaseLivestock, OrganicProducts,
                         AnimalFeedKhoshab, MotherChickenFarm, layingHen,
-                          SupplyingLivestock, AnimalRefinery, PlantRefinery,Contact)
+                          SupplyingLivestock, AnimalRefinery, PlantRefinery, Contact, ContactRequest)
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
@@ -174,5 +174,28 @@ class ContactAdmin (admin.ModelAdmin):
         }),
         ('زمان انتشار', {
             'fields': ('crate_deta',)
+        }),
+    )
+
+@admin.register(ContactRequest)
+class ContactRequestAdmin(admin.ModelAdmin):
+    list_display = ("name", "number", "email", "city", "job", "capital", "created_at")
+    list_filter = ("job", "capital", "city", "created_at")
+    search_fields = ("name", "number", "email", "city")
+    ordering = ("-created_at",)
+    readonly_fields = ("created_at",)
+
+    fieldsets = (
+        ("اطلاعات کاربر", {
+            "fields": ("name", "number", "email", "city")
+        }),
+        ("اطلاعات شغلی", {
+            "fields": ("job", "capital")
+        }),
+        ("پیام", {
+            "fields": ("message",)
+        }),
+        ("زمان ثبت", {
+            "fields": ("created_at",),
         }),
     )

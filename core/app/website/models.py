@@ -131,3 +131,31 @@ class Contact (models.Model):
     
     def __str__(self):
         return self.full_name
+    
+class ContactRequest(models.Model):
+    JOB_CHOICES = [
+        ("آزاد", "آزاد"),
+        ("بیکار", "بیکار"),
+        ("کارمند", "کارمند"),
+        ("بازنشسته", "بازنشسته"),
+        ("دیگر مشاغل", "دیگر مشاغل"),
+    ]
+
+    CAPITAL_CHOICES = [
+        ("کمتر از 200 میلیون تومان", "کمتر از 200 میلیون تومان"),
+        ("بین 200 تا 500 میلیون تومان", "بین 200 تا 500 میلیون تومان"),
+        ("بین 500 میلیون تومان تا یک میلیارد تومان", "بین 500 میلیون تومان تا یک میلیارد تومان"),
+        ("بیشتر از یک میلیارد تومان", "بیشتر از یک میلیارد تومان"),
+    ]
+
+    name = models.CharField(max_length=100,verbose_name="نام و نام خانوادگی")
+    number = models.CharField(max_length=20,verbose_name="شماره تماس")
+    email = models.EmailField(verbose_name="ایمیل")
+    city = models.CharField(max_length=100,verbose_name="شهر")
+    job = models.CharField(max_length=50, choices=JOB_CHOICES,verbose_name="شغل")
+    capital = models.CharField(max_length=100, choices=CAPITAL_CHOICES,verbose_name="میزان سرمایه")
+    message = models.TextField(verbose_name="پیام مورد نظر")
+    created_at = models.DateField(auto_now_add=True,verbose_name="زمان ارسال")
+
+    def __str__(self):
+        return f"{self.name} - {self.number}"

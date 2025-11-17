@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; direction: rtl; }
+        .box { background: #f9f9f9; padding: 20px; border-radius: 10px; }
+        .title { font-size: 20px; font-weight: bold; }
+        .item { margin: 10px 0; }
+        .label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="title">پیام جدید از فرم سرمایه گذاری سایت</p>
+
+        <p class="item"><span class="label">نام: </span> {{ name }}</p>
+        <p class="item"><span class="label">ایمیل: </span> {{ email }}</p>
+        <p class="item"><span class="label">شماره موبایل: </span> {{ number }}</p>
+        <p class="item"><span class="label">شهر: </span> {{ city }}</p>
+        <p class="item"><span class="label">شغل: </span> {{ job }}</p>
+        <p class="item"><span class="label">میزان سرمایه: </span> {{ capital }}</p>
+        <p class="item"><span class="label">پیام: </span><br>{{ message }}</p>
+    </div>
+</body>
+</html>
