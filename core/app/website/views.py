@@ -7,7 +7,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.shortcuts import redirect
 from core.settings import EMAIL_HOST_USER
-from .forms import ContactForm
+from .forms import ContactForm, ContactRequestForm
 from .models import (News, PurchaseLivestock, OrganicProducts, AnimalFeedKhoshab,
                       MotherChickenFarm, layingHen, SupplyingLivestock, AnimalRefinery,PlantRefinery)
 
@@ -56,6 +56,46 @@ def contact_view(request):
 
     return render(request, "contact.html", {"form": form})
 
+def investment_view(request):
+    if request.method == "POST":
+        form = ContactRequestForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.save()  
+            try:
+                html_content = render_to_string("contact_request_email.html", {
+                    "name": instance.name,
+                    "email": instance.email,
+                    "number": instance.number,
+                    "city": instance.city,
+                    "job": instance.job,
+                    "capital": instance.capital,
+                    "message": instance.message,
+                })
+
+                email = EmailMultiAlternatives(
+                    subject="پیام جدید از فرم سرمایه گذاری سایت",
+                    body="یک پیام جدید دریافت شد.",
+                    from_email=None,
+                    to=[EMAIL_HOST_USER],
+                )
+                email.attach_alternative(html_content, "text/html")
+                email.send()
+
+                messages.success(request, "پیام شما با موفقیت ارسال شد!")
+                
+            except Exception as e:
+                messages.error(request, f"ارسال ایمیل با خطا مواجه شد: {e}")
+
+            return redirect('investment')
+
+        else:
+            messages.error(request, "فرم به درستی ارسال نشد. لطفاً دوباره تلاش کنید.")
+    else:
+        form = ContactRequestForm()
+
+    return render(request, "investment.html", {"form": form})
+
 def location_view(request):
     return render(request, 'location.html')
 
@@ -65,8 +105,6 @@ def rooms_view(request):
 def animal_feed_view(request):
     return render(request, 'animal_feed.html')
 
-def investment_view(request):
-    return render(request, 'investment.html')
 
 def animal_feed_khoshab_view(request):
     animal_feed_khoshab = AnimalFeedKhoshab.objects.all().order_by('-published_date')

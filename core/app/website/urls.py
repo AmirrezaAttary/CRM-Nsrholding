@@ -23,4 +23,5 @@ urlpatterns = [
     path('supplying_livestock/', views.supplying_livestock_view, name='supplying_livestock'),
     path('animal_refinery/', views.animal_refinery_view, name='animal_refinery'),
     path('plant_refinery/', views.plant_refinery_view, name='plant_refinery'),
+    path('user/', include('app.website.accounts.urls', namespace='website_accounts')),
 ]

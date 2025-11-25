@@ -5,23 +5,113 @@ from rest_framework.reverse import reverse
 # ─────────────────────────────
 # FieldActivity Serializer
 # ─────────────────────────────
-class FieldActivitySerializer(serializers.ModelSerializer):
-    parent_name = serializers.CharField(source='parent.name', read_only=True)
-
+class FieldActivityChildSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     class Meta:
         model = FieldActivity
-        fields = ['id', 'name', 'parent', 'parent_name']
+        fields = ["id", "name"]
+
+class FieldActivitySerializer(serializers.ModelSerializer):
+    children = FieldActivityChildSerializer(many=True, required=False, allow_null=True)
+    parent = serializers.CharField(source='parent.name', read_only=True)
+    class Meta:
+        model = FieldActivity
+        fields = ["id", "name", "parent", "children"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', []) or []
+        parent_obj = FieldActivity.objects.create(**validated_data)
+
+        for child in children_data:
+            FieldActivity.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            children_data = children_data or []
+            instance.children.all().delete()
+            for child in children_data:
+                FieldActivity.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
 
 
 # ─────────────────────────────
 # ValidationLevel Serializer
 # ─────────────────────────────
-class ValidationLevelSerializer(serializers.ModelSerializer):
-    parent_name = serializers.CharField(source='parent.name', read_only=True)
 
+class ValidationLevelChildSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     class Meta:
         model = ValidationLevel
-        fields = ['id', 'name', 'parent', 'parent_name']
+        fields = ["id", "name"]
+
+
+class ValidationLevelSerializer(serializers.ModelSerializer):
+    children = ValidationLevelChildSerializer(many=True, required=False, allow_null=True)
+    parent = serializers.CharField(source='parent.name', read_only=True)
+    class Meta:
+        model = ValidationLevel
+        fields = ["id", "name", "parent", "children"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', []) or []
+        parent_obj = ValidationLevel.objects.create(**validated_data)
+
+        for child in children_data:
+            ValidationLevel.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            children_data = children_data or []
+            instance.children.all().delete()
+            for child in children_data:
+                ValidationLevel.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
 
 
 # ─────────────────────────────
@@ -88,50 +178,261 @@ class RecursiveSerializer(serializers.Serializer):
         serializer = self.parent.parent.__class__(value, context=self.context)
         return serializer.data
 
-
-class ProductTypeSerializer(serializers.ModelSerializer):
-    parent = serializers.CharField(source='parent.name', read_only=True)
-    children = RecursiveSerializer(many=True, read_only=True)
-
+class ProductTypeChildSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     class Meta:
         model = ProductType
-        fields = ['id', 'name', 'parent', 'children']
+        fields = ["id", "name"]  
 
-
-class PortNameSerializer(serializers.ModelSerializer):
+class ProductTypeSerializer(serializers.ModelSerializer):
+    children = ProductTypeChildSerializer(many=True, required=False, allow_null=True)
     parent = serializers.CharField(source='parent.name', read_only=True)
-    children = RecursiveSerializer(many=True, read_only=True)
+    class Meta:
+        model = ProductType
+        fields = ["id", "name", "parent", "children"]
 
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', []) or []
+        parent_obj = ProductType.objects.create(**validated_data)
+
+        for child in children_data:
+            ProductType.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            children_data = children_data or []
+            instance.children.all().delete()
+            for child in children_data:
+                ProductType.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
+
+class PortNameChildSerializer(serializers.ModelSerializer):
     class Meta:
         model = PortName
-        fields = ['id', 'name', 'parent', 'children']
+        fields = ["id", "name"]
+  
+class PortNameSerializer(serializers.ModelSerializer):
+    children = PortNameChildSerializer(many=True, required=False)
+    parent = serializers.CharField(source='parent.name', read_only=True)
+    class Meta:
+        model = PortName
+        fields = ["id", "name", "parent", "children"]
+    
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', [])
+        parent_obj = PortName.objects.create(**validated_data)
+
+        for child in children_data:
+            PortName.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            
+            instance.children.all().delete()
+            for child in children_data:
+                PortName.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
+
+
+class CountryNameChildSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CountryName
+        fields = ["id", "name"]
 
 
 class CountryNameSerializer(serializers.ModelSerializer):
+    children = CountryNameChildSerializer(many=True, required=False)
     parent = serializers.CharField(source='parent.name', read_only=True)
-    children = RecursiveSerializer(many=True, read_only=True)
-
     class Meta:
         model = CountryName
-        fields = ['id', 'name', 'parent', 'children']
+        fields = ["id", "name", "parent", "children"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', [])
+        parent_obj = CountryName.objects.create(**validated_data)
+
+        for child in children_data:
+            CountryName.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            
+            instance.children.all().delete()
+            for child in children_data:
+                CountryName.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
+
+
+class LoadingTimeChildSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LoadingTime
+        fields = ["id", "name"]
 
 
 class LoadingTimeSerializer(serializers.ModelSerializer):
+    children = LoadingTimeChildSerializer(many=True, required=False)
     parent = serializers.CharField(source='parent.name', read_only=True)
-    children = RecursiveSerializer(many=True, read_only=True)
-
     class Meta:
         model = LoadingTime
-        fields = ['id', 'name', 'parent', 'children']
+        fields = ["id", "name", "parent", "children"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', [])
+        parent_obj = LoadingTime.objects.create(**validated_data)
+
+        for child in children_data:
+            LoadingTime.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            
+            instance.children.all().delete()
+            for child in children_data:
+                LoadingTime.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
 
 
-class TransactionTypeSerializer(serializers.ModelSerializer):
-    parent = serializers.CharField(source='parent.name', read_only=True)
-    children = RecursiveSerializer(many=True, read_only=True)
-
+class TransactionTypeChildSerializer(serializers.ModelSerializer):
     class Meta:
         model = TransactionType
-        fields = ['id', 'name', 'parent', 'children']
+        fields = ["id", "name"]
+
+class TransactionTypeSerializer(serializers.ModelSerializer):
+    children = TransactionTypeChildSerializer(many=True, required=False)
+    parent = serializers.CharField(source='parent.name', read_only=True)
+    class Meta:
+        model = TransactionType
+        fields = ["id", "name", "parent", "children"]
+    
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', [])
+        parent_obj = TransactionType.objects.create(**validated_data)
+
+        for child in children_data:
+            TransactionType.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            
+            instance.children.all().delete()
+            for child in children_data:
+                TransactionType.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
 
 
 class CargoAnnouncementSerializer(serializers.ModelSerializer):
@@ -173,6 +474,13 @@ class CargoAnnouncementSerializer(serializers.ModelSerializer):
             'product_type', 'port_name', 'country_name', 'loading_time', 'transaction_type',
             'absolute_url',
         ]
+        extra_kwargs = {
+            "product_type": {"read_only": True},
+            "port_name": {"read_only": True},
+            "country_name": {"read_only": True},
+            "loading_time": {"read_only": True},
+            "transaction_type": {"read_only": True},
+        }
     def get_absolute_url(self, obj):
         # Generate absolute URL for the post
         request = self.context.get('request')
@@ -181,7 +489,7 @@ class CargoAnnouncementSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         request = self.context.get('request')
         rep = super().to_representation(instance)
-
+            
         if request and "go-to-purchase" in request.path:
             rep["absolute_url"] = request.build_absolute_uri(
                 f"/crm/api/v1/cargo-announcements/{instance.id}/"
@@ -267,18 +575,57 @@ class PurchaseProcessSerializer(serializers.ModelSerializer):
 ########################################################################
 
 # --- SupplyStatus ---
-class SupplyStatusSerializer(serializers.ModelSerializer):
-    parent_name = serializers.CharField(source='parent.name', read_only=True)
-    
-    parent = serializers.PrimaryKeyRelatedField(
-        queryset=SupplyStatus.objects.all(),
-        required=False,
-        allow_null=True
-    )
 
+class SupplyStatusChildSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     class Meta:
         model = SupplyStatus
-        fields = ['id', 'name', 'parent', 'parent_name']
+        fields = ["id", "name"]
+
+class SupplyStatusSerializer(serializers.ModelSerializer):
+    children = SupplyStatusChildSerializer(many=True, required=False, allow_null=True)
+    parent = serializers.CharField(source='parent.name', read_only=True)
+    class Meta:
+        model = SupplyStatus
+        fields = ["id", "name", "parent", "children"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get("request")
+
+        if request and request.method == "GET":
+            rep.pop("parent", None)  
+
+        return rep
+
+    def create(self, validated_data):
+        children_data = validated_data.pop('children', []) or []
+        parent_obj = SupplyStatus.objects.create(**validated_data)
+
+        for child in children_data:
+            SupplyStatus.objects.create(
+                parent=parent_obj,
+                name=child.get("name")
+            )
+
+        return parent_obj
+
+    def update(self, instance, validated_data):
+        children_data = validated_data.pop('children', None)
+        instance.name = validated_data.get('name', instance.name)
+        instance.parent = validated_data.get('parent', instance.parent)
+        instance.save()
+
+        if children_data is not None:
+            children_data = children_data or []
+            instance.children.all().delete()
+            for child in children_data:
+                SupplyStatus.objects.create(
+                    parent=instance,
+                    name=child.get("name")
+                )
+
+        return instance
 
 
 # --- MarketPlace ---

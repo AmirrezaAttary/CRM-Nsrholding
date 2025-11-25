@@ -6,7 +6,10 @@ from django.shortcuts import get_object_or_404
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill
 
-from app.crm.models import CallReport, CargoAnnouncement, PurchaseProcess, SaleReport
+from app.crm.models import (CallReport, CargoAnnouncement, PurchaseProcess, SaleReport
+                            , TransactionType, LoadingTime, CountryName, PortName, ProductType,
+                            FieldActivity, ValidationLevel, SupplyStatus)
+
 from app.crm.api.v1.filters import CallReportFilter, SaleReportFilter
 from app.crm.api.v1.serializer import (
     CallReportSerializer, 
@@ -14,9 +17,12 @@ from app.crm.api.v1.serializer import (
     PurchaseProcessSerializer, 
     SaleReportSerializer,
     SaleReportExportSerializer,
+    ProductTypeSerializer, CountryNameSerializer, PortNameSerializer,
+    LoadingTimeSerializer, TransactionTypeSerializer, FieldActivitySerializer,ValidationLevelSerializer,
+    SupplyStatusSerializer
 )
 from app.crm.api.v1.paginations import CustomPagination
-from app.crm.api.v1.permissions import CustomIsAuthenticated
+from app.crm.api.v1.permissions import IsSuperUserOrKarshenasForooshOrModirAmel, IsSuperUserOrKarshenasForoosh
 
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -24,6 +30,7 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 
 
 
@@ -31,7 +38,7 @@ class CallReportViewSet(viewsets.ModelViewSet):
    
     queryset = CallReport.objects.all().order_by('-created_at')
     serializer_class = CallReportSerializer
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForoosh]
 
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = CallReportFilter  
@@ -51,7 +58,7 @@ class CallReportViewSet(viewsets.ModelViewSet):
 class CargoAnnouncementViewSet(viewsets.ModelViewSet):
     queryset = CargoAnnouncement.objects.all()
     serializer_class = CargoAnnouncementSerializer
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForoosh]
 
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
 
@@ -71,7 +78,7 @@ class PurchaseProcessViewSet(viewsets.ModelViewSet):
     search_fields = ['call_report__name', 'call_report__number', 'buyer_name']
     ordering_fields = ['created_at', 'buyer_name', 'call_report__name']
     pagination_class = CustomPagination
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForoosh]
 
     @action(detail=True, methods=['get'], url_path='go-to-sale-report')
     def go_to_sale_report(self, request, pk=None):
@@ -100,12 +107,59 @@ class SaleReportViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = SaleReportFilter
     pagination_class = CustomPagination
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForoosh]
 
+########################### Export Views #################################################
+# view for models ForeignKey 
+class ProductTypeViewSet(viewsets.ModelViewSet):
+    queryset = ProductType.objects.filter(parent__isnull=True).order_by('id')
+    serializer_class = ProductTypeSerializer
+    pagination_class = CustomPagination
+
+
+class CountryNameViewSet(ModelViewSet):
+    queryset = CountryName.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = CountryNameSerializer
+
+
+class PortNameViewSet(ModelViewSet):
+    queryset = PortName.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = PortNameSerializer
+
+
+class LoadingTimeViewSet(ModelViewSet):
+    queryset = LoadingTime.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = LoadingTimeSerializer
+
+
+class TransactionTypeViewSet(ModelViewSet):
+    queryset = TransactionType.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = TransactionTypeSerializer
+
+class FieldActivityViewSet(ModelViewSet):
+    queryset = FieldActivity.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = FieldActivitySerializer
+
+class ValidationLevelViewSet(ModelViewSet):
+    queryset = ValidationLevel.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = ValidationLevelSerializer
+
+
+class SupplyStatusViewSet(ModelViewSet):
+    queryset = SupplyStatus.objects.filter(parent__isnull=True).order_by('id')
+    pagination_class = CustomPagination
+    serializer_class = SupplyStatusSerializer
+    
 ##################################################
 
 class SaleReportExportView(APIView):
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForooshOrModirAmel]
     def get(self, request, pk):
         sale_report = SaleReport.objects.get(pk=pk)
         serializer = SaleReportSerializer(sale_report, context={'request': request})
@@ -238,7 +292,7 @@ class SaleReportExportView(APIView):
         return response
 
 class SaleReportBulkExportView(APIView):
-    permission_classes = [CustomIsAuthenticated]
+    permission_classes = [IsSuperUserOrKarshenasForooshOrModirAmel]
     def get(self, request):
         queryset = SaleReport.objects.all()
         sale_type_filter = request.GET.get("sale_type")

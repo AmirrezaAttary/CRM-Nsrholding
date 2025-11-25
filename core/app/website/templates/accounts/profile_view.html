@@ -1,0 +1,10 @@
+<h2>پروفایل شما</h2>
+<p>ایمیل: {{ profile.email }}</p>
+<p>کد ملی: {{ profile.code_meli }}</p>
+<p>تاریخ تولد: {{ profile.birth_date }}</p>
+<p>شغل: {{ profile.job }}</p>
+<p>کد یکتا: {{ profile.code_yekta }}</p>
+<p>آدرس: {{ profile.address }}</p>
+<p>کد پستی: {{ profile.code_posti }}</p>
+
+<a href="{% url 'website_accounts:profile_edit' %}">ویرایش پروفایل</a>

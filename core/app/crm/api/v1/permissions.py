@@ -1,9 +1,26 @@
 from rest_framework.permissions import BasePermission
-from rest_framework.exceptions import AuthenticationFailed
+from app.accounts.models import UserType
 
-class CustomIsAuthenticated(BasePermission):
+class IsSuperUserOrKarshenasForoosh(BasePermission):
     
     def has_permission(self, request, view):
-        if not request.user or not request.user.is_authenticated:
-            raise AuthenticationFailed(detail="ابتدا وارد حساب کاربری خود شوید.")
-        return True
+        return (
+            request.user.is_authenticated and
+            request.user.type in [
+                UserType.SUPERUSER,
+                UserType.KARSHENAS_FOROOSH
+            ]
+        )
+
+
+class IsSuperUserOrKarshenasForooshOrModirAmel(BasePermission):
+   
+    def has_permission(self, request, view):
+        return (
+            request.user.is_authenticated and
+            request.user.type in [
+                UserType.SUPERUSER,
+                UserType.KARSHENAS_FOROOSH,
+                UserType.MODIR_AMEL
+            ]
+        )

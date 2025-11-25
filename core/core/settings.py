@@ -136,6 +136,11 @@ EMAIL_HOST_PASSWORD='gzdl rhgh dtzt sklk'
 DEFAULT_FROM_EMAIL="ashkanarzande@gmail.com"
 
 
+# settings for SMS sending
+SMSAPIKEY = "co6QLJNKUrO0x75n94cWToUcFxsD4TEQGaiNXqlhR9THVrh6B5bBdXDayfe0asCb"
+SMSLINENUMBER = "30004007672729"
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 

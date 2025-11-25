@@ -31,7 +31,8 @@
                 <p>برای سرمایه گذاری در پروژه های مختلف شرکت راه ابریشم نو، فرم زیر را تکمیل نمایید</p>
                 <p>همکاران ما در اسرع وقت برای مشاوره و راهنمایی با شما تماس خواهند گرفت</p>
               </div>
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="{% url 'investment' %}" method="post">
+                {% csrf_token %}
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -89,12 +90,6 @@
                     <div class="form-group">
                       <textarea class="form-control" name="message" placeholder="نظرات" rows="6" required=""></textarea>
                     </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
                   </div>
 
                   <div class="col-12 text-center">
