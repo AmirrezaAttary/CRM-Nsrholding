@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_mh2#t+9rk^^id%-mr(87z3!5iw%801q0w6xe9i6px-2gjfs%-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.nsrholding.com","nsrholding.com"]
 
 
 # Application definition
@@ -145,13 +145,15 @@ SMSLINENUMBER = "30004007672729"
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = "/home/nsrholdi/public_html/static"
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'app/website/media')
+MEDIA_ROOT = "/home/nsrholdi/public_html/media"
 
 
 # Default primary key field type
