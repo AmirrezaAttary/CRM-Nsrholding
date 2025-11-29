@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
+from urllib3 import request
 from app.accounts.models import UserProfile, User, PhoneOTP
-from app.website.accounts.forms import UserProfileForm, UserRegisterForm, SetPasswordForm
+from app.website.accounts.forms import (UserProfileForm, UserRegisterForm, SetPasswordForm,
+                                         LoginForm, OTPLoginForm, OTPVerifyForm)
 from app.website.accounts.scripts import send_bulk_sms
 import random
 
@@ -115,13 +117,97 @@ def set_password(request):
             
 
             messages.success(request, "حساب شما با موفقیت فعال شد.")
-            return redirect("home")
+            return redirect("/")
     else:
         form = SetPasswordForm()
 
     return render(request, "accounts/set_password.html", {"form": form})
 
+def login_view(request):
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+
+        if form.is_valid():
+            phone = form.cleaned_data["phone_number"]
+            password = form.cleaned_data["password"]
+
+            user = authenticate(request, phone_number=phone, password=password)
+
+            if user is not None:
+                login(request, user)
+                messages.success(request, "با موفقیت وارد شدید.")
+                return redirect("/")
+            else:
+                messages.error(request, "شماره موبایل یا رمز عبور اشتباه است.")
+    else:
+        form = LoginForm()
+
+    return render(request, "accounts/login.html", {"form": form})
+
+def login_otp_view(request):
+    if request.method == "POST":
+        form = OTPLoginForm(request.POST)
+        if form.is_valid():
+            phone = form.cleaned_data["phone_number"]
+
+            if not User.objects.filter(phone_number=phone).exists():
+                messages.error(request, "این شماره موبایل در سیستم ثبت نشده است.")
+                return redirect("website_accounts:login_with_otp")
+
+            otp_code = str(random.randint(10000, 99999))
+            PhoneOTP.objects.create(phone=phone, code=otp_code)
+
+            send_bulk_sms(
+                message_text=f"کد ورود شما: {otp_code}",
+                mobiles=[phone]
+            )
+
+            request.session["otp_phone"] = phone
+
+            return redirect("website_accounts:verify_otp_login")
+    else:
+        form = OTPLoginForm()
+
+    return render(request, "accounts/login_otp.html", {"form": form})
+
+def verify_otp_login_view(request):
+    phone = request.session.get("otp_phone")
+    if not phone:
+        messages.error(request, "ابتدا شماره موبایل خود را وارد کنید.")
+        return redirect("website_accounts:login_with_otp")
+
+    if request.method == "POST":
+        form = OTPVerifyForm(request.POST)
+        if form.is_valid():
+            entered_code = form.cleaned_data["otp_code"]
+
+            otp_obj = PhoneOTP.objects.filter(phone=phone).last()
+            if not otp_obj:
+                messages.error(request, "کدی برای این شماره یافت نشد.")
+                return redirect("website_accounts:login_with_otp")
+
+            if otp_obj.is_expired():
+                messages.error(request, "کد منقضی شده است.")
+                return redirect("website_accounts:login_with_otp")
+
+            if otp_obj.code == entered_code:
+                
+                user = User.objects.get(phone_number=phone)
+                login(request, user)
+                request.session.pop("otp_phone")
+
+                messages.success(request, "با موفقیت وارد شدید.")
+                return redirect("/")
+            else:
+                messages.error(request, "کد وارد شده اشتباه است.")
+    else:
+        form = OTPVerifyForm()
+
+    return render(request, "accounts/verify_otp_login.html", {"form": form})
+
+
+
 def logout_view(request):
     logout(request) 
     messages.success(request, "شما با موفقیت خارج شدید.")
-    return redirect("home")
+    return redirect("/")
