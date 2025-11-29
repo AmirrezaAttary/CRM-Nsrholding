@@ -1,10 +1,73 @@
-<h2>پروفایل شما</h2>
-<p>ایمیل: {{ profile.email }}</p>
-<p>کد ملی: {{ profile.code_meli }}</p>
-<p>تاریخ تولد: {{ profile.birth_date }}</p>
-<p>شغل: {{ profile.job }}</p>
-<p>کد یکتا: {{ profile.code_yekta }}</p>
-<p>آدرس: {{ profile.address }}</p>
-<p>کد پستی: {{ profile.code_posti }}</p>
+{% extends "base.html" %}
+{% load static %}
 
-<a href="#">ویرایش پروفایل</a>
+{% block content %}
+    <main class="main">
+        <section id="profile" class="section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 rtl">
+                        <div class="profile-wrapper p-4 border rounded shadow-sm">
+
+                            <div class="card-header text-white text-center py-3 rounded-top-4" style="background-color: #436e62">
+                                <h4 class="mb-0" style="color: #fff ;">پروفایل</h4>
+                            </div>
+                            <br>
+                            <br>
+                            {% if profile %}
+
+                            <div class="profile-info mb-3">
+                                <div class="row">
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>ایمیل:</strong> {{ profile.email|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>کد ملی:</strong> {{ profile.code_meli|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>تاریخ تولد:</strong> {{ profile.birth_date|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>شغل:</strong> {{ profile.job|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>کد یکتا:</strong> {{ profile.code_yekta|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>آدرس:</strong> {{ profile.address|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <p><strong>کد پستی:</strong> {{ profile.code_posti|default:"تکمیل نشده" }}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="{% url 'website_accounts:profile_edit' %}" 
+                                class="btn w-100 py-3 rounded-top-4 text-white" 
+                                style="background-color: #436e62; color: #fff; text-decoration: none; display: inline-block;">
+                                 ویرایش پروفایل
+                                </a>
+                            </div>
+
+                            {% else %}
+                                <h2>پروفایل شما هنوز ایجاد نشده است</h2>
+                                <p>برای تکمیل اطلاعات پروفایل خود، لطفاً فرم زیر را پر کنید.</p>
+                                <a href="{% url 'website_accounts:profile_edit' %}" class="btn btn-success">تکمیل پروفایل</a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

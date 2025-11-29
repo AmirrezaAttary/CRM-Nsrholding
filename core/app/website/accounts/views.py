@@ -11,38 +11,55 @@ import random
 
 @login_required
 def profile_view(request):
-    
     profile, created = UserProfile.objects.get_or_create(user=request.user)
-    return render(request, "accounts/profile_view.html", {"profile": profile})
+
+    return render(request, "accounts/profile_view.html", {
+        "profile": profile,
+        "user": request.user
+    })
 
 
 @login_required
 def profile_edit(request):
-
     profile, created = UserProfile.objects.get_or_create(user=request.user)
-    user = request.user   
+    user = request.user
 
     if request.method == "POST":
-
         form = UserProfileForm(request.POST, instance=profile)
 
         if form.is_valid():
-
             form.save()
 
-            user.first_name = request.POST.get("first_name")
-            user.last_name = request.POST.get("last_name")
+            user.first_name = form.cleaned_data['first_name']
+            user.last_name = form.cleaned_data['last_name']
             user.save()
 
             return redirect("website_accounts:profile_view")
 
     else:
-        form = UserProfileForm(instance=profile)
+        form = UserProfileForm(
+            instance=profile,
+            initial={
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+            }
+        )
 
     return render(request, "accounts/profile_edit.html", {
         "form": form,
-        "user": user,
+        "user": user,          
+        "profile": profile,
     })
+
+@login_required
+def profile_delete(request):
+    profile = request.user.profile
+
+    if request.method == "POST":
+        profile.delete()
+        return redirect("home")
+
+    return redirect("website_accounts:profile_edit")
 
 def register_view(request):
     if request.method == "POST":

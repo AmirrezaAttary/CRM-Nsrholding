@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<body class="index-page">
+<html lang="fa" dir="rtl">
 
 <head>
   <meta charset="utf-8">
@@ -55,19 +54,23 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info">
          {% if request.user.is_authenticated %}
-          <a href="{% url 'website_accounts:profile_view' %}">
-            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
-            <span class="ms-2" style="color: white;">پروفایل</span>
-          </a>
-         {% else %}
-          <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
 
-        <span class="ms-2" style="color: white;">
-            <a href="{% url 'website_accounts:register' %}" style="color:white;">افتتاح حساب</a>
-            /
-            <a href="{% url 'website_accounts:login' %}" style="color:white;">ورود به حساب</a>
-        </span>
-         {% endif %}
+                  <a href="{% url 'website_accounts:profile_view' %}">
+                      <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                      <span class="ms-2" style="color: white;">پروفایل</span>
+                  </a>
+              
+
+              {% else %}
+
+                  <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                  <span class="ms-2" style="color: white;">
+                      <a href="{% url 'website_accounts:register' %}" style="color:white;">افتتاح حساب</a>
+                      /
+                      <a href="{% url 'website_accounts:login' %}" style="color:white;">ورود به حساب</a>
+                  </span>
+
+          {% endif %}
 
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
@@ -91,10 +94,10 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="{% url 'home' %}" class="active">صفحه خانه</a></li>
+            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">صفحه خانه</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="{% url 'news_list' %}">پایگاه خبری</a></li>
-            <li><a href="{% url 'investment' %}">سرمایه گذاری</a></li>
+            <li><a href="{% url 'news_list' %}" class="{% if request.resolver_match.url_name == 'news_list' %}active{% endif %}">پایگاه خبری</a></li>
+            <li><a href="{% url 'investment' %}" class="{% if request.resolver_match.url_name == 'investment' %}active{% endif %}">سرمایه گذاری</a></li>
             <li class="dropdown"><a href="#"><span>بازرگانی</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                   <li><a href="{% url 'purchase_livestock' %}">خرید و فروش نهاد های دامی</a></li>
@@ -116,7 +119,7 @@
                   <li><a href="{% url 'animal_feed' %}">خوراک دام و طیور و آبزیان</a></li>
               </ul>
             </li>
-            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">تماس با ما</a></li>
 
             <li class="dropdown">
               <a href="#english">

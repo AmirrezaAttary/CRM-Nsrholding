@@ -25,8 +25,6 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = [
-            "first_name",
-            "last_name",
             "email",
             "code_meli",
             "birth_date",
