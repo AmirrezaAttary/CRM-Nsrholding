@@ -24,7 +24,7 @@
     <div class="row align-items-center mb-5">
       <div class="col-lg-7" data-aos="fade-right" data-aos-delay="50">
         <div class="room-header-image">
-          <img src="{{ organic_products.product_photo.url }}"
+          <img src="{% if organic_products.product_photo %}{{ organic_products.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}"
                alt="{{ organic_products.product_name }}"
                class="img-fluid rounded">
         </div>

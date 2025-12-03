@@ -37,7 +37,7 @@
               <div class="col-md-6">
                 <div class="menu-item special-item">
                   <div class="menu-item-img">
-                    <img src="{{ organic_products.product_photo.url }}" alt="Special Dish" class="img-fluid">
+                    <img src="{% if organic_products.product_photo %}{{ organic_products.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Dish" class="img-fluid">
                   </div>
                   <div class="menu-item-content">
                     <h4><a href="{% url 'organic_products_detail' organic_products.id %}">{{ organic_products.product_name }}</a></h4>

@@ -14,7 +14,14 @@ from .models import (News, PurchaseLivestock, OrganicProducts, AnimalFeedKhoshab
 # Create your views here.
 
 def index_view(request):
-    return render(request, 'index.html')
+    latest_news = News.objects.filter(is_active=True).order_by('-published_date')[:3]
+    latest_livestock = PurchaseLivestock.objects.order_by('-published_date')[:3]
+    latest_organic = OrganicProducts.objects.order_by('-published_date')[:3]
+    return render(request, 'index.html', {
+        'latest_news': latest_news,
+        'latest_livestock': latest_livestock,
+        'latest_organic': latest_organic,
+    })
 
 def about_view(request):
     return render(request, 'about.html')
