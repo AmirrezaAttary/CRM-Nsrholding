@@ -75,7 +75,7 @@ class CustomUserAdmin(UserAdmin):
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = (
-        "user",          
+        "user",
         "get_first_name",
         "get_last_name",
         "email",
@@ -84,15 +84,19 @@ class UserProfileAdmin(admin.ModelAdmin):
         "created_at",
         "updated_at",
     )
+
     search_fields = (
-        "user__phone_number",  
+        "user__phone_number",
         "user__first_name",
         "user__last_name",
         "email",
         "code_meli",
     )
+
     list_filter = ("job",)
-    readonly_fields = ("created_at", "updated_at")
+
+    readonly_fields = ("created_at", "updated_at", "get_first_name", "get_last_name")
+
     fieldsets = (
         ("اطلاعات کاربر", {
             "fields": ("user", "get_first_name", "get_last_name")
