@@ -98,8 +98,8 @@ class UserProfile(models.Model):
     created_at = jmodels.jDateField(auto_now_add=True) 
     updated_at = jmodels.jDateField(auto_now=True)
 
-    def __str__(self):
-        return f"{self.user.phone_number} Profile"
+    # def __str__(self):
+    #     return f"{self.user.phone_number} Profile"
     
 class PhoneOTP(models.Model):
     phone = models.CharField(max_length=11)
