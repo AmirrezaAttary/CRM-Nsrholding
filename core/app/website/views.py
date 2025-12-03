@@ -103,12 +103,6 @@ def investment_view(request):
 
     return render(request, "investment.html", {"form": form})
 
-def location_view(request):
-    return render(request, 'location.html')
-
-def rooms_view(request):
-    return render(request, 'rooms.html')
-
 def animal_feed_view(request):
     return render(request, 'animal_feed.html')
 

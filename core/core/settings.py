@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Sitemap generation
+    'django.contrib.sitemaps',
+    'django.contrib.sites',  
     # To convert solar date to Gregorian date
     'django_jalali',
     # created apps
@@ -53,6 +56,8 @@ INSTALLED_APPS = [
     # API documentation
     'drf_yasg',
 ]
+
+SITE_ID = 2
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
