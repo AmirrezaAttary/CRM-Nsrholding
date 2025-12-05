@@ -55,6 +55,8 @@ sitemaps = {
     'plant_refinery': PlantRefinerySitemap,
 }
 
+handler404 = 'app.website.views.custom_404'
+
 urlpatterns = [
     path('', include('app.website.urls')),
     path('accounts/api/', include('app.accounts.urls')),

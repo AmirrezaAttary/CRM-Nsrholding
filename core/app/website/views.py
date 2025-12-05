@@ -23,6 +23,9 @@ def index_view(request):
         'latest_organic': latest_organic,
     })
 
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
 def about_view(request):
     return render(request, 'about.html')
 
