@@ -22,6 +22,12 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
+from app.website.sitemaps import (StaticViewSitemap, NewsSitemap, PurchaseLivestockSitemap,
+    OrganicProductsSitemap, AnimalFeedKhoshabSitemap,
+    MotherChickenFarmSitemap, LayingHenSitemap,
+    SupplyingLivestockSitemap, AnimalRefinerySitemap,
+    PlantRefinerySitemap)
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -36,6 +42,21 @@ schema_view = get_schema_view(
    permission_classes=(permissions.AllowAny,),
 )
 
+sitemaps = {
+    'static': StaticViewSitemap,
+    'news': NewsSitemap,
+    'purchase_livestock': PurchaseLivestockSitemap,
+    'organic_products': OrganicProductsSitemap,
+    'animal_feed_khoshab': AnimalFeedKhoshabSitemap,
+    'mother_chicken_farm': MotherChickenFarmSitemap,
+    'laying_hen': LayingHenSitemap,
+    'supplying_livestock': SupplyingLivestockSitemap,
+    'animal_refinery': AnimalRefinerySitemap,
+    'plant_refinery': PlantRefinerySitemap,
+}
+
+handler404 = 'app.website.views.custom_404'
+
 urlpatterns = [
     path('', include('app.website.urls')),
     path('accounts/api/', include('app.accounts.urls')),
@@ -44,6 +65,7 @@ urlpatterns = [
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
 
 if settings.DEBUG:

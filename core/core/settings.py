@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_mh2#t+9rk^^id%-mr(87z3!5iw%801q0w6xe9i6px-2gjfs%-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["www.nsrholding.com","nsrholding.com"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Sitemap generation
+    'django.contrib.sitemaps',
+    'django.contrib.sites',  
     # To convert solar date to Gregorian date
     'django_jalali',
     # created apps
@@ -53,6 +56,8 @@ INSTALLED_APPS = [
     # API documentation
     'drf_yasg',
 ]
+
+SITE_ID = 2
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -145,7 +150,12 @@ SMSLINENUMBER = "30004007672729"
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/home/nsrholdi/public_html/static"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # STATICFILES_DIRS = [

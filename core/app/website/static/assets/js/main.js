@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
     Swal.fire({
       text: text,
       icon: icon || 'info',
-      title: 'notification',
-      confirmButtonText: 'ok',
+      title: 'اعلان',
+      confirmButtonText: 'باشه',
     });
   }
 });

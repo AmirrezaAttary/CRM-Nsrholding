@@ -23,6 +23,9 @@ def index_view(request):
         'latest_organic': latest_organic,
     })
 
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
 def about_view(request):
     return render(request, 'about.html')
 
@@ -102,12 +105,6 @@ def investment_view(request):
         form = ContactRequestForm()
 
     return render(request, "investment.html", {"form": form})
-
-def location_view(request):
-    return render(request, 'location.html')
-
-def rooms_view(request):
-    return render(request, 'rooms.html')
 
 def animal_feed_view(request):
     return render(request, 'animal_feed.html')
