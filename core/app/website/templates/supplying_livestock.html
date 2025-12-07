@@ -28,7 +28,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{{ obj.image.url }}" alt="Special Offer" class="img-fluid">
+                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
               </div>
               <div class="offer-content rtl">
                 <h3>{{ obj.title }}</h3>

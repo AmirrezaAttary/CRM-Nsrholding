@@ -142,25 +142,34 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+# Global Header (Optimized & No-Shake on Scroll)
 --------------------------------------------------------------*/
 .header {
   --background-color: #436e62;
   --heading-color: #ffffff;
+
   color: var(--default-color);
-  transition: all 0.5s;
-  z-index: 997;
   background-color: var(--background-color);
+
+  transition: background-color 0.5s, box-shadow 0.5s;
+  z-index: 997;
 }
 
+/* ---------------------------
+   Topbar (Fixed – No Shake)
+---------------------------- */
 .header .topbar {
   background-color: var(--background-color);
-  height: 40px;
+  height: 40px;        
   padding: 0;
   font-size: 14px;
-  transition: all 0.5s;
+  transition: opacity 0.4s ease; 
+  opacity: 1;
 }
 
+/* ---------------------------
+   Contact Info
+---------------------------- */
 .header .topbar .contact-info i {
   font-style: normal;
   color: var(--contrast-color);
@@ -170,19 +179,14 @@ h6 {
 .header .topbar .contact-info i span {
   padding-left: 5px;
   color: var(--contrast-color);
+  transition: color 0.3s;
 }
 
 @media (max-width: 575px) {
-
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
     font-size: 13px;
   }
-}
-
-.header .topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
 }
 
 .header .topbar .contact-info i a:hover {
@@ -190,17 +194,23 @@ h6 {
   text-decoration: underline;
 }
 
+/* ---------------------------
+   Social Links
+---------------------------- */
 .header .topbar .social-links a {
   color: color-mix(in srgb, var(--contrast-color), transparent 40%);
   line-height: 0;
-  transition: 0.3s;
   margin-left: 20px;
+  transition: color 0.3s;
 }
 
 .header .topbar .social-links a:hover {
   color: var(--contrast-color);
 }
 
+/* ---------------------------
+   Branding / Logo Area
+---------------------------- */
 .header .branding {
   min-height: 60px;
   padding: 10px 0;
@@ -222,14 +232,11 @@ h6 {
   color: var(--heading-color);
 }
 
+/* ---------------------------
+   Header Shadow When Scrolled
+---------------------------- */
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-.scrolled .header .topbar {
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
