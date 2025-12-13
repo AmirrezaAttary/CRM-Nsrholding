@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -8,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">خوراک دام خوشاب</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "خوراک دام خوشاب" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "home" %}">صفحه خانه</a></li>
-            <li class="current">خوراک دام خوشاب</li>
+            <li><a href="{% url "home" %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "خوراک دام خوشاب" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,22 +21,198 @@
 
     <!-- Offers Section -->
     <section id="offers" class="offers section">
-      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;" >زنجیره طلایی خوراک دام خوشاب</h1>
+      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;" >{% trans "زنجیره طلایی خوراک دام خوشاب" %}</h1>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          {% for obj in animal_feed_khoshab %}
+
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
               </div>
-              <div class="offer-content rtl">
-                <h3>{{ obj.title }}</h3>
-                <p>{{ obj.description }}</p>
+              <div class="offer-content">
+                <p>{% trans "در دنیای امروز، امنیت غذایی و تغذیه سالم دام، طیور و آبزیان، به‌عنوان یکی از ارکان مهم توسعه اقتصادی و کشاورزی کشورها شناخته می‌شود. تأمین خوراک باکیفیت و استاندارد نه‌تنها نقش مستقیمی در بهره‌وری و سلامت دام‌ها و طیور دارد، بلکه در نهایت بر زنجیره تولید پروتئین و تأمین مواد غذایی سالم برای جامعه نیز تأثیرگذار است. طرح (خوشاب، زنجیره طلایی خوراک دام، طیور، آبزیان و حیوانات خانگی) یک پروژه صنعتی پیشرو است که در راستای این نیاز اساسی، با بهره‌گیری از فناوری‌های روز دنیا و دانش بومی، در شهرک صنعتی شهرستان خوشاب اجرا خواهد شد." %}</p>
               </div>
-            </div><!-- End Offer Card -->
+            </div>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "ضرورت و اهمیت طرح" %}</h4>
+                <p>{% trans "این پروژه نه‌تنها به تأمین نیاز داخلی کشور کمک می‌کند، بلکه با صادرات محصولات خود به کشورهای منطقه، می‌تواند منبع درآمد ارزی قابل‌توجهی ایجاد کند. همچنین، ایجاد اشتغال پایدار، کاهش وابستگی به واردات، و استفاده از ضایعات کشاورزی و فرآوری آن‌ها به محصولات با ارزش افزوده، از دیگر مزایای اجرای این طرح خواهد بود." %}</p>
+                <p>{% trans "شرکت (راه ابریشم نو مسیر توسعه تحول جهانی)، علاوه بر احداث این کارخانه، در حال اجرای بزرگ‌ترین مزرعه مرغ مادر کشور و واحدهای پرورش میگوی گلخانه‌ای است. این زنجیره تولید، نیاز مبرمی به خوراک باکیفیت و استاندارد دارد، که این کارخانه آن را تأمین خواهد کرد." %}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "اهداف طرح" %}</h4>
+
+                <p>{% trans "این پروژه با اهداف متعددی در بخش‌های اقتصادی، اجتماعی و زیست‌محیطی طراحی شده است که مهم‌ترین آن‌ها عبارتند از:" %}</p>
+
+                <h4>{% trans "اهداف اقتصادی:" %}</h4>
+
+                <p>{% trans "1. تولید سالانه 150 هزار تن خوراک دام، طیور، آبزیان و حیوانات خانگی" %}</p>
+                <p>{% trans "2. افزایش بهره‌وری و کاهش هزینه‌های تولید در صنعت دام و طیور از طریق تأمین خوراک با کیفیت" %}</p>
+                <p>{% trans "3. ایجاد اشتغال مستقیم برای 20 نفر و اشتغال غیرمستقیم برای 100 نفر در بخش‌های تولید، حمل‌ونقل، بازاریابی و فروش" %}</p>
+                <p>{% trans "4. کاهش وابستگی به واردات خوراک دام و طیور و تأمین نیاز داخلی با استانداردهای بین‌المللی" %}</p>
+                <p>{% trans "5. افزایش ظرفیت صادراتی کشور و جذب بازارهای هدف در منطقه" %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "اهداف اجتماعی:" %}</h4>
+
+                <p>{% trans "1. توسعه پایدار و افزایش فرصت‌های شغلی در منطقه خوشاب" %}</p>
+                <p>{% trans "2. بهبود کیفیت محصولات پروتئینی از طریق تغذیه سالم دام و طیور" %}</p>
+                <p>{% trans "3. مشارکت در آموزش و توسعه علمی در صنعت خوراک دام از طریق راه‌اندازی مرکز پژوهش و آزمایشگاه" %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "اهداف زیست‌محیطی:" %}</h4>
+
+                <p>{% trans "1. استفاده بهینه از ضایعات تولیدی در کارخانه‌های خوراک دام و طیور برای تولید غذای حیوانات خانگی مانند سگ، گربه و اسب" %}</p>
+                <p>{% trans "2. کاهش آلایندگی و استفاده از فناوری‌های نوین در تولید خوراک" %}</p>
+                <p>{% trans "3. بهره‌گیری از روش‌های زیست‌فناورانه مانند استفاده از میکروارگانیسم‌ها برای تولید خوراک طیور" %}</p>
+                <p>{% trans "4. مدیریت صحیح پسماندها و تبدیل آن‌ها به محصولات قابل استفاده" %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "فرآیند تولید و فناوری‌های مورد استفاده" %}</h4>
+
+                <p>{% trans "کارخانه خوشاب از جدیدترین روش‌ها و فناوری‌های تولید خوراک بهره خواهد برد. فرآیند تولید شامل مراحل زیر است:" %}</p>
+
+                <p>{% trans "1. انتخاب و آماده‌سازی مواد اولیه: استفاده از دانه‌های غلات، پروتئین‌های گیاهی و حیوانی، مواد معدنی و افزودنی‌های مغذی" %}</p>
+                <p>{% trans "2. آسیاب کردن: تبدیل مواد اولیه به ذرات ریز برای ترکیب بهتر" %}</p>
+                <p>{% trans "3. فرآوری حرارتی: بهبود کیفیت تغذیه‌ای و افزایش قابلیت هضم خوراک" %}</p>
+                <p>{% trans "4. پلتینگ (Pelleting): شکل‌دهی خوراک به فرم پلت برای بهبود مصرف و کاهش ضایعات" %}</p>
+                <p>{% trans "5. خشک‌کردن و بسته‌بندی: اطمینان از ماندگاری بالا و کاهش رطوبت محصول نهایی" %}</p>
+                <p>{% trans "6. کنترل کیفیت: انجام آزمایش‌های دقیق در آزمایشگاه پژوهشی کارخانه" %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <p>{% trans "استفاده از میکروارگانیسم‌های مفید برای افزایش ارزش تغذیه‌ای خوراک طیور و بهره‌گیری از فناوری زیست‌فناورانه در تولید کیتوزان از پوست سخت‌پوستان، از نوآوری‌های این طرح محسوب می‌شوند." %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+
+                <h4>{% trans "محصولات کارخانه" %}</h4>
+
+                <p>{% trans "1. خوراک دام (گاو، گوسفند و بز): متناسب با نیازهای تغذیه‌ای و فیزیولوژیکی دام" %}</p>
+                <p>{% trans "2. خوراک طیور (مرغ گوشتی، مرغ تخم‌گذار، بوقلمون و بلدرچین): دارای ترکیبات مغذی و مکمل‌های ضروری" %}</p>
+                <p>{% trans "3. خوراک آبزیان (ماهی، میگو و آبزیان زینتی): با فرمولاسیون علمی و متناسب با نیازهای رشد" %}</p>
+                <p>{% trans "4. خوراک حیوانات خانگی (سگ، گربه، اسب): تولید شده از ضایعات خوراک دام و طیور با ارزش غذایی بالا" %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "مطالعات بازار و تحلیل رقابتی" %}</h4>
+                <p>{% trans "بررسی‌های انجام شده نشان می‌دهد که بازار خوراک دام و طیور ایران همواره با چالش‌هایی مانند وابستگی به واردات، نوسانات قیمت مواد اولیه و کمبود کیفیت در برخی محصولات داخلی مواجه بوده است. این پروژه با تمرکز بر تولید داخلی با استانداردهای بالا و قیمت رقابتی، می‌تواند جایگاه ویژه‌ای در بازار به دست آورد." %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "مزایای رقابتی کارخانه خوشاب" %}</h4>
+
+                <p>{% trans "1. استفاده از مواد اولیه باکیفیت داخلی و خارجی برای تولید محصولاتی با ارزش غذایی بالا" %}</p>
+                <p>{% trans "2. بهره‌گیری از فناوری‌های مدرن مانند میکروارگانیسم‌ها و فرایندهای زیستی" %}</p>
+                <p>{% trans "3. امکان صادرات به کشورهای همسایه و رقابت در بازارهای بین‌المللی" %}</p>
+                <p>{% trans "4. استفاده از ضایعات تولیدی برای کاهش هزینه‌ها و تولید خوراک حیوانات خانگی" %}</p>
+                <p>{% trans "5. راه‌اندازی آزمایشگاه و مرکز تحقیقاتی برای کنترل کیفیت و نوآوری در فرمولاسیون خوراک" %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+
+                <h4>{% trans "تأثیرات اقتصادی و اشتغال‌زایی" %}</h4>
+
+                <p>{% trans "این پروژه در سه سطح ملی، منطقه‌ای و بین‌المللی تأثیرات مثبتی خواهد داشت. از نظر اشتغال‌زایی، به‌طور مستقیم حدود 20 نفر در کارخانه مشغول به کار خواهند شد و حدود 100 نفر به‌صورت غیرمستقیم در حوزه‌های حمل‌ونقل، بازاریابی و توزیع، شغل ایجاد می‌شود." %}</p>
+
+                <p>{% trans "از نظر اقتصادی، این کارخانه با کاهش وابستگی به واردات، توسعه زنجیره تأمین داخلی و افزایش صادرات، می‌تواند نقش مهمی در رشد صنعت کشاورزی و دامپروری کشور ایفا کند." %}</p>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <p>{% trans "طرح (خوشاب، زنجیره طلایی خوراک دام، طیور، آبزیان و حیوانات خانگی) یک پروژه جامع و مدرن است که با هدف تولید خوراک باکیفیت، استفاده از تکنولوژی‌های نوین و ایجاد ارزش افزوده از ضایعات تولیدی اجرا می‌شود. این کارخانه نه‌تنها می‌تواند نیاز داخلی کشور را برطرف کند، بلکه ظرفیت بالایی برای صادرات و رقابت در بازارهای جهانی دارد." %}</p>
+
+                <p>{% trans "با سرمایه‌گذاری در این پروژه، گامی بزرگ در جهت خودکفایی، توسعه پایدار و ارتقای صنعت دامپروری کشور برداشته خواهد شد." %}</p>
+              </div>
+            </div>
+          </div>
+          
         </div>
 
       </div>

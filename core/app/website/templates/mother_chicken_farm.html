@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block content %}
 
   <main class="main">
@@ -8,11 +8,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">مزرعه مرغ مادر</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "مزرعه مرغ مادر" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "home" %}">صفحه خانه</a></li>
-            <li class="current">مزرعه مرغ مادر</li>
+            <li><a href="{% url "home" %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "مزرعه مرغ مادر" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,22 +20,254 @@
 
     <!-- Offers Section -->
     <section id="offers" class="offers section">
-      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;" >بزرگ‌ترین مزرعه مرغ مادر و جوجه یک‌روزه کشور​​​​​​​</h1>
+      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;">{% trans "بزرگ‌ترین مزرعه مرغ مادر و جوجه یک‌روزه کشور​​​​​​​" %}​​​​​​</h1>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          {% for obj in mother_chicken_farm %}
+
+          
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
               </div>
-              <div class="offer-content rtl">
-                <h3>{{ obj.title }}</h3>
-                <p>{{ obj.description }}</p>
+              <div class="offer-content">
+                <p>{% trans "با رشد جمعیت و افزایش تقاضا برای محصولات پروتئینی، صنعت پرورش طیور به یکی از ارکان مهم تأمین امنیت غذایی کشور تبدیل شده است. در این میان، تأمین جوجه یک‌روزه باکیفیت و مقاوم، تأثیر مستقیمی بر عملکرد مزارع پرورش مرغ گوشتی و تخم‌گذار دارد. (بزرگ‌ترین مزرعه مرغ مادر و تولید جوجه یک‌روزه کشور در خوشاب) یک پروژه ملی و استراتژیک است که با هدف تأمین نیاز داخلی و توسعه ظرفیت صادراتی کشور طراحی شده است. این مزرعه در شهرک صنعتی شهرستان خوشاب احداث خواهد شد و با بهره‌گیری از دانش فنی روز و زیرساخت‌های پیشرفته، نقش مهمی در تأمین زنجیره تولید گوشت مرغ و تخم‌مرغ کشور ایفا خواهد کرد." %}</p>
               </div>
-            </div><!-- End Offer Card -->
+            </div>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "ضرورت و اهمیت طرح" %}</h4>
+                <p>{% trans "ایران یکی از بزرگ‌ترین تولیدکنندگان گوشت مرغ در منطقه است، اما تأمین جوجه یک‌روزه باکیفیت همواره یکی از چالش‌های اساسی این صنعت بوده است. وابستگی برخی مزارع به واردات جوجه یک‌روزه و نوسانات قیمتی، تولیدکنندگان را با مشکلات متعددی مواجه کرده است. در این شرایط، احداث مزرعه‌ای بزرگ و مدرن برای تولید جوجه یک‌روزه مقاوم، سالم و استاندارد، نه‌تنها نیاز داخلی را تأمین می‌کند، بلکه امکان توسعه صادرات به کشورهای منطقه را نیز فراهم می‌سازد." %}</p>
+              </div>
+              </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "اهداف پروژه" %}</h4>
+                  <h6>{% trans "اهداف کوتاه‌مدت" %}</h6>
+
+                  <p>{% trans "1. احداث یک مجموعه مدرن و صنعتی برای پرورش مرغ مادر" %}</p>
+                  <p>{% trans "2. تجهیز مزرعه به سیستم‌های پیشرفته کنترل شرایط محیطی و بهداشتی" %}</p>
+                  <p>{% trans "3. تولید جوجه یک‌روزه با نژادهای اصلاح‌شده و مقاوم در برابر بیماری‌ها" %}</p>
+                  <p>{% trans "4. راه‌اندازی آزمایشگاه کنترل کیفیت و سیستم‌های مدیریت ژنتیکی برای بهبود عملکرد گله‌های مادر" %}</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+              <div class="offer-content">
+                <h4>{% trans "مزایای اجرای این پروژه" %}</h4>
+
+                <p>{% trans "1. کاهش وابستگی به واردات جوجه یک‌روزه و تأمین نیاز مزارع داخلی" %}</p>
+                <p>{% trans "2. افزایش بهره‌وری صنعت طیور از طریق تولید جوجه‌های مقاوم و استاندارد" %}</p>
+                <p>{% trans "3. ایجاد اشتغال پایدار در منطقه خوشاب و توسعه اقتصادی محلی" %}</p>
+                <p>{% trans "4. افزایش توان رقابتی ایران در بازارهای منطقه‌ای و بین‌المللی" %}</p>
+                <p>{% trans "5. بهبود امنیت غذایی کشور و کاهش نوسانات بازار مرغ و تخم‌مرغ" %}</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "اهداف بلندمدت" %}</h4>
+
+                  <p>{% trans "1. تأمین حدود 30 درصد از نیاز داخلی به جوجه یک‌روزه" %}</p>
+                  <p>{% trans "2. توسعه ظرفیت صادرات جوجه یک‌روزه به کشورهای منطقه مانند عراق، افغانستان، ترکمنستان و سایر کشورهای حاشیه خلیج فارس" %}</p>
+                  <p>{% trans "3. کاهش هزینه‌های تولید گوشت مرغ و تخم‌مرغ از طریق افزایش کیفیت جوجه‌های تولیدی" %}</p>
+                  <p>{% trans "4. ایجاد یک زنجیره پایدار تولید شامل مزرعه مرغ مادر، واحد جوجه‌کشی، و کارخانه تولید خوراک اختصاصی" %}</p>
+                  <p>{% trans "5. مشارکت در تحقیقات اصلاح نژاد و توسعه سویه‌های جدید طیور برای بهبود عملکرد و کاهش مصرف دان" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "فرآیند مرغ‌ها و مشخصات فنی پروژه" %}</h4>
+
+                  <h4>{% trans "ظرفیت تولید" %}</h4>
+                  <p>{% trans "1. بیش از 500 هزار قطعه مرغ مادر در دوره" %}</p>
+                  <p>{% trans "2. تولید سالانه حدود 100 میلیون قطعه جوجه یک‌روزه" %}</p>
+
+                  <h4>{% trans "زیرساخت‌های پروژه" %}</h4>
+                  <p>{% trans "1. زمین مورد نیاز: بیش از 20 هکتار زمین در شهرک صنعتی خوشاب" %}</p>
+                  <p>{% trans "2. سالن‌های پرورش: چندین سالن مجهز به سیستم‌های تهویه، گرمایش و سرمایش هوشمند" %}</p>
+                  <p>{% trans "3. واحدهای جوجه‌کشی: با ظرفیت تولید بالا و استفاده از دستگاه‌های پیشرفته هچری" %}</p>
+                  <p>{% trans "4. آزمایشگاه ژنتیک و کنترل کیفیت: برای پایش سلامت و بهبود ویژگی‌های نژادی مرغ‌های مادر" %}</p>
+                  <p>{% trans "5. بخش مدیریت و آموزش: جهت تربیت نیروی متخصص در زمینه مدیریت پرورش طیور" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "فناوری‌های مورد استفاده" %}</h4>
+
+                  <p>{% trans "1. سیستم‌های اتوماسیون: استفاده از سیستم‌های خودکار برای کنترل دما، رطوبت و تهویه در سالن‌های پرورش" %}</p>
+                  <p>{% trans "2. دستگاه‌های جوجه‌کشی پیشرفته: این دستگاه‌ها با دقت بالا، شرایط بهینه برای رشد جنین را فراهم می‌کنند" %}</p>
+                  <p>{% trans "3. مدیریت هوشمند: استفاده از نرم‌افزارهای مدیریتی برای نظارت بر عملکرد مرغ‌های مادر و جوجه‌ها" %}</p>
+                  <p>{% trans "4. فناوری‌های زیست‌محیطی: سیستم‌های تصفیه هوا و مدیریت پسماند برای کاهش آلایندگی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "فرآیند تولید جوجه یک‌روزه" %}</h4>
+
+                  <p>{% trans "تولید جوجه یک‌روزه یک فرآیند چندمرحله‌ای است که از انتخاب مرغ‌های مادر تا انتقال جوجه‌ها به بازار ادامه دارد." %}</p>
+
+                  <h4>{% trans "1. انتخاب و پرورش مرغ‌های مادر" %}</h4>
+                  <p>{% trans "انتخاب نژادهای با عملکرد بالا، مقاومت ژنتیکی مناسب و راندمان تولیدی برتر" %}</p>
+                  <p>{% trans "پرورش مرغ‌های مادر در شرایط کاملاً استاندارد و نظارت‌شده" %}</p>
+                  <p>{% trans "تنظیم برنامه‌های تغذیه‌ای و بهداشتی برای بهبود کیفیت تخم‌های نطفه‌دار" %}</p>
+
+                  <h4>{% trans "2. جمع‌آوری و ذخیره‌سازی تخم‌های نطفه‌دار" %}</h4>
+                  <p>{% trans "جمع‌آوری روزانه تخم‌های نطفه‌دار از سالن‌های مرغ مادر" %}</p>
+                  <p>{% trans "ذخیره‌سازی در شرایط استاندارد دما و رطوبت برای حفظ قابلیت جوجه‌کشی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "3. فرآیند جوجه‌کشی" %}</h4>
+                  <p>{% trans "قرار دادن تخم‌های نطفه‌دار در دستگاه‌های ستر و هچر" %}</p>
+                  <p>{% trans "کنترل دما، رطوبت و تهویه برای افزایش درصد جوجه‌درآوری" %}</p>
+                  <p>{% trans "پایش سلامت و کیفیت جوجه‌ها قبل از انتقال به بازار" %}</p>
+
+                  <h4>{% trans "4. انتقال و توزیع جوجه‌های یک‌روزه" %}</h4>
+                  <p>{% trans "بسته‌بندی استاندارد و حمل‌ونقل جوجه‌ها به مزارع پرورش گوشتی و تخم‌گذار" %}</p>
+                  <p>{% trans "ارائه تضمین کیفیت برای اطمینان از سلامت و عملکرد مناسب جوجه‌ها" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "تحلیل بازار و رقابت" %}</h4>
+
+                  <p>{% trans "با توجه به افزایش تقاضا برای گوشت مرغ و تخم‌مرغ، تولید جوجه یک‌روزه از اهمیت ویژه‌ای برخوردار است." %}</p>
+
+                  <p>{% trans "در حال حاضر، بسیاری از مزارع داخلی وابسته به تولیدکنندگان محدود داخلی یا واردات هستند که این وابستگی مشکلاتی از قبیل نوسانات قیمت و محدودیت‌های بهداشتی را ایجاد کرده است." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "مزیت‌های رقابتی مزرعه خوشاب:" %}</h4>
+
+                  <p>{% trans "1. استفاده از نژادهای اصلاح‌شده و مقاوم در برابر بیماری‌ها" %}</p>
+
+                  <p>{% trans "2. افزایش ظرفیت تولید و پاسخگویی به نیاز داخلی و صادراتی" %}</p>
+
+                  <p>{% trans "3. بهره‌گیری از فناوری‌های پیشرفته جوجه‌کشی و کاهش تلفات" %}</p>
+
+                  <p>{% trans "4. کنترل کیفیت و نظارت بهداشتی دقیق برای افزایش راندمان جوجه‌های تولیدی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "مزایای اقتصادی و اشتغال‌زایی" %}</h4>
+
+                  <p>{% trans "1. اشتغال مستقیم برای بیش از 100 نفر در بخش‌های تولید، جوجه‌کشی و مدیریت" %}</p>
+
+                  <p>{% trans "2. اشتغال غیرمستقیم برای بیش از 500 نفر در بخش‌های حمل‌ونقل، توزیع و فروش" %}</p>
+
+                  <p>{% trans "3. افزایش بهره‌وری صنعت مرغداری کشور و کاهش هزینه‌های تولید" %}</p>
+
+                  <p>{% trans "4. حفظ و تقویت جایگاه ایران در بازارهای منطقه‌ای" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "چالش ها و راهکارها" %}</h4>
+
+                  <p>{% trans "1. کنترل بیماری‌ها: احداث قرنطینه‌های استاندارد و پایش دقیق سلامت گله‌ها" %}</p>
+
+                  <p>{% trans "2. تأمین نهاده‌های دامی: تولید بخشی از خوراک طیور در زنجیره تأمین داخلی" %}</p>
+
+                  <p>{% trans "3. نوسانات بازار: انعقاد قراردادهای پایدار با تولیدکنندگان داخلی و خارجی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "نتیجه گیری" %}</h4>
+
+                <p>{% trans "پروژه (بزرگ‌ترین مزرعه مرغ مادر و جوجه یک‌روزه کشور در خوشاب) یکی از مهم‌ترین گام‌ها در توسعه صنعت طیور ایران است. با احداث این مزرعه، ظرفیت تولید جوجه یک‌روزه به میزان قابل‌توجهی افزایش یافته و نیاز داخلی به‌طور کامل تأمین خواهد شد. علاوه بر این، ظرفیت صادراتی کشور تقویت شده و ایران می‌تواند به یکی از صادرکنندگان بزرگ منطقه در حوزه جوجه یک‌روزه تبدیل شود." %}</p>
+
+                <p>{% trans "1. افزایش بهره‌وری در صنعت طیور" %}</p>
+                <p>{% trans "2. ایجاد اشتغال پایدار" %}</p>
+                <p>{% trans "3. کاهش وابستگی به واردات" %}</p>
+                <p>{% trans "4. توسعه صادرات و ارزآوری برای کشور" %}</p>
+
+                <p>{% trans "اجرای این پروژه، تحولی اساسی در صنعت مرغداری ایران ایجاد کرده و امنیت غذایی کشور را بیش‌ازپیش تقویت خواهد کرد." %}</p>
+                </div>
+            </div>
+          </div>
+          
         </div>
 
       </div>

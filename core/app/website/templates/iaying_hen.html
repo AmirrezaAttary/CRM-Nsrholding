@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -8,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">مجموعه مرغ تخم گذار</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "مجموعه مرغ تخم گذار" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "home" %}">صفحه خانه</a></li>
-            <li class="current">مجموعه مرغ تخم گذار</li>
+            <li><a href="{% url "home" %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "مجموعه مرغ تخم گذار" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,22 +21,247 @@
 
     <!-- Offers Section -->
     <section id="offers" class="offers section">
-      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;" >بزرگ‌ترین مجموعه مرغ تخم گذار کشور</h1>
+      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;" >{% trans "بزرگ‌ترین مجموعه مرغ تخم گذار کشور" %}</h1>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          {% for obj in iaying_hen %}
+
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
               </div>
-              <div class="offer-content rtl">
-                <h3>{{ obj.title }}</h3>
-                <p>{{ obj.description }}</p>
-              </div>
-            </div><!-- End Offer Card -->
+                <div class="offer-content rtl">
+                  <p>{% trans "با توجه به اهمیت تأمین پروتئین و نقش تخم‌مرغ به‌عنوان یکی از مهم‌ترین منابع تغذیه‌ای در سبد خانوار، ایجاد بزرگ‌ترین مجموعه مرغ تخم‌گذار کشور با ظرفیت یک‌میلیون قطعه و تولید روزانه یک‌میلیون عدد تخم‌مرغ، گامی اساسی در راستای تأمین نیاز داخلی، کاهش وابستگی به واردات، و توسعه ظرفیت‌های صادراتی محسوب می‌شود. این مجموعه که در شهرستان خوشاب احداث خواهد شد، به‌عنوان یکی از بزرگ‌ترین و مدرن‌ترین مزارع تولید تخم‌مرغ در منطقه، استانداردهای جهانی را در تولید، بهداشت و بسته‌بندی رعایت خواهد کرد." %}</p>
+
+                  <p>{% trans "در این گزارش، جنبه‌های مختلف این پروژه شامل اهمیت، اهداف، فرآیند تولید، تحلیل بازار، زیرساخت‌ها، چالش‌ها و مزایای اقتصادی مورد بررسی قرار می‌گیرد." %}</p>
+                </div>
+            </div>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "ضرورت و اهمیت طرح" %}</h4>
+
+                  <p>{% trans "تخم‌مرغ به‌عنوان یکی از ارزان‌ترین و غنی‌ترین منابع پروتئین، نقش حیاتی در امنیت غذایی کشور دارد. طبق آمار، ایران سالانه بیش از یک میلیون تن تخم‌مرغ تولید می‌کند و از جمله تولیدکنندگان بزرگ این محصول در منطقه است. اما همچنان با چالش‌هایی همچون نوسانات قیمت، کمبود عرضه، وابستگی برخی مناطق به واردات، و نیاز به بهبود کیفیت تولید مواجه هستیم." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "مزایای اجرای این پروژه:" %}</h4>
+
+                  <p>{% trans "1. افزایش ظرفیت تولید داخلی و جلوگیری از کمبود تخم‌مرغ در کشور" %}</p>
+                  <p>{% trans "2. حذف وابستگی به واردات و افزایش توان صادراتی ایران" %}</p>
+                  <p>{% trans "3. کاهش قیمت تمام‌شده تخم‌مرغ و تأمین نیاز بازار با قیمت مناسب" %}</p>
+                  <p>{% trans "4. ایجاد اشتغال پایدار برای صدها نفر در منطقه خوشاب" %}</p>
+                  <p>{% trans "5. افزایش کیفیت تخم‌مرغ تولیدی با رعایت استانداردهای بهداشتی جهانی" %}</p>
+                  <p>{% trans "6. استفاده از فناوری‌های نوین برای کاهش تلفات و افزایش بهره‌وری" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "اهداف پروژه" %}</h4>
+
+                  <h4>{% trans "اهداف کوتاه‌مدت:" %}</h4>
+
+                  <p>{% trans "1. احداث یک مجموعه صنعتی مدرن با ظرفیت یک‌میلیون قطعه مرغ تخم‌گذار" %}</p>
+                  <p>{% trans "2. تولید روزانه یک‌میلیون عدد تخم‌مرغ با کیفیت بالا" %}</p>
+                  <p>{% trans "3. ایجاد زیرساخت‌های استاندارد پرورش طیور شامل سالن‌های اتوماتیک، تهویه پیشرفته و سیستم‌های تغذیه‌ای بهینه" %}</p>
+                  <p>{% trans "4. کاهش هزینه‌های تولید از طریق مدیریت بهینه خوراک، انرژی و نیروی انسانی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "اهداف بلند مدت:" %}</h4>
+
+                  <p>{% trans "1. تبدیل شدن به قطب اصلی تأمین تخم‌مرغ کشور و منطقه" %}</p>
+                  <p>{% trans "2. توسعه ظرفیت صادرات به کشورهای همسایه همچون عراق، افغانستان، کشورهای حوزه خلیج فارس و آسیای میانه" %}</p>
+                  <p>{% trans "3. ایجاد یک زنجیره تأمین پایدار شامل پرورش پولت (مرغ جوان)، کارخانه خوراک اختصاصی و واحد بسته‌بندی و توزیع" %}</p>
+                  <p>{% trans "4. ارتقای استانداردهای تولید و کاهش بیماری‌های رایج در مزارع طیور" %}</p>
+                  <p>{% trans "5. مشارکت در تحقیقات ژنتیکی و بهبود نژادهای مرغ تخم‌گذار برای افزایش راندمان تولید" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "فرآیند مرغ‌های مشخصات فنی پروژه" %}</h4>
+
+                  <p>{% trans "ظرفیت تولید:" %}</p>
+
+                  <p>{% trans "1. یک‌میلیون قطعه مرغ تخم‌گذار در دوره تولیدی" %}</p>
+                  <p>{% trans "2. تولید سالانه حدود 365 میلیون عدد تخم‌مرغ" %}</p>
+                  <p>{% trans "3. بسته‌بندی و عرضه محصول در بازارهای داخلی و خارجی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "زیرساخت‌های پروژه:" %}</h4>
+
+                  <p>{% trans "1. زمین مورد نیاز: بیش از 25 هکتار در شهرک صنعتی خوشاب" %}</p>
+                  <p>{% trans "2. سالن‌های پرورش: چندین سالن مدرن با سیستم‌های اتوماتیک تهویه، گرمایش، سرمایش و تغذیه" %}</p>
+                  <p>{% trans "3. واحد تولید خوراک: کارخانه اختصاصی برای تأمین دان استاندارد و باکیفیت" %}</p>
+                  <p>{% trans "4. آزمایشگاه کنترل کیفیت: جهت پایش سلامت و کیفیت تخم‌مرغ تولیدی" %}</p>
+                  <p>{% trans "5. بخش بسته‌بندی و انبارداری: مجهز به سیستم‌های بسته‌بندی اتوماتیک و سردخانه" %}</p>
+                  <p>{% trans "6. واحد توزیع و حمل‌ونقل: برای ارسال سریع و بهینه تخم‌مرغ به نقاط مختلف کشور" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "فرآیند تولید تخم‌مرغ" %}</h4>
+
+                  <p>{% trans "تولید تخم‌مرغ یک فرآیند پیچیده و چندمرحله‌ای است که شامل انتخاب نژاد، تغذیه، مدیریت بهداشت، جمع‌آوری، بسته‌بندی و توزیع محصول می‌شود." %}</p>
+
+                  <h6>{% trans "1. انتخاب و پرورش پولت (مرغ‌های جوان):" %}</h6>
+
+                  <p>{% trans "• انتخاب نژادهای برتر با راندمان تولید بالا و مقاوم در برابر بیماری‌ها" %}</p>
+                  <p>{% trans "• پرورش مرغ‌ها در شرایط کاملاً استاندارد و نظارت بر رشد و سلامت آن‌ها" %}</p>
+                  <p>{% trans "• برنامه‌های تغذیه‌ای و واکسیناسیون دقیق برای بهبود عملکرد تولیدی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h6>{% trans "2. دوره تولید و تخم‌گذاری:" %}</h6>
+
+                  <p>{% trans "• رسیدن مرغ‌های تخم‌گذار به سن 16-18 هفتگی و آغاز تخم‌گذاری" %}</p>
+                  <p>{% trans "• مدیریت شرایط محیطی سالن‌ها شامل نور، دما، رطوبت و تهویه برای افزایش تولید" %}</p>
+                  <p>{% trans "• کنترل کیفیت تخم‌ها و جمع‌آوری آن‌ها به‌صورت خودکار" %}</p>
+
+                  <h6>{% trans "3. بسته‌بندی و توزیع:" %}</h6>
+
+                  <p>{% trans "• دسته‌بندی تخم‌مرغ‌ها بر اساس وزن، کیفیت و استانداردهای بهداشتی" %}</p>
+                  <p>{% trans "• بسته‌بندی در کارتن‌های استاندارد و مقاوم برای حمل‌ونقل بهینه" %}</p>
+                  <p>{% trans "• توزیع محصول از طریق شبکه‌های فروشگاهی، رستوران‌ها و صادرات" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "تحلیل بازار و رقابت" %}</h4>
+
+                  <h6>{% trans "افزایش تقاضای داخلی:" %}</h6>
+                  <p>{% trans "سرانه مصرف تخم‌مرغ در ایران حدود 12 کیلوگرم در سال است که این میزان رو به افزایش است." %}</p>
+
+                  <h6>{% trans "ظرفیت صادراتی:" %}</h6>
+                  <p>{% trans "کشورهای همسایه، به‌ویژه عراق، افغانستان و امارات، از واردکنندگان بزرگ تخم‌مرغ هستند." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "مزیت‌های رقابتی مزرعه خوشاب:" %}</h4>
+
+                  <p>{% trans "1. استفاده از تکنولوژی‌های نوین و کاهش تلفات" %}</p>
+                  <p>{% trans "2. تولید تخم‌مرغ باکیفیت و ارگانیک" %}</p>
+                  <p>{% trans "3. قیمت رقابتی به دلیل کاهش هزینه‌های تولید" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "مزایای اقتصادی و اشتغال‌زایی" %}</h4>
+
+                  <p>{% trans "1. اشتغال مستقیم برای بیش از 150 نفر در بخش‌های تولید، بسته‌بندی و مدیریت" %}</p>
+                  <p>{% trans "2. اشتغال غیرمستقیم برای بیش از 500 نفر در حوزه‌های حمل‌ونقل، فروش و توزیع" %}</p>
+                  <p>{% trans "3. افزایش بهره‌وری در صنعت مرغداری و کاهش هزینه‌های تولید تخم‌مرغ" %}</p>
+                  <p>{% trans "4. کمک به تثبیت قیمت تخم‌مرغ در بازار و کاهش نوسانات قیمت" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "چالش‌ها و راهکارها" %}</h4>
+
+                  <p>{% trans "1. کنترل بیماری‌ها: احداث قرنطینه‌های استاندارد و پایش سلامت گله‌ها" %}</p>
+                  <p>{% trans "2. تأمین نهاده‌های دامی: ایجاد کارخانه خوراک اختصاصی برای کاهش وابستگی" %}</p>
+                  <p>{% trans "3. نوسانات قیمت بازار: انعقاد قراردادهای پایدار با خریداران داخلی و خارجی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content rtl">
+                  <h4>{% trans "نتیجه‌گیری" %}</h4>
+
+                  <p>{% trans "پروژه (بزرگ‌ترین مجموعه مرغ تخم‌گذار کشور در خوشاب) تحولی عظیم در صنعت طیور ایران ایجاد خواهد کرد. با احداث این مزرعه:" %}</p>
+
+                  <p>{% trans "1. ظرفیت تولید تخم‌مرغ کشور به‌طور چشمگیری افزایش می‌یابد" %}</p>
+                  <p>{% trans "2. وابستگی به واردات کاهش یافته و توان صادراتی ایران تقویت می‌شود" %}</p>
+                  <p>{% trans "3. امنیت غذایی کشور تضمین شده و قیمت تخم‌مرغ در بازار تثبیت میشود" %}</p>
+                  <p>{% trans "4. اشتغال‌زایی قابل‌توجهی در منطقه ایجاد شده و اقتصاد محلی رشد می‌کند" %}</p>
+
+                  <p>{% trans "اجرای این پروژه، ایران را به یکی از بزرگ‌ترین تولیدکنندگان و صادرکنندگان تخم‌مرغ در منطقه تبدیل خواهد کرد." %}</p>
+                </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
