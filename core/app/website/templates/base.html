@@ -1,17 +1,18 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Grandoria Bootstrap Template</title>
+  <title>NSR COMPANY</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/nsr_logo.png' %}" rel="icon">
+  <link href="{% static 'assets/img/nsr_logo.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -57,7 +58,7 @@
 
                   <a href="{% url 'website_accounts:profile_view' %}">
                       <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
-                      <span class="ms-2" style="color: white;">پروفایل</span>
+                      <span class="ms-2" style="color: white;">{% trans "پروفایل" %}</span>
                   </a>
               
 
@@ -65,9 +66,9 @@
 
                   <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
                   <span class="ms-2" style="color: white;">
-                      <a href="{% url 'website_accounts:register' %}" style="color:white;">افتتاح حساب</a>
+                      <a href="{% url 'website_accounts:register' %}" style="color:white;">{% trans "افتتاح حساب" %}</a>
                       /
-                      <a href="{% url 'website_accounts:login' %}" style="color:white;">ورود به حساب</a>
+                      <a href="{% url 'website_accounts:login' %}" style="color:white;">{% trans "ورود به حساب" %}</a>
                   </span>
 
           {% endif %}
@@ -76,7 +77,7 @@
         <div class="social-links d-none d-md-flex align-items-center">
           {% if request.user.is_authenticated %}
           <a href="{% url 'website_accounts:logout' %}" >
-            خروج از حساب
+            {% trans "خروج از حساب" %}
           </a>
           {% endif %}
         </div>
@@ -94,33 +95,61 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">صفحه خانه</a></li>
-            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">درباره ما</a></li>
-            <li><a href="{% url 'news_list' %}" class="{% if request.resolver_match.url_name == 'news_list' %}active{% endif %}">پایگاه خبری</a></li>
-            <li><a href="{% url 'investment' %}" class="{% if request.resolver_match.url_name == 'investment' %}active{% endif %}">سرمایه گذاری</a></li>
-            <li class="dropdown"><a href="#"><span>بازرگانی</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "صفحه خانه" %}</a></li>
+            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "درباره ما" %}</a></li>
+            <li><a href="{% url 'news_list' %}" class="{% if request.resolver_match.url_name == 'news_list' %}active{% endif %}">{% trans "پایگاه خبری" %}</a></li>
+            <li><a href="{% url 'investment' %}" class="{% if request.resolver_match.url_name == 'investment' %}active{% endif %}">{% trans "سرمایه گذاری" %}</a></li>
+            <li class="dropdown"><a href="#"><span>{% trans "بازرگانی" %}</span> <i class="bi bi-chevron-down toggle-dropdown" style="margin: 5px;"></i></a>
               <ul>
-                  <li><a href="{% url 'purchase_livestock' %}">خرید و فروش نهاد های دامی</a></li>
-                  <li><a href="{% url 'organic_products' %}">محصولات ارگانیک</a></li>
+                  <li><a href="{% url 'purchase_livestock' %}">{% trans "خرید و فروش نهاد های دامی" %}</a></li>
+                  <li><a href="{% url 'organic_products' %}">{% trans "محصولات ارگانیک" %}</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>پروژه ها</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="#"><span>{% trans "پروژه ها" %}</span> <i class="bi bi-chevron-down toggle-dropdown" style="margin: 5px;"></i></a>
               <ul>
-                  <li><a href="{% url 'animal_feed_khoshab' %}">خوراک دام خوشاب</a></li>
-                  <li><a href="{% url 'mother_chicken_farm' %}">مزرعه مرغ مادر</a></li>
-                  <li><a href="{% url 'iaying_hen' %}">مجموعه مرغ تخم گذار</a></li>
-                  <li><a href="{% url 'supplying_livestock' %}">تامین نهاد های دامی</a></li>
-                  <li><a href="{% url 'animal_refinery' %}">پالایشگاه دام</a></li>
-                  <li><a href="{% url 'plant_refinery' %}">پالایشگاه گیاهان دارویی</a></li>
+                  <li><a href="{% url 'animal_feed_khoshab' %}">{% trans "خوراک دام خوشاب" %}</a></li>
+                  <li><a href="{% url 'mother_chicken_farm' %}">{% trans "مزرعه مرغ مادر" %}</a></li>
+                  <li><a href="{% url 'iaying_hen' %}">{% trans "مجموعه مرغ تخم گذار" %}</a></li>
+                  <li><a href="{% url 'supplying_livestock' %}">{% trans "تامین نهاد های دامی" %}</a></li>
+                  <li><a href="{% url 'animal_refinery' %}">{% trans "پالایشگاه دام" %}</a></li>
+                  <li><a href="{% url 'plant_refinery' %}">{% trans "پالایشگاه گیاهان دارویی" %}</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>رویداد ها</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="#"><span>{% trans "رویداد ها" %}</span> <i class="bi bi-chevron-down toggle-dropdown" style="margin: 5px;"></i></a>
               <ul>
-                  <li><a href="{% url 'animal_feed' %}">خوراک دام و طیور و آبزیان</a></li>
+                  <li><a href="{% url 'animal_feed' %}">{% trans "خوراک دام و طیور و آبزیان" %}</a></li>
               </ul>
             </li>
-            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">تماس با ما</a></li>
+            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% trans "تماس با ما" %}</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" style="gap: 5px;">
+                <svg class="icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H6V2H10V4H8.86807C8.57073 5.66996 7.78574 7.17117 6.6656 8.35112C7.46567 8.73941 8.35737 8.96842 9.29948 8.99697L10.2735 6H12.7265L15.9765 16H13.8735L13.2235 14H9.77647L9.12647 16H7.0235L8.66176 10.9592C7.32639 10.8285 6.08165 10.3888 4.99999 9.71246C3.69496 10.5284 2.15255 11 0.5 11H0V9H0.5C1.5161 9 2.47775 8.76685 3.33437 8.35112C2.68381 7.66582 2.14629 6.87215 1.75171 6H4.02179C4.30023 6.43491 4.62904 6.83446 4.99999 7.19044C5.88743 6.33881 6.53369 5.23777 6.82607 4H0V2H4V0ZM12.5735 12L11.5 8.69688L10.4265 12H12.5735Z" fill="currentColor"></path>
+                  </g>
+                </svg>
+                <span>{% get_current_language as LANGUAGE_CODE %}{% if LANGUAGE_CODE == 'fa' %}English{% else %}فارسی{% endif %}</span>
+              </a>
 
+              <ul class="dropdown-menu">
+                <li>
+                  <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <input type="hidden" name="language" value="fa">
+                    <button type="submit" class="dropdown-item">English</button>
+                  </form>
+                </li>
+                <li>
+                  <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <input type="hidden" name="language" value="en">
+                    <button type="submit" class="dropdown-item">فارسی</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -145,42 +174,42 @@
               <span class="sitename">NSR COMPANY</span>
             </a>
             <div class="footer-contact pt-3">
-              <p class="mt-3"><strong>شماره تماس:</strong> <span dir="ltr" style="display:inline-block; text-align:left;">+98 915 571 4255</span></p>
+              <p class="mt-3"><strong>{% trans "شماره تماس" %}:</strong> <span dir="ltr" style="display:inline-block; text-align:left;">+98 915 571 4255</span></p>
               <br>
-              <p><strong>ایمیل:</strong> <span>nsrcompany.ir@gmail.com</span></p>
+              <p><strong>{% trans "ایمیل" %}:</strong> <span>nsrcompany.ir@gmail.com</span></p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>صفحات اصلی</h4>
+            <h4>{% trans "صفحات اصلی" %}</h4>
             <ul>
-              <li><a href="{% url 'home' %}">خانه</a></li>
-              <li><a href="{% url 'about' %}">درباره ما</a></li>
-              <li><a href="{% url 'news_list' %}">پایگاه خبری</a></li>
-              <li><a href="{% url 'investment' %}">سرمایه گذاری</a></li>
-              <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+              <li><a href="{% url 'home' %}">{% trans "خانه" %}</a></li>
+              <li><a href="{% url 'about' %}">{% trans "درباره ما" %}</a></li>
+              <li><a href="{% url 'news_list' %}">{% trans "پایگاه خبری" %}</a></li>
+              <li><a href="{% url 'investment' %}">{% trans "سرمایه گذاری" %}</a></li>
+              <li><a href="{% url 'contact' %}">{% trans "تماس با ما" %}</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>پروژه ها</h4>
+            <h4>{% trans "پروژه ها" %}</h4>
             <ul>
-              <li><a href="{% url 'animal_feed_khoshab' %}">خوراک دام خوشاب</a></li>
-              <li><a href="{% url 'mother_chicken_farm' %}">مزرعه مرغ مادر</a></li>
-              <li><a href="{% url 'iaying_hen' %}">مجموعه مرغ تخم گذار</a></li>
-              <li><a href="{% url 'supplying_livestock' %}">تامین نهاد های دامی</a></li>
-              <li><a href="{% url 'animal_refinery' %}">پالایشگاه دام</a></li>
-              <li><a href="{% url 'plant_refinery' %}">پالایشگاه گیاهان دارویی</a></li>
+              <li><a href="{% url 'animal_feed_khoshab' %}">{% trans "خوراک دام خوشاب" %}</a></li>
+              <li><a href="{% url 'mother_chicken_farm' %}">{% trans "مزرعه مرغ مادر" %}</a></li>
+              <li><a href="{% url 'iaying_hen' %}">{% trans "مجموعه مرغ تخم گذار" %}</a></li>
+              <li><a href="{% url 'supplying_livestock' %}">{% trans "تامین نهاد های دامی" %}</a></li>
+              <li><a href="{% url 'animal_refinery' %}">{% trans "پالایشگاه دام" %}</a></li>
+              <li><a href="{% url 'plant_refinery' %}">{% trans "پالایشگاه گیاهان دارویی" %}</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>آدرس های حضوری در ایران</h4>
+            <h4>{% trans "آدرس های حضوری در ایران" %}</h4>
             <ul>
               <li><a href="{% url 'contact' %}"><p>
-                    سبزوار _میدان طالقانی_ساختمان اکسیژن
+              {% trans "سبزوار _میدان طالقانی_ساختمان اکسیژن" %}
               </p></a></li>
-              <li><a href="{% url 'contact' %}"> تهران_میدان فردوسی</a></li>
+              <li><a href="{% url 'contact' %}">{% trans "تهران_میدان فردوسی" %}</a></li>
             </ul>
           </div>
 
@@ -212,7 +241,7 @@
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
             <h4 style="margin-top: 20px ;">
-              راه های ارتباطی با ما
+              {% trans "راه های ارتباطی با ما" %}
             </h4>
           </div>
         </div>

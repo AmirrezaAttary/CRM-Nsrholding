@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
   <main class="main">
@@ -7,11 +8,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">تماس با ما</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "تماس با ما" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">صفحه خانه</a></li>
-            <li class="current">تماس با ما</li>
+            <li><a href="{% url 'home' %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "تماس با ما" %}</li>
           </ol>
         </nav>
       </div>
@@ -35,8 +36,8 @@
                 <i class="bi bi-geo-alt"></i>
               </div>
               <div class="info-content">
-                <h4>راه ابریشم نو</h4>
-                <p>ایران _ سبزوار _ میدان طالقانی _ ساختمان اکسیژن</p>
+                  <h4>{% trans "راه ابریشم نو" %}</h4>
+                  <p>{% trans "ایران _ سبزوار _ میدان طالقانی _ ساختمان اکسیژن" %}</p>
               </div>
             </div>
           </div>
@@ -47,8 +48,8 @@
                 <i class="bi bi-geo-alt"></i>
               </div>
               <div class="info-content">
-                <h4>راه ابریشم نو</h4>
-                <p>ایران _ تهران _ میدان فردوسی</p>
+                  <h4>{% trans "راه ابریشم نو" %}</h4>
+                  <p>{% trans "ایران _ تهران _ میدان فردوسی" %}</p>
               </div>
             </div>
           </div>
@@ -83,7 +84,7 @@
                 <i class="bi bi-telephone"></i>
               </div>
               <div class="info-content">
-                <h4>تلفن پشتیبانی</h4>
+                <h4>{% trans "تلفن پشتیبانی" %}</h4>
                 <p>+98 9155714255</p>
               </div>
             </div>
@@ -95,7 +96,7 @@
                 <i class="bi bi-envelope"></i>
               </div>
               <div class="info-content">
-                <h4>ایمیل پشتیبانی</h4>
+                <h4>{% trans "ایمیل پشتیبانی" %}</h4>
                 <p>nsrcompany.ir@gmail.com</p>
               </div>
             </div>
@@ -107,41 +108,41 @@
         <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-10">
             <div class="contact-form-wrapper">
-              <h2 class="text-center mb-4">با ما در تماس باشید</h2>
+              <h2 class="text-center mb-4">{% trans "با ما در تماس باشید" %}</h2>
               <div class="contact-box">
-                <p>برای ارتباط با ما و شروع یک همکاری موثر لطفا فرم زیر را تکمیل کنید</p>
-                <p>نظرات و پیشنهادات شما برای ما ارزشمند است</p>
-                <p>منتظر پیام شما هستیم</p>
+                <p>{% trans "برای ارتباط با ما و شروع یک همکاری موثر لطفا فرم زیر را تکمیل کنید" %}</p>
+                <p>{% trans "نظرات و پیشنهادات شما برای ما ارزشمند است" %}</p>
+                <p>{% trans "منتظر پیام شما هستیم" %}</p>
               </div>
-              <form action="{% url "contact" %}" method="post" >
+              <form action="{% url 'contact' %}" method="post">
                 {% csrf_token %}
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="full_name" placeholder="نام و نام خانوادگی" required="">
+                      <input type="text" class="form-control" name="full_name" placeholder="{% trans 'نام و نام خانوادگی' %}" required="">
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="ایمیل" required="">
+                      <input type="email" class="form-control" name="email" placeholder="{% trans 'ایمیل' %}" required="">
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="number" placeholder="شماره تلفن همراه" required="">
+                      <input type="text" class="form-control" name="number" placeholder="{% trans 'شماره تلفن همراه' %}" required="">
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="پیام مورد نظر" rows="6" required=""></textarea>
+                      <textarea class="form-control" name="message" placeholder="{% trans 'پیام مورد نظر' %}" rows="6" required=""></textarea>
                     </div>
                   </div>
 
                   <div class="col-12 text-center">
-                    <button type="submit" class="btn-submit">ارسال پیام</button>
+                    <button type="submit" class="btn-submit">{% trans "ارسال پیام" %}</button>
                   </div>
                 </div>
               </form>

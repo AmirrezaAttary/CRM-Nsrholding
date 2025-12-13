@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -8,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">تامین نهاد های دامی</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "تامین نهاد های دامی" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "home" %}">صفحه خانه</a></li>
-            <li class="current">تامین نهاد های دامی</li>
+            <li><a href="{% url "home" %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "تامین نهاد های دامی" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,23 +21,206 @@
 
     <!-- Offers Section -->
     <section id="offers" class="offers section">
-      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;">تامین و عرضه نهادهای دامی
-</h1>
+      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;">{% trans "تامین و عرضه نهادهای دامی" %}</h1>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          {% for obj in supplying_livestock %}
+
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
               </div>
-              <div class="offer-content rtl">
-                <h3>{{ obj.title }}</h3>
-                <p>{{ obj.description }}</p>
-              </div>
-            </div><!-- End Offer Card -->
+                <div class="offer-content">
+                    <p>{% trans "شرکت راه ابریشم نو مسیر توسعه تحول جهانی با شناسه ملی ۱۴۰۱۲۸۴۲۹۱۲، به‌عنوان یکی از فعالان برجسته در حوزه بازرگانی، تأمین، واردات و توزیع نهاده‌های دامی، نقش مهمی در تأمین نیاز صنعت دام، طیور و آبزیان کشور ایفا می‌کند. این شرکت با بهره‌گیری از تجربه گسترده، شبکه تأمین قوی و استراتژی‌های نوین بازرگانی، توانسته است زنجیره‌ای کارآمد برای واردات، تأمین و توزیع نهاده‌های دامی ایجاد کند که ضمن کاهش هزینه‌های تولیدکنندگان داخلی، امنیت تأمین خوراک دام را افزایش می‌دهد." %}</p>
+
+                    <p>{% trans "نهاده‌های دامی به‌عنوان یکی از مهم‌ترین عناصر در پرورش دام، طیور و آبزیان، تأثیر مستقیمی بر کیفیت و هزینه تولید محصولات پروتئینی دارند. تأمین پایدار و باکیفیت این نهاده‌ها، اهمیت استراتژیک بالایی در صنعت کشاورزی و دامپروری دارد. در این گزارش، فعالیت‌های شرکت راه ابریشم نو در حوزه واردات، تأمین و توزیع نهاده‌های دامی به‌طور جامع بررسی خواهد شد." %}</p>
+                </div>
+            </div>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "اهمیت تأمین و واردات نهاده‌های دامی" %}</h4>
+
+                  <p>{% trans "نهاده‌های دامی شامل ذرت، سویا، جو، کنجاله سویا، سبوس، مکمل‌های معدنی و ویتامینی، پودر ماهی و سایر مواد غذایی مورد نیاز دام و طیور هستند. ایران به دلیل محدودیت‌های اقلیمی و کاهش منابع داخلی تولید نهاده‌های دامی، وابستگی زیادی به واردات این محصولات دارد. بر همین اساس، شرکت راه ابریشم نو با هدف تأمین پایدار و اقتصادی نهاده‌های دامی، در حوزه واردات و توزیع این محصولات فعالیت گسترده‌ای دارد." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "مشکلات تأمین نهاده‌های دامی در کشور" %}</h4>
+
+                  <p>{% trans "1. کمبود تولید داخلی و وابستگی به واردات" %}</p>
+                  <p>{% trans "2. نوسانات قیمت جهانی نهاده‌ها و تأثیر آن بر هزینه‌های تولید" %}</p>
+                  <p>{% trans "3. مشکلات ارزی و انتقال پول در تجارت بین‌المللی" %}</p>
+                  <p>{% trans "4. چالش‌های حمل‌ونقل و لجستیک در تأمین پایدار نهاده‌ها" %}</p>
+                  <p>{% trans "5. وجود واسطه‌ها و عدم شفافیت در توزیع" %}</p>
+                  <p>{% trans "شرکت راه ابریشم نو با استفاده از استراتژی‌های هوشمندانه و همکاری با تأمین‌کنندگان معتبر بین‌المللی، این چالش‌ها را مدیریت کرده و توانسته است زنجیره تأمین کارآمدی ایجاد کند." %}</p>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "حوزه‌های فعالیت شرکت راه ابریشم نو در تأمین نهاده‌های دامی" %}</h4>
+
+                  <p>{% trans "فعالیت‌های این شرکت در سه حوزه اصلی واردات، تأمین و توزیع نهاده‌های دامی متمرکز است." %}</p>
+
+                  <h6>{% trans "واردات نهاده‌های دامی" %}</h6>
+
+                  <p>{% trans "واردات از کشورهای تولیدکننده برتر:" %}</p>
+                  <p>{% trans "ذرت، سویا و جو از کشورهای برزیل، آرژانتین، روسیه و قزاقستان" %}</p>
+                  <p>{% trans "کنجاله سویا از هند و اوکراین" %}</p>
+                  <p>{% trans "پودر ماهی از پرو و چین" %}</p>
+                  <p>{% trans "مکمل‌های ویتامینی و معدنی از اروپا و چین" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                    <h4>{% trans "همکاری با تأمین‌کنندگان معتبر بین‌المللی" %}</h4>
+
+                    <p>{% trans "شرکت راه ابریشم نو مستقیماً با تولیدکنندگان و صادرکنندگان بزرگ همکاری می‌کند تا نهاده‌های دامی را بدون واسطه و با قیمت رقابتی تأمین کند." %}</p>
+
+                    <h6>{% trans "مدیریت فرآیندهای گمرکی و ترخیص کالا" %}</h6>
+
+                    <p>{% trans "این شرکت تخصص ویژه‌ای در مدیریت امور گمرکی و ترخیص سریع نهاده‌های دامی از بنادر کشور دارد که باعث کاهش زمان تأمین و افزایش بهره‌وری زنجیره تأمین می‌شود." %}</p>
+
+                    <h6>{% trans "نظارت بر کیفیت و استانداردهای بهداشتی" %}</h6>
+
+                    <p>{% trans "تمامی نهاده‌های وارداتی از نظر کیفیت، سلامت و استانداردهای بهداشتی بررسی می‌شوند تا اطمینان حاصل شود که محصولات وارداتی مطابق با الزامات دامپزشکی و استانداردهای ملی و بین‌المللی هستند." %}</p>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "تأمین و ذخیره‌سازی نهاده‌های دامی" %}</h4>
+
+                  <p>{% trans "ایجاد انبارهای استراتژیک در نقاط مختلف کشور: شرکت راه ابریشم نو دارای انبارهای ذخیره‌سازی در استان‌های کلیدی کشور است که به افزایش امنیت غذایی و پایداری تأمین نهاده‌های دامی کمک می‌کند." %}</p>
+
+                  <p>{% trans "برنامه‌ریزی تأمین متناسب با نیاز بازار:" %}</p>
+                  <p>{% trans "پیش‌بینی نیاز فصلی بازار و تأمین به‌موقع نهاده‌ها" %}</p>
+                  <p>{% trans "مدیریت ذخایر استراتژیک برای جلوگیری از کمبود و نوسانات قیمت" %}</p>
+                  <p>{% trans "همکاری با اتحادیه‌ها و تشکل‌های دامداری و مرغداری برای تأمین پایدار" %}</p>
+
+                  <p>{% trans "تأمین خوراک اختصاصی برای واحدهای تولیدی بزرگ: این شرکت علاوه بر تأمین عمومی، خوراک دام و طیور را متناسب با نیازهای خاص واحدهای پرورشی تأمین می‌کند تا عملکرد تولیدی بهینه شود." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "توزیع و فروش نهاده‌های دامی" %}</h4>
+
+                  <h6>{% trans "توزیع سراسری از طریق شبکه فروش گسترده:" %}</h6>
+                  <p>{% trans "شرکت راه ابریشم نو دارای شبکه توزیع گسترده‌ای در سطح کشور است که امکان تحویل سریع و به‌موقع نهاده‌های دامی را برای دامداران، مرغداران و آبزی‌پروران فراهم می‌کند." %}</p>
+
+                  <h6>{% trans "فروش مستقیم به تولیدکنندگان و حذف واسطه‌ها:" %}</h6>
+                  <p>{% trans "یکی از مزیت‌های اصلی این شرکت فروش مستقیم نهاده‌های دامی به واحدهای تولیدی بزرگ و متوسط است که باعث کاهش هزینه‌های تمام‌شده و افزایش بهره‌وری تولیدکنندگان می‌شود." %}</p>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h6>{% trans "ارائه تسهیلات و شرایط ویژه برای مشتریان:" %}</h6>
+
+                  <p>{% trans "فروش اعتباری و تسهیلات خرید برای تولیدکنندگان عمده" %}</p>
+                  <p>{% trans "مشاوره تغذیه‌ای برای انتخاب مناسب‌ترین نهاده‌های دامی" %}</p>
+                  <p>{% trans "امکان خرید عمده و تأمین پایدار برای قراردادهای بلندمدت" %}</p>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "مزایای رقابتی شرکت راه ابریشم نو در تأمین نهاده‌های دامی" %}</h4>
+
+                  <p>{% trans "تأمین مستقیم از تولیدکنندگان معتبر جهانی و حذف واسطه‌ها" %}</p>
+                  <p>{% trans "مدیریت حرفه‌ای زنجیره تأمین و کاهش هزینه‌های واردات" %}</p>
+                  <p>{% trans "استفاده از شبکه توزیع گسترده و تحویل سریع نهاده‌ها به تولیدکنندگان" %}</p>
+                  <p>{% trans "نظارت دقیق بر کیفیت محصولات و رعایت استانداردهای بهداشتی" %}</p>
+                  <p>{% trans "ایجاد انبارهای استراتژیک برای مدیریت بهتر عرضه و تقاضا" %}</p>
+                  <p>{% trans "پشتیبانی و ارائه مشاوره تغذیه‌ای به تولیدکنندگان دام، طیور و آبزیان" %}</p>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "چالش‌های بازار نهاده‌های دامی و راهکارهای شرکت راه ابریشم نو" %}</h4>
+
+                  <h6>{% trans "محدودیت‌های وارداتی و قوانین گمرکی:" %}</h6>
+                  <p>{% trans "پیگیری مستمر قوانین تجارت و همکاری با سازمان‌های دولتی برای تسهیل فرآیندهای واردات." %}</p>
+
+                  <h6>{% trans "مشکلات ارزی و نقل‌وانتقال مالی:" %}</h6>
+                  <p>{% trans "استفاده از روش‌های تأمین مالی متنوع و همکاری با بانک‌های بین‌المللی برای کاهش ریسک ارزی." %}</p>
+
+                  <h6>{% trans "مشکل نوسانات قیمت جهانی و داخلی:" %}</h6>
+                  <p>{% trans "شرکت با انعقاد قراردادهای بلندمدت و تأمین ذخایر استراتژیک، این ریسک را مدیریت می‌کند." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "نتیجه‌گیری" %}</h4>
+
+                  <p>{% trans "شرکت راه ابریشم نو یکی از بازیگران کلیدی در تأمین، واردات و توزیع نهاده‌های دامی در کشور است. با بهره‌گیری از مدیریت کارآمد، شبکه تأمین قدرتمند و استراتژی‌های نوین تجاری، این شرکت نقش مهمی در تأمین پایدار نهاده‌های دامی، کاهش وابستگی به واسطه‌ها، افزایش بهره‌وری تولیدکنندگان و ایجاد امنیت غذایی کشور ایفا می‌کند." %}</p>
+
+                  <p>{% trans "این شرکت با توسعه فعالیت‌های خود و گسترش همکاری‌های بین‌المللی، می‌تواند به یکی از بزرگ‌ترین تأمین‌کنندگان نهاده‌های دامی در منطقه تبدیل شود." %}</p>
+                </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

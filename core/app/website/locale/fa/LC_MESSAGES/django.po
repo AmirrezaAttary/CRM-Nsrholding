@@ -1,0 +1,3033 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PACKAGE package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 11:40+0000\n"
+"PO-Revision-Date: 2025-12-08 13:10+0000\n"
+"Last-Translator: Your Name <your@email.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/website/templates/about.html:11 app/website/templates/about.html:15
+#: app/website/templates/base.html:99 app/website/templates/base.html:187
+msgid "درباره ما"
+msgstr "About"
+
+#: app/website/templates/about.html:14
+#: app/website/templates/animal_feed.html:14
+#: app/website/templates/animal_feed_khoshab.html:15
+#: app/website/templates/animal_refinery.html:15
+#: app/website/templates/base.html:98 app/website/templates/contact.html:14
+#: app/website/templates/iaying_hen.html:15
+#: app/website/templates/investment.html:14
+#: app/website/templates/mother_chicken_farm.html:14
+#: app/website/templates/news_detail.html:14
+#: app/website/templates/news_list.html:14
+#: app/website/templates/organic_products.html:13
+#: app/website/templates/organic_products_detail.html:13
+#: app/website/templates/plant_refinery.html:15
+#: app/website/templates/purchase_livestock.html:15
+#: app/website/templates/purchase_livestock_detail.html:13
+#: app/website/templates/supplying_livestock.html:15
+msgid "صفحه خانه"
+msgstr "Home"
+
+#: app/website/templates/about.html:39 app/website/templates/index.html:17
+msgid "ما که هستیم و چه می‌کنیم"
+msgstr "Who are we and what do we do"
+
+#: app/website/templates/about.html:43 app/website/templates/index.html:19
+msgid "درباره مجموعه ما"
+msgstr "About our company"
+
+#: app/website/templates/about.html:46 app/website/templates/index.html:21
+msgid "معرفی هلدینگ راه ابریشم نو و چشم‌انداز آینده"
+msgstr "Introduction to New Silk Road Holding and Future Perspective"
+
+#: app/website/templates/about.html:50
+msgid ""
+"هلدینگ راه ابریشم نو مسیر توسعه تحول جهانی با هدف ایجاد تحولی پایدار در "
+"اقتصاد کشور و ارتقای بهره‌وری در صنایع کشاورزی، دامپروری و آبزی‌پروری در "
+"آذرماه 1402 تأسیس شد. این مجموعه با سرمایه‌ای 2000 میلیارد ریالی و نگاهی "
+"بلندمدت به آینده، فعالیت خود را آغاز کرد و در مدت کوتاهی توانست با اخذ "
+"مجوزهای لازم، به یکی از بازیگران اصلی در تأمین نهاده‌های دامی کشور تبدیل شود."
+msgstr ""
+"The New Silk Road Holding was established in December 2023 with the aim of "
+"creating a sustainable transformation in the country's economy and enhancing "
+"productivity in the agricultural, livestock, and aquaculture industries. "
+"This entity started its operations with capital of 20 trillion IRR, adopting "
+"a long-term outlook towards the future. In a short time, it has obtained the "
+"necessary licenses to become one of the key players in the supply of animal "
+"feeds in the country."
+
+#: app/website/templates/about.html:54
+msgid ""
+"ما در راه ابریشم نو باور داریم که امنیت غذایی، یکی از حیاتی‌ترین نیازهای "
+"جوامع مدرن است و تلاش کرده‌ایم با ایجاد زنجیره‌های ارزش در صنایع مرتبط، این "
+"نیاز را با بالاترین کیفیت پاسخ دهیم. از تولید محصولات دانش‌بنیان مانند "
+"کیتوزان و خوراک طیور پروبیوتیک گرفته تا طراحی و اجرای پروژه‌های نوآورانه با "
+"استفاده از فناوری‌های پیشرفته، همگی در راستای این هدف بزرگ بوده‌اند."
+msgstr ""
+"At New Silk Road, we believe that food security is one of the most vital "
+"needs of modern societies. We have strived to address this need with the "
+"highest quality by creating value chains in the related industries. From "
+"producing knowledge-based products such as chitosan and probiotic poultry "
+"feed to designing and executing innovative projects utilizing advanced "
+"technologies, all our efforts align with this great goal."
+
+#: app/website/templates/about.html:58
+msgid "چشم‌انداز آینده"
+msgstr "Future Perspective"
+
+#: app/website/templates/about.html:62
+msgid ""
+"چشم‌انداز ما فراتر از مرزهای کشور است. ما در تلاشیم تا با توسعه همکاری‌های "
+"بین‌المللی، از جمله شراکت با مجموعه‌هایی همچون CP Group، دانش و فناوری روز "
+"دنیا را به کشور وارد کنیم و ایران را به قطبی برجسته در تولید محصولات کشاورزی "
+"و دامی در منطقه تبدیل کنیم."
+msgstr ""
+"Our vision extends beyond national borders. We aim to develop international "
+"collaborations, including partnerships with organizations like CP Group, to "
+"bring the latest knowledge and technology into the country and to transform "
+"Iran into a prominent hub for agricultural and livestock production in the "
+"region."
+
+#: app/website/templates/about.html:66
+msgid ""
+"هدف ما تنها تولید بیشتر نیست؛ بلکه بهبود کیفیت محصولات، کاهش ضایعات، و "
+"افزایش بهره‌وری در تمامی مراحل زنجیره تولید است. این رویکرد ما را قادر می‌سازد "
+"تا نه‌تنها نیازهای داخلی را به بهترین شکل ممکن برآورده کنیم، بلکه در بازارهای "
+"جهانی نیز حضوری پررنگ داشته باشیم."
+msgstr ""
+"Our goal is not only to increase production but also to improve product "
+"quality, reduce waste, and enhance efficiency at all stages of the "
+"production chain. This approach enables us not only to meet domestic needs "
+"in the best possible way, but also to have a strong presence in global "
+"markets."
+
+#: app/website/templates/about.html:71
+msgid "ارزش‌های سازمانی هلدینگ راه ابریشم نو"
+msgstr "Organizational Values of New Silk Road Holding"
+
+#: app/website/templates/about.html:75
+msgid ""
+"1. نوآوری و فناوری‌محوری: در دنیای امروز، نوآوری کلید پیشرفت است. ما در راه "
+"ابریشم نو همواره به دنبال استفاده از جدیدترین فناوری‌ها و راهکارهای خلاقانه "
+"برای حل چالش‌های پیش‌روی صنایع کشاورزی و دامپروری هستیم."
+msgstr ""
+"1. Innovation and Technology Orientation: In today’s world, innovation is "
+"the key to progress. At New Silk Road, we are always seeking to utilize the "
+"latest technologies and creative solutions to tackle the challenges facing "
+"the agricultural and livestock industries."
+
+#: app/website/templates/about.html:79
+msgid ""
+"2. تعهد به پایداری: پایداری محیط‌زیست و توسعه پایدار، از ارزش‌های بنیادین "
+"ماست. تمامی فعالیت‌های ما با هدف حفظ منابع طبیعی و حمایت از نسل‌های آینده "
+"طراحی و اجرا می‌شوند."
+msgstr ""
+"2. Commitment to Sustainability: Environmental sustainability and "
+"sustainable development are fundamental values for us. All our activities "
+"are designed and implemented with the aim of preserving natural resources "
+"and supporting future generations."
+
+#: app/website/templates/about.html:83
+msgid ""
+"3. استفاده از ظرفیت‌های داخلی: ما به توانایی‌ها و دانش نخبگان ایرانی باور "
+"داریم و تلاش می‌کنیم بستری برای رشد استعدادهای داخلی فراهم کنیم. همکاری با "
+"دانشگاه‌ها، مراکز تحقیقاتی، و کارآفرینان جوان، یکی از اولویت‌های ماست."
+msgstr ""
+"3. Utilization of Domestic Capacities: We believe in the capabilities and "
+"knowledge of Iranian elites and strive to create an environment for the "
+"growth of domestic talents. Collaborating with universities, research "
+"centers, and young entrepreneurs is one of our priorities."
+
+#: app/website/templates/about.html:88
+msgid ""
+"4. همکاری‌های بین‌المللی: هلدینگ راه ابریشم نو معتقد است که پیشرفت در گرو "
+"تعامل و همکاری جهانی است. ما با شرکای بین‌المللی خود به‌دنبال انتقال دانش، "
+"توسعه زیرساخت‌ها و ایجاد فرصت‌های جدید هستیم."
+msgstr ""
+"4. International Collaborations: New Silk Road Holding believes that "
+"progress relies on global interaction and cooperation. We seek to transfer "
+"knowledge, develop infrastructure, and create new opportunities with our "
+"international partners."
+
+#: app/website/templates/about.html:93
+msgid ""
+"5. توجه به مشتریان و ذینفعان: رضایت مشتریان و ارزش‌آفرینی برای ذینفعان، محور "
+"اصلی تمامی تصمیمات و فعالیت‌های ماست."
+msgstr ""
+"5. Focus on Customers and Stakeholders: Customer satisfaction and value "
+"creation for stakeholders are the core of all our decisions and activities."
+
+#: app/website/templates/about.html:104
+msgid "از مزرعه تا سفره​​​​​​​"
+msgstr "From farm to table​​​​​​​"
+
+#: app/website/templates/about.html:108
+msgid "هدف ما استفاده بهینه از تمام ظرفیت ها"
+msgstr "Our goal is to make optimal use of all capacities"
+
+#: app/website/templates/about.html:111
+msgid "برای رسیدن به توسعه پایدار است"
+msgstr "To achieve sustainable development"
+
+#: app/website/templates/about.html:125
+msgid "تعداد پرسنل مجموعه"
+msgstr "The number of personnel in the complex"
+
+#: app/website/templates/about.html:128
+msgid "22 نفر شرکت اصلی"
+msgstr "22 people: main company"
+
+#: app/website/templates/about.html:131
+msgid "43 نفر زیر مجموعه های شرکت"
+msgstr "43 people: subsidiaries of the company"
+
+#: app/website/templates/about.html:142
+msgid "ساعت کار"
+msgstr "Work hours​​​​​​​"
+
+#: app/website/templates/about.html:143
+msgid "شنبه تا پنجشنبه"
+msgstr "Monday to Friday"
+
+#: app/website/templates/about.html:145
+msgid "​​​​​​​ساعت 8 الی 16"
+msgstr "8 AM to 4 PM"
+
+#: app/website/templates/about.html:156
+msgid "مشتریان"
+msgstr "Customer​​​​​​​"
+
+#: app/website/templates/about.html:157
+msgid ""
+"مشتریان ما طیف وسیعی از دامداران و پرورش دهندگان طیور و آبزیان و همچنین "
+"کارخانه های خوراک دام و طیور در کشور میباشند"
+msgstr ""
+"Our clients include a wide range of livestock farmers, poultry and "
+"aquaculture breeders, as well as animal and poultry feed manufacturers in "
+"the country."
+
+#: app/website/templates/about.html:167
+msgid "شرکاری تجاری"
+msgstr "Completed project"
+
+#: app/website/templates/about.html:168
+msgid ""
+"ما همواره در تلاشیم تا با ارتباط موثر با شرکت های داخلی و خارجی نیازهای "
+"مشتریان خود را برطرف نماییم"
+msgstr ""
+"We are continuously striving to address our customers’ needs through "
+"effective communication with domestic and foreign companies."
+
+#: app/website/templates/about.html:191
+msgid "تحقیق و تجزیه و تحلیل"
+msgstr "Research and Analysis​​​​​​​"
+
+#: app/website/templates/about.html:209
+msgid "توسعه پایدار​​​​​​​"
+msgstr "Sustainable development"
+
+#: app/website/templates/about.html:227
+msgid "سیستم سازی"
+msgstr "Systematization​​​​​​​"
+
+#: app/website/templates/about.html:245
+msgid "هدف گذاری"
+msgstr "​Goal setting"
+
+#: app/website/templates/animal_feed.html:11
+#: app/website/templates/animal_feed.html:15
+#: app/website/templates/animal_feed.html:29
+#: app/website/templates/base.html:120
+msgid "خوراک دام و طیور و آبزیان"
+msgstr "Livestock, poultry, and aquaculture feed"
+
+#: app/website/templates/animal_feed.html:28
+msgid "بزرگترین رویداد دانش بنیان در حوزه"
+msgstr "Largest knowledge-based event in the field of"
+
+#: app/website/templates/animal_feed.html:30
+msgid ""
+"شرکت راه ابریشم نو مفتخر است که بزرگترین ایونت دانش بنیان در حوزه خوراک دام "
+"و طیور و آبزیان را در تابستان سال 1403 برگزار نماید"
+msgstr ""
+"New Silk Road Company is proud to announce the largest knowledge-based event "
+"in the field of animal feed (livestock, poultry, and aquaculture) in the "
+"summer of 1403 (2024)."
+
+#: app/website/templates/animal_feed.html:31
+msgid ""
+"این رویداد با هدف حمایت از ایده های نوآورانه و خلاقانه در این حوزه و همچنین "
+"ایجاد فرصتی برای تبادل نظر و تجربیات بین اساتید، دانشجویان و افراد صاحب نظر "
+"در این زمینه برگزار خواهد شد"
+msgstr ""
+"This event aims to support innovative and creative ideas in this field and "
+"provide an opportunity for the exchange of views and experiences among "
+"professors, students, and experts."
+
+#: app/website/templates/animal_feed.html:48
+msgid "محورهای اصلی این رویداد"
+msgstr "Main Themes of the Event:"
+
+#: app/website/templates/animal_feed.html:50
+msgid "توسعه و نوآوری در فرمولاسیون خوراک دام و طیور و آبزیان"
+msgstr ""
+"Development and innovation in animal feed formulation (livestock, poultry, "
+"and aquaculture)"
+
+#: app/website/templates/animal_feed.html:51
+msgid "استفاده از مواد اولیه بومی و جایگزینی نهاده های وارداتی"
+msgstr "Utilizing domestic raw materials and replacing imported inputs"
+
+#: app/website/templates/animal_feed.html:52
+msgid "افزایش راندمان تولید و کاهش ضایعات"
+msgstr "Increasing production efficiency and reducing waste"
+
+#: app/website/templates/animal_feed.html:53
+msgid "بهبود سلامت و بهداشت دام و طیور و آبزیان"
+msgstr ""
+"Improving the health and hygiene of livestock, poultry, and aquaculture"
+
+#: app/website/templates/animal_feed.html:54
+msgid "ایجاد اشتغال و رونق اقتصادی در این حوزه"
+msgstr "Creating employment and economic prosperity in this sector"
+
+#: app/website/templates/animal_feed.html:60
+msgid "شرایط شرکت در رویداد"
+msgstr "Participation Requirements:"
+
+#: app/website/templates/animal_feed.html:61
+msgid ""
+"تمامی اساتید، دانشجویان و افراد دارای تجربه در حوزه خوراک دام و طیور و "
+"آبزیان می توانند در این رویداد شرکت کنند"
+msgstr ""
+"All professors, students, and experienced individuals in the field of animal "
+"feed (livestock, poultry, and aquaculture) can participate."
+
+#: app/website/templates/animal_feed.html:62
+msgid ""
+"شرکت کنندگان باید پروژه های دانش بنیان خود در این حوزه را با توضیحات مختصر "
+"برای دبیرخانه این رویداد ارسال نمایند"
+msgstr ""
+"Participants should submit their knowledge-based projects in this field with "
+"a brief description to the event secretariat."
+
+#: app/website/templates/animal_feed.html:63
+msgid "مهلت و نحوه ارسال پروژه ها بزودی اطلاع رسانی خواهد شد"
+msgstr ""
+"The deadline and method for submitting projects will be announced soon."
+
+#: app/website/templates/animal_feed.html:65
+msgid "جوایز رویداد"
+msgstr "Event Prizes:"
+
+#: app/website/templates/animal_feed.html:67
+msgid "به برگزیدگان این رویداد جوایز نفیسی اهدا خواهد شد"
+msgstr "The winners of this event will be awarded with exquisite prizes."
+
+#: app/website/templates/animal_feed.html:68
+msgid ""
+"با برگزیدگان این رویداد برای تجاری سازی پروژه ها قرارداد همکاری بسته خواهد شد"
+msgstr ""
+"A cooperation agreement will be signed with the winners of this event to "
+"commercialize the designs."
+
+#: app/website/templates/animal_feed.html:72
+msgid ""
+"این رویداد فرصتی عالی برای معرفی ایده های نوآورانه و خلاقانه و ایجاد ارتباط "
+"با افراد صاحب نظر و متخصص در این حوزه جهت یافتن سرمایه گذار برای تجاری سازی "
+"پروژه ها و اشتغال و کارآفرینی در این حوزه است"
+msgstr ""
+"This event provides an excellent opportunity to showcase innovative and "
+"creative ideas and to connect with experts and specialists in the field, "
+"with the aim of finding investors for project commercialization and "
+"fostering employment and entrepreneurship in this sector."
+
+#: app/website/templates/animal_feed.html:73
+msgid ""
+"با حضور شما در این رویداد، شاهد گامی بزرگ در جهت توسعه و پیشرفت صنعت خوراک "
+"دام و طیور و آبزیان در کشور خواهیم بود"
+msgstr ""
+"Your participation in this event will mark a significant step towards the "
+"development and advancement of the livestock, poultry, and aquaculture feed "
+"industry in the country."
+
+#: app/website/templates/animal_feed_khoshab.html:12
+#: app/website/templates/animal_feed_khoshab.html:16
+#: app/website/templates/base.html:110 app/website/templates/base.html:197
+msgid "خوراک دام خوشاب"
+msgstr "Khoshab animal feed"
+
+#: app/website/templates/animal_feed_khoshab.html:24
+#: app/website/templates/index.html:286
+msgid "زنجیره طلایی خوراک دام خوشاب"
+msgstr "Khoshab golden livestock feed chain"
+
+#: app/website/templates/animal_feed_khoshab.html:34
+msgid ""
+"در دنیای امروز، امنیت غذایی و تغذیه سالم دام، طیور و آبزیان، به‌عنوان یکی از "
+"ارکان مهم توسعه اقتصادی و کشاورزی کشورها شناخته می‌شود. تأمین خوراک باکیفیت و "
+"استاندارد نه‌تنها نقش مستقیمی در بهره‌وری و سلامت دام‌ها و طیور دارد، بلکه در "
+"نهایت بر زنجیره تولید پروتئین و تأمین مواد غذایی سالم برای جامعه نیز "
+"تأثیرگذار است. طرح (خوشاب، زنجیره طلایی خوراک دام، طیور، آبزیان و حیوانات "
+"خانگی) یک پروژه صنعتی پیشرو است که در راستای این نیاز اساسی، با بهره‌گیری از "
+"فناوری‌های روز دنیا و دانش بومی، در شهرک صنعتی شهرستان خوشاب اجرا خواهد شد."
+msgstr ""
+"In today’s world, food security and the healthy nutrition of livestock, "
+"poultry, and aquatic animals are recognized as essential pillars of the "
+"economic and agricultural development of countries. Providing quality and "
+"standard feed not only has a direct impact on the productivity and health of "
+"animals but also ultimately affects the protein production chain and the "
+"provision of healthy food for society. The “Khoshab, Golden Feed Chain for "
+"Livestock, Poultry, Aquatic Animals, and Pets” project is a pioneering "
+"industrial initiative aimed at addressing this fundamental need. It will be "
+"implemented in the industrial town of Khoshab, utilizing cutting-edge "
+"technologies and local expertise."
+
+#: app/website/templates/animal_feed_khoshab.html:45
+#: app/website/templates/iaying_hen.html:47
+#: app/website/templates/mother_chicken_farm.html:45
+msgid "ضرورت و اهمیت طرح"
+msgstr "Importance and Necessity of the Project"
+
+#: app/website/templates/animal_feed_khoshab.html:46
+msgid ""
+"این پروژه نه‌تنها به تأمین نیاز داخلی کشور کمک می‌کند، بلکه با صادرات محصولات "
+"خود به کشورهای منطقه، می‌تواند منبع درآمد ارزی قابل‌توجهی ایجاد کند. همچنین، "
+"ایجاد اشتغال پایدار، کاهش وابستگی به واردات، و استفاده از ضایعات کشاورزی و "
+"فرآوری آن‌ها به محصولات با ارزش افزوده، از دیگر مزایای اجرای این طرح خواهد "
+"بود."
+msgstr ""
+"This project not only contributes to meeting the country’s domestic needs "
+"but also has the potential to generate a significant amount of foreign "
+"currency through exports of its products to regional countries. "
+"Additionally, the creation of sustainable jobs, reduction of dependence on "
+"imports, and utilization of agricultural waste for the production of high-"
+"value-added products will be among the benefits of implementing this project."
+
+#: app/website/templates/animal_feed_khoshab.html:47
+msgid ""
+"شرکت (راه ابریشم نو مسیر توسعه تحول جهانی)، علاوه بر احداث این کارخانه، در "
+"حال اجرای بزرگ‌ترین مزرعه مرغ مادر کشور و واحدهای پرورش میگوی گلخانه‌ای است. "
+"این زنجیره تولید، نیاز مبرمی به خوراک باکیفیت و استاندارد دارد، که این "
+"کارخانه آن را تأمین خواهد کرد."
+msgstr ""
+"“New Silk Road Masir Development Global Transformation” company, in addition "
+"to building this factory, is currently executing the country’s largest "
+"chicken mother farm and land-based shrimp breeding units. This production "
+"chain requires high-quality and standard feed, which this factory will "
+"supply."
+
+#: app/website/templates/animal_feed_khoshab.html:58
+msgid "اهداف طرح"
+msgstr "Objectives of the Project"
+
+#: app/website/templates/animal_feed_khoshab.html:60
+msgid ""
+"این پروژه با اهداف متعددی در بخش‌های اقتصادی، اجتماعی و زیست‌محیطی طراحی شده "
+"است که مهم‌ترین آن‌ها عبارتند از:"
+msgstr ""
+"This project has been designed with a number of objectives in economic, "
+"social, and environmental areas. The most important ones are as follows:"
+
+#: app/website/templates/animal_feed_khoshab.html:62
+msgid "اهداف اقتصادی:"
+msgstr "Economic Objectives:"
+
+#: app/website/templates/animal_feed_khoshab.html:64
+msgid "1. تولید سالانه 150 هزار تن خوراک دام، طیور، آبزیان و حیوانات خانگی"
+msgstr ""
+"1. Production of 150,000 tons of feed for livestock, poultry, aquatic "
+"animals and pets per year."
+
+#: app/website/templates/animal_feed_khoshab.html:65
+msgid ""
+"2. افزایش بهره‌وری و کاهش هزینه‌های تولید در صنعت دام و طیور از طریق تأمین "
+"خوراک با کیفیت"
+msgstr ""
+"2. Increasing productivity and reducing production costs in the animal "
+"husbandry and poultry industry through the provision of quality feed."
+
+#: app/website/templates/animal_feed_khoshab.html:66
+msgid ""
+"3. ایجاد اشتغال مستقیم برای 20 نفر و اشتغال غیرمستقیم برای 100 نفر در بخش‌های "
+"تولید، حمل‌ونقل، بازاریابی و فروش"
+msgstr ""
+"3. Creating direct employment for 20 people and indirect employment for 100 "
+"people in the production, transportation, marketing and sales sectors."
+
+#: app/website/templates/animal_feed_khoshab.html:67
+msgid ""
+"4. کاهش وابستگی به واردات خوراک دام و طیور و تأمین نیاز داخلی با "
+"استانداردهای بین‌المللی"
+msgstr ""
+"4. Reducing dependence on animal feed imports and meeting domestic needs "
+"with international standards."
+
+#: app/website/templates/animal_feed_khoshab.html:68
+msgid "5. افزایش ظرفیت صادراتی کشور و جذب بازارهای هدف در منطقه"
+msgstr ""
+"5. Increasing the country’s export capacity and attracting target markets in "
+"the region."
+
+#: app/website/templates/animal_feed_khoshab.html:80
+msgid "اهداف اجتماعی:"
+msgstr "Social Objectives:"
+
+#: app/website/templates/animal_feed_khoshab.html:82
+msgid "1. توسعه پایدار و افزایش فرصت‌های شغلی در منطقه خوشاب"
+msgstr ""
+"1. Sustainable development and increased job opportunities in the Khoshab "
+"region."
+
+#: app/website/templates/animal_feed_khoshab.html:83
+msgid "2. بهبود کیفیت محصولات پروتئینی از طریق تغذیه سالم دام و طیور"
+msgstr ""
+"2. Improving the quality of protein products through healthy feeding of "
+"livestock and poultry."
+
+#: app/website/templates/animal_feed_khoshab.html:84
+msgid ""
+"3. مشارکت در آموزش و توسعه علمی در صنعت خوراک دام از طریق راه‌اندازی مرکز "
+"پژوهش و آزمایشگاه"
+msgstr ""
+"3. Participating in education and scientific development in the animal feed "
+"industry through the establishment of a research center and laboratory."
+
+#: app/website/templates/animal_feed_khoshab.html:96
+msgid "اهداف زیست‌محیطی:"
+msgstr ":Environmental Objectives"
+
+#: app/website/templates/animal_feed_khoshab.html:98
+msgid ""
+"1. استفاده بهینه از ضایعات تولیدی در کارخانه‌های خوراک دام و طیور برای تولید "
+"غذای حیوانات خانگی مانند سگ، گربه و اسب"
+msgstr ""
+"1. Optimal use of production waste from animal feed factories to produce pet "
+"food, such as for dogs, cats, and horses."
+
+#: app/website/templates/animal_feed_khoshab.html:99
+msgid "2. کاهش آلایندگی و استفاده از فناوری‌های نوین در تولید خوراک"
+msgstr ""
+"2. Reduction of pollution and the use of innovative technologies in feed "
+"production."
+
+#: app/website/templates/animal_feed_khoshab.html:100
+msgid ""
+"3. بهره‌گیری از روش‌های زیست‌فناورانه مانند استفاده از میکروارگانیسم‌ها برای "
+"تولید خوراک طیور"
+msgstr ""
+"3. Utilization of biotechnological methods, such as using microorganisms for "
+"poultry feed production."
+
+#: app/website/templates/animal_feed_khoshab.html:101
+msgid "4. مدیریت صحیح پسماندها و تبدیل آن‌ها به محصولات قابل استفاده"
+msgstr "4. Proper management of waste and converting it into usable products."
+
+#: app/website/templates/animal_feed_khoshab.html:113
+msgid "فرآیند تولید و فناوری‌های مورد استفاده"
+msgstr "The process of manufacturing and technologies used"
+
+#: app/website/templates/animal_feed_khoshab.html:115
+msgid ""
+"کارخانه خوشاب از جدیدترین روش‌ها و فناوری‌های تولید خوراک بهره خواهد برد. "
+"فرآیند تولید شامل مراحل زیر است:"
+msgstr ""
+"The Khoshab factory will benefit from the latest methods and technologies of "
+"feed production.  The production process includes the following steps:"
+
+#: app/website/templates/animal_feed_khoshab.html:117
+msgid ""
+"1. انتخاب و آماده‌سازی مواد اولیه: استفاده از دانه‌های غلات، پروتئین‌های گیاهی "
+"و حیوانی، مواد معدنی و افزودنی‌های مغذی"
+msgstr ""
+"1. Selection and Preparation of Raw Materials: The use of grains, plant and "
+"animal proteins, minerals and nutrient additives"
+
+#: app/website/templates/animal_feed_khoshab.html:118
+msgid "2. آسیاب کردن: تبدیل مواد اولیه به ذرات ریز برای ترکیب بهتر"
+msgstr "2. Milling: Convert raw materials to fine particles to combine better"
+
+#: app/website/templates/animal_feed_khoshab.html:119
+msgid "3. فرآوری حرارتی: بهبود کیفیت تغذیه‌ای و افزایش قابلیت هضم خوراک"
+msgstr ""
+" 3. Heat Processing: Improving nutritional quality and enhancing food "
+"digestion capability"
+
+#: app/website/templates/animal_feed_khoshab.html:120
+msgid ""
+"4. پلتینگ (Pelleting): شکل‌دهی خوراک به فرم پلت برای بهبود مصرف و کاهش ضایعات"
+msgstr ""
+"4. Pelleting: Form form forming for pellets to improve consumption and "
+"reduce waste"
+
+#: app/website/templates/animal_feed_khoshab.html:121
+msgid ""
+"5. خشک‌کردن و بسته‌بندی: اطمینان از ماندگاری بالا و کاهش رطوبت محصول نهایی"
+msgstr ""
+"5. Drying and Packaging: Ensure high durability and reduces the moisture of "
+"the final product"
+
+#: app/website/templates/animal_feed_khoshab.html:122
+msgid "6. کنترل کیفیت: انجام آزمایش‌های دقیق در آزمایشگاه پژوهشی کارخانه"
+msgstr " 6. Quality Control: Conducting Factory Research Laboratory"
+
+#: app/website/templates/animal_feed_khoshab.html:134
+msgid ""
+"استفاده از میکروارگانیسم‌های مفید برای افزایش ارزش تغذیه‌ای خوراک طیور و "
+"بهره‌گیری از فناوری زیست‌فناورانه در تولید کیتوزان از پوست سخت‌پوستان، از "
+"نوآوری‌های این طرح محسوب می‌شوند."
+msgstr ""
+"Using beneficial microorganisms to enhance the nutritional value of poultry "
+"feed and employing biotechnology in the production of chitosan from "
+"crustacean shells are considered key innovations of this project."
+
+#: app/website/templates/animal_feed_khoshab.html:146
+msgid "محصولات کارخانه"
+msgstr "Factory products"
+
+#: app/website/templates/animal_feed_khoshab.html:148
+msgid ""
+"1. خوراک دام (گاو، گوسفند و بز): متناسب با نیازهای تغذیه‌ای و فیزیولوژیکی دام"
+msgstr ""
+"1. feed for cattle, sheep and goats according to the nutritional and "
+"physiological needs of the animals"
+
+#: app/website/templates/animal_feed_khoshab.html:149
+msgid ""
+"2. خوراک طیور (مرغ گوشتی، مرغ تخم‌گذار، بوقلمون و بلدرچین): دارای ترکیبات "
+"مغذی و مکمل‌های ضروری"
+msgstr ""
+"2. Poultry feed, broiler chicken, laying hen, turkey and quail with "
+"nutritious ingredients and essential supplements +"
+
+#: app/website/templates/animal_feed_khoshab.html:150
+msgid ""
+"3. خوراک آبزیان (ماهی، میگو و آبزیان زینتی): با فرمولاسیون علمی و متناسب با "
+"نیازهای رشد"
+msgstr ""
+"3. Aquatic feed for shrimps and ornamental aquatics with scientific "
+"formulation and suitable for growth needs"
+
+#: app/website/templates/animal_feed_khoshab.html:151
+msgid ""
+"4. خوراک حیوانات خانگی (سگ، گربه، اسب): تولید شده از ضایعات خوراک دام و طیور "
+"با ارزش غذایی بالا"
+msgstr ""
+"4. Pet food for dogs, cats, horses produced from animal and poultry feed "
+"waste with high nutritional value"
+
+#: app/website/templates/animal_feed_khoshab.html:163
+msgid "مطالعات بازار و تحلیل رقابتی"
+msgstr "Market studies and competitive analysis"
+
+#: app/website/templates/animal_feed_khoshab.html:164
+msgid ""
+"بررسی‌های انجام شده نشان می‌دهد که بازار خوراک دام و طیور ایران همواره با "
+"چالش‌هایی مانند وابستگی به واردات، نوسانات قیمت مواد اولیه و کمبود کیفیت در "
+"برخی محصولات داخلی مواجه بوده است. این پروژه با تمرکز بر تولید داخلی با "
+"استانداردهای بالا و قیمت رقابتی، می‌تواند جایگاه ویژه‌ای در بازار به دست آورد."
+msgstr ""
+"Investigations show that Iran's livestock and poultry feed market has always "
+"faced challenges such as dependence on imports, price fluctuations of raw "
+"materials and lack of quality in some domestic products. This project can "
+"gain a special position in the market by focusing on domestic production "
+"with high standards and competitive price."
+
+#: app/website/templates/animal_feed_khoshab.html:175
+msgid "مزایای رقابتی کارخانه خوشاب"
+msgstr "Competitive Advantages of the Khushab Factory"
+
+#: app/website/templates/animal_feed_khoshab.html:177
+msgid ""
+"1. استفاده از مواد اولیه باکیفیت داخلی و خارجی برای تولید محصولاتی با ارزش "
+"غذایی بالا"
+msgstr ""
+"1. Utilization of high-quality domestic and foreign raw materials to produce "
+"nutritionally valuable products."
+
+#: app/website/templates/animal_feed_khoshab.html:178
+msgid "2. بهره‌گیری از فناوری‌های مدرن مانند میکروارگانیسم‌ها و فرایندهای زیستی"
+msgstr ""
+"2. Adoption of modern technologies such as microorganisms and biological "
+"processes."
+
+#: app/website/templates/animal_feed_khoshab.html:179
+msgid "3. امکان صادرات به کشورهای همسایه و رقابت در بازارهای بین‌المللی"
+msgstr ""
+"3. Capability for exporting to neighboring countries and competing in "
+"international markets."
+
+#: app/website/templates/animal_feed_khoshab.html:180
+msgid ""
+"4. استفاده از ضایعات تولیدی برای کاهش هزینه‌ها و تولید خوراک حیوانات خانگی"
+msgstr "4. Use of production waste to reduce costs and produce pet food."
+
+#: app/website/templates/animal_feed_khoshab.html:181
+msgid ""
+"5. راه‌اندازی آزمایشگاه و مرکز تحقیقاتی برای کنترل کیفیت و نوآوری در "
+"فرمولاسیون خوراک"
+msgstr ""
+"5. Establishment of a laboratory and research center for quality control and "
+"innovation in feed formulation."
+
+#: app/website/templates/animal_feed_khoshab.html:193
+msgid "تأثیرات اقتصادی و اشتغال‌زایی"
+msgstr "Economic Impacts and Job Creation"
+
+#: app/website/templates/animal_feed_khoshab.html:195
+msgid ""
+"این پروژه در سه سطح ملی، منطقه‌ای و بین‌المللی تأثیرات مثبتی خواهد داشت. از "
+"نظر اشتغال‌زایی، به‌طور مستقیم حدود 20 نفر در کارخانه مشغول به کار خواهند شد و "
+"حدود 100 نفر به‌صورت غیرمستقیم در حوزه‌های حمل‌ونقل، بازاریابی و توزیع، شغل "
+"ایجاد می‌شود."
+msgstr ""
+"This project will have positive impacts at national, regional, and "
+"international levels. In terms of job creation, approximately 20 people will "
+"be directly employed at the factory, while around 100 additional jobs will "
+"be created indirectly in areas such as transportation, marketing, and "
+"distribution."
+
+#: app/website/templates/animal_feed_khoshab.html:197
+msgid ""
+"از نظر اقتصادی، این کارخانه با کاهش وابستگی به واردات، توسعه زنجیره تأمین "
+"داخلی و افزایش صادرات، می‌تواند نقش مهمی در رشد صنعت کشاورزی و دامپروری کشور "
+"ایفا کند."
+msgstr ""
+"Economically, this factory can play a significant role in the growth of the "
+"country's agricultural and livestock sectors by reducing dependence on "
+"imports, developing the domestic supply chain, and increasing exports."
+
+#: app/website/templates/animal_feed_khoshab.html:209
+msgid ""
+"طرح (خوشاب، زنجیره طلایی خوراک دام، طیور، آبزیان و حیوانات خانگی) یک پروژه "
+"جامع و مدرن است که با هدف تولید خوراک باکیفیت، استفاده از تکنولوژی‌های نوین و "
+"ایجاد ارزش افزوده از ضایعات تولیدی اجرا می‌شود. این کارخانه نه‌تنها می‌تواند "
+"نیاز داخلی کشور را برطرف کند، بلکه ظرفیت بالایی برای صادرات و رقابت در "
+"بازارهای جهانی دارد."
+msgstr ""
+"The “Khushab, Golden Chain of Animal and Poultry Feed” project is a "
+"comprehensive and modern project aimed at producing high-quality feed, "
+"utilizing cutting-edge technologies, and creating value-added products from "
+"production waste. This factory not only aims to meet the domestic market’s "
+"needs, but also has a significant potential for exports and competing in the "
+"global markets."
+
+#: app/website/templates/animal_feed_khoshab.html:211
+msgid ""
+"با سرمایه‌گذاری در این پروژه، گامی بزرگ در جهت خودکفایی، توسعه پایدار و "
+"ارتقای صنعت دامپروری کشور برداشته خواهد شد."
+msgstr ""
+"With an investment in this project, a major step will be taken towards "
+"achieving self-sufficiency, sustainable development, and improving the "
+"country’s animal husbandry industry.​​​​​​​"
+
+#: app/website/templates/animal_refinery.html:12
+#: app/website/templates/animal_refinery.html:16
+msgid "پالایشگاه دامی"
+msgstr "Livestock Refinery"
+
+#: app/website/templates/animal_refinery.html:24
+#: app/website/templates/index.html:346
+msgid "اولین پالایشگاه دام سبک و سنگین"
+msgstr "The first light and heavy livestock refinery"
+
+#: app/website/templates/animal_refinery.html:34
+msgid ""
+"با افزایش جمعیت و تغییر سبک زندگی، نیاز به تأمین پایدار و بهداشتی گوشت قرمز "
+"و فرآورده‌های جانبی دام بیش از پیش احساس می‌شود. در این راستا، ایجاد یک "
+"پالایشگاه دام سبک و سنگین با ظرفیت 1000 رأس دام سبک و 100 رأس دام سنگین، "
+"گامی مهم در جهت بهینه‌سازی زنجیره تولید گوشت، کاهش ضایعات، بهره‌وری بالاتر و "
+"استفاده حداکثری از فرآورده‌های دامی خواهد بود."
+msgstr ""
+"With population growth and evolving lifestyles, the need for a sustainable "
+"and sanitary supply of red meat and livestock by-products is increasingly "
+"felt. In this regard, establishing a light and heavy livestock processing "
+"plant with a capacity of 1,000 head of light livestock and 100 head of heavy "
+"livestock is a significant step towards optimizing the meat production "
+"chain, reducing waste, enhancing efficiency, and maximizing the utilization "
+"of livestock by-products."
+
+#: app/website/templates/animal_refinery.html:35
+msgid ""
+"این پالایشگاه علاوه بر کشتار و بسته‌بندی گوشت، دارای واحدهای تخصصی قطعه‌بندی و "
+"بسته‌بندی، تولید ژلاتین استخوانی، فرآوری خون و پلاسما، تولید نخ بخیه از روده، "
+"فرآوری پوست و پشم و تولید سوسیس و کالباس است. این طرح نوآورانه با بهره‌گیری "
+"از فناوری‌های مدرن، استانداردهای بهداشتی و روش‌های نوین مدیریت صنعتی، نقش مهمی "
+"در افزایش بهره‌وری صنعت دامپروری و کاهش وابستگی کشور به واردات محصولات جانبی "
+"دامی خواهد داشت."
+msgstr ""
+"This processing plant, in addition to slaughtering and meat packaging, will "
+"feature specialized units for cutting and packaging, production of bone "
+"gelatin, processing of blood and plasma, production of surgical sutures from "
+"intestines, processing of hides and wool, and the production of sausages and "
+"cold cuts. This innovative project, leveraging modern technologies, sanitary "
+"standards, and novel industrial management methods, will play a crucial role "
+"in improving the efficiency of the livestock industry and reducing the "
+"country’s dependence on imports of livestock by-products.​​​​​​​"
+
+#: app/website/templates/animal_refinery.html:46
+msgid "۱. ضرورت راه‌اندازی پالایشگاه دام سبک و سنگین"
+msgstr ""
+"1. Rationale for Establishing a Light and Heavy Livestock Processing Plant"
+
+#: app/website/templates/animal_refinery.html:48
+msgid "بهبود زنجیره تأمین گوشت و فرآورده‌های جانبی دامی"
+msgstr "Improvement of the meat and livestock by-product supply chain"
+
+#: app/website/templates/animal_refinery.html:49
+msgid "استفاده بهینه از ضایعات و تبدیل آن‌ها به محصولات ارزشمند"
+msgstr "Optimal utilization of waste and its conversion into valuable products"
+
+#: app/website/templates/animal_refinery.html:50
+msgid ""
+"کاهش وابستگی کشور به واردات ژلاتین، پودر خون، نخ بخیه و سایر فرآورده‌های دامی"
+msgstr ""
+"Reduction of the country’s dependence on imports of gelatin, blood powder, "
+"surgical sutures, and other livestock by-products"
+
+#: app/website/templates/animal_refinery.html:51
+msgid "افزایش بهره‌وری اقتصادی دامپروری از طریق فرآوری کامل دام"
+msgstr ""
+"Increased economic efficiency of the livestock industry through "
+"comprehensive livestock processing"
+
+#: app/website/templates/animal_refinery.html:52
+msgid "افزایش اشتغال‌زایی و توسعه صنعتی در منطقه"
+msgstr "Job creation and industrial development in the region"
+
+#: app/website/templates/animal_refinery.html:54
+msgid ""
+"در حال حاضر، بسیاری از ضایعات دامی در ایران بدون فرآوری مناسب دور ریخته "
+"می‌شوند، در حالی که در کشورهای توسعه‌یافته از این مواد برای تولید محصولات با "
+"ارزش افزوده بالا مانند ژلاتین، نخ بخیه، پودر خون و سوسیس و کالباس استفاده "
+"می‌شود. پالایشگاه دام با ایجاد یک چرخه کامل تولید، تمامی بخش‌های دام را به "
+"فرآورده‌های ارزشمند تبدیل می‌کند."
+msgstr ""
+"Currently, in Iran, a significant amount of livestock waste is discarded "
+"without proper processing, whereas in developed countries, these materials "
+"are utilized to produce high-value-added products such as gelatin, surgical "
+"sutures, blood powder, sausages, and cold cuts. The livestock processing "
+"plant, by creating a complete production cycle, converts all parts of the "
+"livestock into valuable products.​​​​​​​"
+
+#: app/website/templates/animal_refinery.html:65
+msgid "2. ظرفیت و بخش‌های مختلف پالایشگاه"
+msgstr "2. Capacity and different parts of the refinery"
+
+#: app/website/templates/animal_refinery.html:67
+#: app/website/templates/iaying_hen.html:115
+#: app/website/templates/plant_refinery.html:68
+msgid "ظرفیت تولید:"
+msgstr "Production Capacity:"
+
+#: app/website/templates/animal_refinery.html:69
+msgid "کشتار و فرآوری روزانه 1000 رأس دام سبک و 100 رأس دام سنگین"
+msgstr "Slaughtering and processing 1,000 light and 100 heavy livestock daily"
+
+#: app/website/templates/animal_refinery.html:70
+msgid "ظرفیت سالانه تولید گوشت: بیش از 20 هزار تن"
+msgstr "Annual Meat Production Capacity: More than 20,000 tons"
+
+#: app/website/templates/animal_refinery.html:71
+msgid "تولید محصولات جانبی با ارزش افزوده بالا از ضایعات دامی"
+msgstr "Production of high-value-added by-products from animal waste"
+
+#: app/website/templates/animal_refinery.html:73
+#: app/website/templates/plant_refinery.html:74
+msgid "بخش‌های اصلی پالایشگاه:"
+msgstr "Main sections of the refinery:"
+
+#: app/website/templates/animal_refinery.html:75
+msgid "واحد قطعه‌بندی و بسته‌بندی گوشت"
+msgstr "Meat cutting and packaging unit"
+
+#: app/website/templates/animal_refinery.html:76
+msgid "واحد استخوان‌گیری و تولید ژلاتین استخوانی"
+msgstr "Bone extraction unit and production of bone gelatin"
+
+#: app/website/templates/animal_refinery.html:77
+msgid "واحد فرآوری خون: تولید پلاسما و پودر خون"
+msgstr "Blood processing unit: production of plasma and blood powder"
+
+#: app/website/templates/animal_refinery.html:78
+msgid "واحد فرآوری روده: تولید نخ بخیه پزشکی"
+msgstr " Intestinal processing unit: medical suture thread production"
+
+#: app/website/templates/animal_refinery.html:79
+msgid "واحد تولید سوسیس و کالباس"
+msgstr "Sausage production unit"
+
+#: app/website/templates/animal_refinery.html:80
+msgid "واحد فرآوری پوست و پشم"
+msgstr "Skin and wool processing unit"
+
+#: app/website/templates/animal_refinery.html:91
+#: app/website/templates/plant_refinery.html:92
+msgid "۳. جزئیات فرآوری در بخش‌های مختلف پالایشگاه"
+msgstr "3. Details of processing in different parts of the refinery"
+
+#: app/website/templates/animal_refinery.html:93
+msgid "۳.۱. واحد قطعه‌بندی و بسته‌بندی گوشت"
+msgstr "3.1. Meat Cutting and Packaging Unit"
+
+#: app/website/templates/animal_refinery.html:95
+msgid "تفکیک لاشه و بسته‌بندی بهداشتی گوشت قرمز"
+msgstr "Carcass separation and hygienic packaging of red meat"
+
+#: app/website/templates/animal_refinery.html:96
+msgid "افزایش ماندگاری گوشت از طریق بسته‌بندی در خلا (Vacuum Packaging)"
+msgstr "Increasing the shelf life of meat through vacuum packaging"
+
+#: app/website/templates/animal_refinery.html:97
+msgid ""
+"ایجاد ارزش افزوده از طریق عرضه گوشت در بسته‌بندی‌های متنوع برای بازار داخلی و "
+"صادرات"
+msgstr ""
+"Creating added value through the supply of meat in various packages for the "
+"domestic market and export"
+
+#: app/website/templates/animal_refinery.html:99
+msgid "۳.۲. واحد استخوان‌گیری و تولید ژلاتین استخوانی"
+msgstr "3.2. Bone extraction and gelatin production unit"
+
+#: app/website/templates/animal_refinery.html:101
+msgid "فرآوری استخوان دام و تبدیل آن به ژلاتین خوراکی و صنعتی"
+msgstr ""
+"Processing livestock bones and converting them into edible and industrial "
+"gelatin"
+
+#: app/website/templates/animal_refinery.html:102
+msgid "استفاده در صنایع غذایی (دسرها، شیرینی‌جات) و دارویی (کپسول‌های ژلاتینی)"
+msgstr ""
+"Use in the food (desserts, confectionery) and pharmaceutical industries "
+"(gelatin capsules)"
+
+#: app/website/templates/animal_refinery.html:103
+msgid "جایگزینی واردات ژلاتین با تولید داخلی"
+msgstr "Replacing gelatin imports with domestic production"
+
+#: app/website/templates/animal_refinery.html:114
+msgid "۳.۳. واحد فرآوری خون: تولید پلاسما و پودر خون"
+msgstr "3.3. Blood Processing Unit: Production of Plasma and Blood Powder"
+
+#: app/website/templates/animal_refinery.html:116
+msgid "استخراج پلاسما از خون دام برای استفاده در صنایع دارویی و غذایی"
+msgstr ""
+"Extraction of plasma from animal blood for use in the pharmaceutical and "
+"food industries"
+
+#: app/website/templates/animal_refinery.html:117
+msgid "تولید پودر خون برای استفاده در خوراک دام و طیور (منبع پروتئینی غنی)"
+msgstr ""
+"Production of Blood Powder for Use in Livestock and Poultry Feed (Rich "
+"Protein Source)"
+
+#: app/website/templates/animal_refinery.html:119
+msgid "۳.۴. واحد فرآوری روده: تولید نخ بخیه پزشکی"
+msgstr "3.4. Intestinal processing unit: production of medical suture thread"
+
+#: app/website/templates/animal_refinery.html:121
+msgid "فرآوری روده دام و تبدیل آن به نخ بخیه طبیعی برای مصارف پزشکی"
+msgstr ""
+"Processing of livestock intestines and converting them into natural suture "
+"threads for medical use"
+
+#: app/website/templates/animal_refinery.html:122
+msgid "جایگزینی واردات نخ بخیه طبیعی و توسعه صنعت تجهیزات پزشکی"
+msgstr ""
+"Replacing the import of natural suture thread and developing the medical "
+"equipment industry"
+
+#: app/website/templates/animal_refinery.html:124
+msgid "۳.۵. واحد تولید سوسیس و کالباس"
+msgstr "3.5. Sausage production unit"
+
+#: app/website/templates/animal_refinery.html:126
+msgid "استفاده از گوشت قرمز برای تولید فرآورده‌های گوشتی فرآوری‌شده"
+msgstr "Using red meat to produce processed meat products"
+
+#: app/website/templates/animal_refinery.html:127
+msgid "استانداردهای بهداشتی بالا و تولید محصولات بدون مواد نگهدارنده مضر"
+msgstr ""
+"High hygiene standards and production of products without harmful "
+"preservatives"
+
+#: app/website/templates/animal_refinery.html:129
+msgid "۳.۶. واحد فرآوری پوست و پشم"
+msgstr "3.6. Leather and wool processing unit"
+
+#: app/website/templates/animal_refinery.html:131
+msgid "تبدیل پوست دام به چرم طبیعی برای صنایع کیف، کفش و پوشاک"
+msgstr ""
+"Converting Animal Skins into Natural Leather for Bag, Shoe and Garment "
+"Industries"
+
+#: app/website/templates/animal_refinery.html:132
+msgid "فرآوری پشم برای استفاده در صنایع نساجی و تولید نخ"
+msgstr " Wool processing for use in textile and yarn production industries​​​​​​​"
+
+#: app/website/templates/animal_refinery.html:143
+msgid "۴. مزایای اقتصادی و صنعتی پالایشگاه دام"
+msgstr "4. Economic and industrial advantages of livestock refinery"
+
+#: app/website/templates/animal_refinery.html:145
+#: app/website/templates/plant_refinery.html:138
+msgid "۴.۱. کاهش ضایعات و افزایش بهره‌وری"
+msgstr "4.1. Reducing Waste and Increasing Productivity"
+
+#: app/website/templates/animal_refinery.html:147
+msgid "تبدیل تمام اجزای دام به محصولات قابل فروش، کاهش هدررفت منابع"
+msgstr ""
+"Converting all livestock components into marketable products, reducing waste "
+"of resources"
+
+#: app/website/templates/animal_refinery.html:148
+#: app/website/templates/plant_refinery.html:142
+msgid "افزایش درآمد دامداران از طریق فرآوری کامل دام"
+msgstr ""
+"Increasing livestock farmers income through complete livestock processing"
+
+#: app/website/templates/animal_refinery.html:150
+#: app/website/templates/plant_refinery.html:144
+msgid "۴.۲. کاهش وابستگی به واردات و توسعه صادرات"
+msgstr "4.2. Reducing Dependence on Imports and Developing Exports"
+
+#: app/website/templates/animal_refinery.html:152
+msgid "جایگزینی واردات ژلاتین، پودر خون، نخ بخیه و چرم فرآوری‌شده"
+msgstr ""
+"Import Replacement of Gelatin, Blood Powder, Suture Thread and Processed "
+"Leather"
+
+#: app/website/templates/animal_refinery.html:153
+#: app/website/templates/plant_refinery.html:148
+msgid "افزایش صادرات فرآورده‌های گوشتی بسته‌بندی‌شده"
+msgstr "Increasing the export of packaged meat products"
+
+#: app/website/templates/animal_refinery.html:155
+#: app/website/templates/plant_refinery.html:150
+msgid "۴.۳. ایجاد اشتغال و توسعه منطقه‌ای"
+msgstr "4.3. Job Creation and Regional Development"
+
+#: app/website/templates/animal_refinery.html:157
+#: app/website/templates/plant_refinery.html:152
+msgid "اشتغال‌زایی مستقیم و غیرمستقیم برای صدها نفر در منطقه"
+msgstr "Direct and indirect employment for hundreds of people in the region"
+
+#: app/website/templates/animal_refinery.html:158
+msgid "توسعه صنعت فرآوری دام در کشور"
+msgstr "Development of livestock processing industry in the country"
+
+#: app/website/templates/animal_refinery.html:169
+#: app/website/templates/plant_refinery.html:165
+msgid "۵. چالش‌های احتمالی و راهکارها"
+msgstr "5. Potential Challenges and Solutions"
+
+#: app/website/templates/animal_refinery.html:171
+msgid "چالش‌ها:"
+msgstr "Challenges:"
+
+#: app/website/templates/animal_refinery.html:172
+#: app/website/templates/plant_refinery.html:169
+msgid "مشکلات تأمین دام زنده برای کشتار روزانه"
+msgstr "Problems of supplying live animals for daily slaughter"
+
+#: app/website/templates/animal_refinery.html:173
+#: app/website/templates/plant_refinery.html:171
+msgid "نیاز به سرمایه‌گذاری اولیه بالا برای راه‌اندازی پالایشگاه"
+msgstr "The need for a high initial investment to set up the refinery"
+
+#: app/website/templates/animal_refinery.html:174
+msgid "توسعه بازارهای صادراتی برای فرآورده‌های جانبی دامی"
+msgstr "Development of export markets for livestock by-products"
+
+#: app/website/templates/animal_refinery.html:176
+msgid "راهکارها:"
+msgstr "Solutions:"
+
+#: app/website/templates/animal_refinery.html:177
+#: app/website/templates/plant_refinery.html:177
+msgid "ایجاد زنجیره تأمین دام سبک و سنگین از دامداران داخلی"
+msgstr ""
+"Creating a supply chain for light and heavy livestock from domestic "
+"livestock farmers"
+
+#: app/website/templates/animal_refinery.html:178
+#: app/website/templates/plant_refinery.html:179
+msgid "جذب سرمایه‌گذاری دولتی و خصوصی برای تأمین مالی پروژه"
+msgstr "Attracting public and private investment to finance the project"
+
+#: app/website/templates/animal_refinery.html:179
+#: app/website/templates/plant_refinery.html:181
+msgid "بازاریابی بین‌المللی و همکاری با شرکت‌های صادرکننده"
+msgstr "International Marketing and Cooperation with Exporting Companies"
+
+#: app/website/templates/animal_refinery.html:190
+#: app/website/templates/mother_chicken_farm.html:257
+msgid "نتیجه گیری"
+msgstr "Conclusion:"
+
+#: app/website/templates/animal_refinery.html:192
+msgid ""
+"پالایشگاه دام سبک و سنگین با ظرفیت 1000 رأس دام سبک و 100 رأس دام سنگین، یک "
+"پروژه ملی در راستای مدرن‌سازی صنعت دامپروری، افزایش بهره‌وری و کاهش ضایعات "
+"دامی محسوب می‌شود. تولید فرآورده‌های جانبی با ارزش افزوده بالا مانند ژلاتین، "
+"نخ بخیه، پودر خون، چرم و سوسیس و کالباس، نه‌تنها بازار داخلی را تأمین می‌کند "
+"بلکه ظرفیت بالایی برای صادرات دارد."
+msgstr ""
+"The light and heavy livestock refinery with a capacity of 1,000 light "
+"livestock and 100 heavy livestock is a national project in order to "
+"modernize the livestock industry, increase productivity and reduce livestock "
+"waste. The production of high-value-added by-products such as gelatin, "
+"suture thread, blood powder, leather and sausages, and sausages, not only "
+"supplies the domestic market, but also has a high capacity for export."
+
+#: app/website/templates/animal_refinery.html:194
+#: app/website/templates/plant_refinery.html:196
+msgid ""
+"این پالایشگاه می‌تواند الگوی صنعتی برای سایر مناطق کشور باشد و به توسعه "
+"پایدار صنعت دامپروری و فرآوری دامی کمک کند."
+msgstr ""
+"This refinery can be an industrial model for other regions of the country "
+"and contribute to the sustainable development of the animal husbandry and "
+"animal processing industry."
+
+#: app/website/templates/animal_refinery.html:196
+#: app/website/templates/plant_refinery.html:198
+msgid ""
+"با اجرای این پروژه، ایران می‌تواند در تولید محصولات گوشتی و فرآورده‌های جانبی، "
+"به یکی از بازیگران اصلی منطقه تبدیل شود."
+msgstr ""
+"With the implementation of this project, Iran can become one of the main "
+"players in the region in the production of meat products and by-products."
+
+#: app/website/templates/base.html:61
+msgid "پروفایل"
+msgstr "Profile"
+
+#: app/website/templates/base.html:69
+msgid "افتتاح حساب"
+msgstr "Sign up"
+
+#: app/website/templates/base.html:71
+msgid "ورود به حساب"
+msgstr "Log in"
+
+#: app/website/templates/base.html:80
+msgid "خروج از حساب"
+msgstr "Log out"
+
+#: app/website/templates/base.html:100 app/website/templates/base.html:188
+#: app/website/templates/news_detail.html:10
+#: app/website/templates/news_detail.html:16
+#: app/website/templates/news_list.html:11
+#: app/website/templates/news_list.html:15
+msgid "پایگاه خبری"
+msgstr "News"
+
+#: app/website/templates/base.html:101 app/website/templates/base.html:189
+#: app/website/templates/investment.html:11
+#: app/website/templates/investment.html:15
+#: app/website/templates/investment.html:30
+msgid "سرمایه گذاری"
+msgstr "Investment"
+
+#: app/website/templates/base.html:102 app/website/templates/index.html:207
+msgid "بازرگانی"
+msgstr "Commerce"
+
+#: app/website/templates/base.html:104 app/website/templates/index.html:210
+#: app/website/templates/purchase_livestock.html:12
+#: app/website/templates/purchase_livestock.html:16
+#: app/website/templates/purchase_livestock_detail.html:10
+#: app/website/templates/purchase_livestock_detail.html:14
+msgid "خرید و فروش نهاد های دامی"
+msgstr "Buying and selling livestock inputs"
+
+#: app/website/templates/base.html:105 app/website/templates/index.html:236
+#: app/website/templates/organic_products.html:10
+#: app/website/templates/organic_products.html:14
+#: app/website/templates/organic_products_detail.html:10
+#: app/website/templates/organic_products_detail.html:14
+msgid "محصولات ارگانیک"
+msgstr "Organic products"
+
+#: app/website/templates/base.html:108 app/website/templates/base.html:195
+msgid "پروژه ها"
+msgstr "Projects"
+
+#: app/website/templates/base.html:111 app/website/templates/base.html:198
+#: app/website/templates/mother_chicken_farm.html:11
+#: app/website/templates/mother_chicken_farm.html:15
+msgid "مزرعه مرغ مادر"
+msgstr "Mother Poultry Farm"
+
+#: app/website/templates/base.html:112 app/website/templates/base.html:199
+#: app/website/templates/iaying_hen.html:12
+#: app/website/templates/iaying_hen.html:16
+msgid "مجموعه مرغ تخم گذار"
+msgstr "Laying Hen Complex"
+
+#: app/website/templates/base.html:113 app/website/templates/base.html:200
+#: app/website/templates/supplying_livestock.html:12
+#: app/website/templates/supplying_livestock.html:16
+msgid "تامین نهاد های دامی"
+msgstr "Supplying Livestock Inputs"
+
+#: app/website/templates/base.html:114 app/website/templates/base.html:201
+msgid "پالایشگاه دام"
+msgstr "Livestock Refinery"
+
+#: app/website/templates/base.html:115 app/website/templates/base.html:202
+#: app/website/templates/plant_refinery.html:12
+#: app/website/templates/plant_refinery.html:16
+msgid "پالایشگاه گیاهان دارویی"
+msgstr "Medicinal Herb Refinery"
+
+#: app/website/templates/base.html:118
+msgid "رویداد ها"
+msgstr "Events"
+
+#: app/website/templates/base.html:123 app/website/templates/base.html:190
+#: app/website/templates/contact.html:11 app/website/templates/contact.html:15
+msgid "تماس با ما"
+msgstr "Contact us"
+
+#: app/website/templates/base.html:177 app/website/templates/investment.html:46
+msgid "شماره تماس"
+msgstr "Contact number"
+
+#: app/website/templates/base.html:179 app/website/templates/contact.html:128
+#: app/website/templates/investment.html:52
+msgid "ایمیل"
+msgstr "Email"
+
+#: app/website/templates/base.html:184
+msgid "صفحات اصلی"
+msgstr "Main pages"
+
+#: app/website/templates/base.html:186
+msgid "خانه"
+msgstr "Home"
+
+#: app/website/templates/base.html:207
+msgid "آدرس های حضوری در ایران"
+msgstr "In-person addresses in Iran"
+
+#: app/website/templates/base.html:210
+msgid "سبزوار _میدان طالقانی_ساختمان اکسیژن"
+msgstr "Sabzevar _Taleghani Square_Oxygen Building"
+
+#: app/website/templates/base.html:212
+msgid "تهران_میدان فردوسی"
+msgstr "Tehran_Ferdowsi Square"
+
+#: app/website/templates/base.html:244
+msgid "راه های ارتباطی با ما"
+msgstr "Ways to contact us"
+
+#: app/website/templates/contact.html:39 app/website/templates/contact.html:51
+msgid "راه ابریشم نو"
+msgstr "New Silk Road"
+
+#: app/website/templates/contact.html:40
+msgid "ایران _ سبزوار _ میدان طالقانی _ ساختمان اکسیژن"
+msgstr "Iran - Sabzevar - Taleghani Square - Oxygen Building"
+
+#: app/website/templates/contact.html:52
+msgid "ایران _ تهران _ میدان فردوسی"
+msgstr "Iran - Tehran - Ferdowsi Square"
+
+#: app/website/templates/contact.html:87
+msgid "تلفن پشتیبانی"
+msgstr "Support Phone"
+
+#: app/website/templates/contact.html:99
+msgid "ایمیل پشتیبانی"
+msgstr "Support Email"
+
+#: app/website/templates/contact.html:111
+msgid "با ما در تماس باشید"
+msgstr "Get in Touch with Us"
+
+#: app/website/templates/contact.html:113
+msgid "برای ارتباط با ما و شروع یک همکاری موثر لطفا فرم زیر را تکمیل کنید"
+msgstr "To contact us and start an effective collaboration, please fill out the form below"
+
+#: app/website/templates/contact.html:114
+msgid "نظرات و پیشنهادات شما برای ما ارزشمند است"
+msgstr "Your feedback and suggestions are valuable to us"
+
+#: app/website/templates/contact.html:115
+msgid "منتظر پیام شما هستیم"
+msgstr "We look forward to receiving your message"
+
+#: app/website/templates/contact.html:122
+#: app/website/templates/investment.html:40
+msgid "نام و نام خانوادگی"
+msgstr "First name and last name"
+
+#: app/website/templates/contact.html:134
+msgid "شماره تلفن همراه"
+msgstr "Mobile Number"
+
+#: app/website/templates/contact.html:140
+msgid "پیام مورد نظر"
+msgstr "Your Message"
+
+#: app/website/templates/contact.html:145
+msgid "ارسال پیام"
+msgstr "Send Message"
+
+#: app/website/templates/iaying_hen.html:24
+msgid "بزرگ‌ترین مجموعه مرغ تخم گذار کشور"
+msgstr "The country’s largest egg-laying chicken farm"
+
+#: app/website/templates/iaying_hen.html:34
+msgid ""
+"با توجه به اهمیت تأمین پروتئین و نقش تخم‌مرغ به‌عنوان یکی از مهم‌ترین منابع "
+"تغذیه‌ای در سبد خانوار، ایجاد بزرگ‌ترین مجموعه مرغ تخم‌گذار کشور با ظرفیت "
+"یک‌میلیون قطعه و تولید روزانه یک‌میلیون عدد تخم‌مرغ، گامی اساسی در راستای تأمین "
+"نیاز داخلی، کاهش وابستگی به واردات، و توسعه ظرفیت‌های صادراتی محسوب می‌شود. "
+"این مجموعه که در شهرستان خوشاب احداث خواهد شد، به‌عنوان یکی از بزرگ‌ترین و "
+"مدرن‌ترین مزارع تولید تخم‌مرغ در منطقه، استانداردهای جهانی را در تولید، بهداشت "
+"و بسته‌بندی رعایت خواهد کرد."
+msgstr ""
+"Given the importance of protein and the role of eggs as one of the most "
+"important nutritional sources in household food baskets, the creation of the "
+"country’s largest egg-laying facility with a capacity of one million hens "
+"and a daily production of one million eggs represents a crucial step towards "
+"meeting domestic needs, reducing reliance on imports, and expanding export "
+"capabilities. This facility, to be constructed in Khoshab County, will be "
+"one of the largest and most modern egg production farms in the region, "
+"adhering to international standards in production, hygiene, and packaging."
+
+#: app/website/templates/iaying_hen.html:36
+msgid ""
+"در این گزارش، جنبه‌های مختلف این پروژه شامل اهمیت، اهداف، فرآیند تولید، تحلیل "
+"بازار، زیرساخت‌ها، چالش‌ها و مزایای اقتصادی مورد بررسی قرار می‌گیرد."
+msgstr ""
+"This report will examine various aspects of this project, including its "
+"significance, objectives, production process, market analysis, "
+"infrastructure, challenges, and economic benefits.​​​​​​​"
+
+#: app/website/templates/iaying_hen.html:49
+msgid ""
+"تخم‌مرغ به‌عنوان یکی از ارزان‌ترین و غنی‌ترین منابع پروتئین، نقش حیاتی در امنیت "
+"غذایی کشور دارد. طبق آمار، ایران سالانه بیش از یک میلیون تن تخم‌مرغ تولید "
+"می‌کند و از جمله تولیدکنندگان بزرگ این محصول در منطقه است. اما همچنان با "
+"چالش‌هایی همچون نوسانات قیمت، کمبود عرضه، وابستگی برخی مناطق به واردات، و "
+"نیاز به بهبود کیفیت تولید مواجه هستیم."
+msgstr ""
+"Eggs, as one of the most affordable and richest sources of protein, play a "
+"vital role in the country’s food security. According to statistics, Iran "
+"annually produces over one million tons of eggs and is among the major "
+"producers of this product in the region. However, we still face challenges "
+"such as price fluctuations, supply shortages, the dependence of some regions "
+"on imports, and the need to improve production quality.​​​​​​​"
+
+#: app/website/templates/iaying_hen.html:60
+msgid "مزایای اجرای این پروژه:"
+msgstr "Benefits of Implementing this Project:"
+
+#: app/website/templates/iaying_hen.html:62
+msgid "1. افزایش ظرفیت تولید داخلی و جلوگیری از کمبود تخم‌مرغ در کشور"
+msgstr ""
+"1. Increasing domestic production capacity and preventing egg shortages in "
+"the country"
+
+#: app/website/templates/iaying_hen.html:63
+msgid "2. حذف وابستگی به واردات و افزایش توان صادراتی ایران"
+msgstr ""
+"2. Eliminating dependence on imports and increasing Iran’s export "
+"capabilities"
+
+#: app/website/templates/iaying_hen.html:64
+msgid "3. کاهش قیمت تمام‌شده تخم‌مرغ و تأمین نیاز بازار با قیمت مناسب"
+msgstr ""
+"3. Reducing the final price of eggs and supplying market needs at a "
+"reasonable price"
+
+#: app/website/templates/iaying_hen.html:65
+msgid "4. ایجاد اشتغال پایدار برای صدها نفر در منطقه خوشاب"
+msgstr ""
+"4. Creating sustainable employment for hundreds of people in the Khoshab "
+"region"
+
+#: app/website/templates/iaying_hen.html:66
+msgid "5. افزایش کیفیت تخم‌مرغ تولیدی با رعایت استانداردهای بهداشتی جهانی"
+msgstr ""
+"5. Increasing the quality of produced eggs by adhering to international "
+"health standards"
+
+#: app/website/templates/iaying_hen.html:67
+msgid "6. استفاده از فناوری‌های نوین برای کاهش تلفات و افزایش بهره‌وری"
+msgstr ""
+"6. Utilizing modern technologies to reduce losses and increase efficiency"
+
+#: app/website/templates/iaying_hen.html:78
+#: app/website/templates/mother_chicken_farm.html:57
+msgid "اهداف پروژه"
+msgstr "Objectives of the Project"
+
+#: app/website/templates/iaying_hen.html:80
+msgid "اهداف کوتاه‌مدت:"
+msgstr "Short term goals:"
+
+#: app/website/templates/iaying_hen.html:82
+msgid "1. احداث یک مجموعه صنعتی مدرن با ظرفیت یک‌میلیون قطعه مرغ تخم‌گذار"
+msgstr ""
+"1. Construction of a modern industrial complex with a capacity of one "
+"million egg-laying hens"
+
+#: app/website/templates/iaying_hen.html:83
+msgid "2. تولید روزانه یک‌میلیون عدد تخم‌مرغ با کیفیت بالا"
+msgstr "2. Daily production of one million high-quality eggs"
+
+#: app/website/templates/iaying_hen.html:84
+msgid ""
+"3. ایجاد زیرساخت‌های استاندارد پرورش طیور شامل سالن‌های اتوماتیک، تهویه "
+"پیشرفته و سیستم‌های تغذیه‌ای بهینه"
+msgstr ""
+"3. Creation of standard poultry farming infrastructure, including automated "
+"barns, advanced ventilation, and optimized feeding systems"
+
+#: app/website/templates/iaying_hen.html:85
+msgid "4. کاهش هزینه‌های تولید از طریق مدیریت بهینه خوراک، انرژی و نیروی انسانی"
+msgstr ""
+"4. Reduction of production costs through optimized management of feed, "
+"energy, and human resources"
+
+#: app/website/templates/iaying_hen.html:96
+msgid "اهداف بلند مدت:"
+msgstr "Long-Term Objectives:"
+
+#: app/website/templates/iaying_hen.html:98
+msgid "1. تبدیل شدن به قطب اصلی تأمین تخم‌مرغ کشور و منطقه"
+msgstr ""
+"1. Becoming the primary hub for supplying eggs to the country and the region"
+
+#: app/website/templates/iaying_hen.html:99
+msgid ""
+"2. توسعه ظرفیت صادرات به کشورهای همسایه همچون عراق، افغانستان، کشورهای حوزه "
+"خلیج فارس و آسیای میانه"
+msgstr ""
+"2. Developing export capacity to neighboring countries such as Iraq, "
+"Afghanistan, the Persian Gulf countries, and Central Asia"
+
+#: app/website/templates/iaying_hen.html:100
+msgid ""
+"3. ایجاد یک زنجیره تأمین پایدار شامل پرورش پولت (مرغ جوان)، کارخانه خوراک "
+"اختصاصی و واحد بسته‌بندی و توزیع"
+msgstr ""
+"3. Establishing a sustainable supply chain including pullet (young hen) "
+"rearing, a dedicated feed mill, and a packaging and distribution unit"
+
+#: app/website/templates/iaying_hen.html:101
+msgid "4. ارتقای استانداردهای تولید و کاهش بیماری‌های رایج در مزارع طیور"
+msgstr ""
+"4. Improving production standards and reducing common diseases in poultry "
+"farms"
+
+#: app/website/templates/iaying_hen.html:102
+msgid ""
+"5. مشارکت در تحقیقات ژنتیکی و بهبود نژادهای مرغ تخم‌گذار برای افزایش راندمان "
+"تولید"
+msgstr ""
+"5. Participating in genetic research and improvement of egg-laying hen "
+"breeds to increase production efficiency"
+
+#: app/website/templates/iaying_hen.html:113
+msgid "فرآیند مرغ‌های مشخصات فنی پروژه"
+msgstr "Project Technical Specifications"
+
+#: app/website/templates/iaying_hen.html:117
+msgid "1. یک‌میلیون قطعه مرغ تخم‌گذار در دوره تولیدی"
+msgstr "1. One million egg-laying hens per production cycle"
+
+#: app/website/templates/iaying_hen.html:118
+msgid "2. تولید سالانه حدود 365 میلیون عدد تخم‌مرغ"
+msgstr "2. Annual production of approximately 365 million eggs"
+
+#: app/website/templates/iaying_hen.html:119
+msgid "3. بسته‌بندی و عرضه محصول در بازارهای داخلی و خارجی"
+msgstr ""
+"3.Packaging and distribution of the product in domestic and foreign markets"
+
+#: app/website/templates/iaying_hen.html:130
+msgid "زیرساخت‌های پروژه:"
+msgstr "Project Infrastructure:"
+
+#: app/website/templates/iaying_hen.html:132
+msgid "1. زمین مورد نیاز: بیش از 25 هکتار در شهرک صنعتی خوشاب"
+msgstr "1. Required Land: Over 25 hectares in the Khushab Industrial Estate"
+
+#: app/website/templates/iaying_hen.html:133
+msgid ""
+"2. سالن‌های پرورش: چندین سالن مدرن با سیستم‌های اتوماتیک تهویه، گرمایش، سرمایش "
+"و تغذیه"
+msgstr ""
+"2. Rearing Houses: Multiple modern houses equipped with automated "
+"ventilation, heating, cooling, and feeding systems"
+
+#: app/website/templates/iaying_hen.html:134
+msgid "3. واحد تولید خوراک: کارخانه اختصاصی برای تأمین دان استاندارد و باکیفیت"
+msgstr ""
+"3. Feed Production Unit: Dedicated factory to supply standard and high-"
+"quality feed"
+
+#: app/website/templates/iaying_hen.html:135
+msgid "4. آزمایشگاه کنترل کیفیت: جهت پایش سلامت و کیفیت تخم‌مرغ تولیدی"
+msgstr ""
+"4. Quality Control Laboratory: For monitoring the health and quality of the "
+"produced eggs"
+
+#: app/website/templates/iaying_hen.html:136
+msgid ""
+"5. بخش بسته‌بندی و انبارداری: مجهز به سیستم‌های بسته‌بندی اتوماتیک و سردخانه"
+msgstr ""
+"5. Packaging and Storage Section: Equipped with automated packaging systems "
+"and cold storage facilities"
+
+#: app/website/templates/iaying_hen.html:137
+msgid ""
+"6. واحد توزیع و حمل‌ونقل: برای ارسال سریع و بهینه تخم‌مرغ به نقاط مختلف کشور"
+msgstr ""
+"6. Distribution and Transportation Unit: For the fast and efficient delivery "
+"of eggs to various parts of the country"
+
+#: app/website/templates/iaying_hen.html:148
+msgid "فرآیند تولید تخم‌مرغ"
+msgstr "Egg Production Process"
+
+#: app/website/templates/iaying_hen.html:150
+msgid ""
+"تولید تخم‌مرغ یک فرآیند پیچیده و چندمرحله‌ای است که شامل انتخاب نژاد، تغذیه، "
+"مدیریت بهداشت، جمع‌آوری، بسته‌بندی و توزیع محصول می‌شود."
+msgstr ""
+"Egg production is a complex and multi-stage process that involves the "
+"selection of breeds, nutrition, health management, collection, packaging, "
+"and distribution of the product."
+
+#: app/website/templates/iaying_hen.html:152
+msgid "1. انتخاب و پرورش پولت (مرغ‌های جوان):"
+msgstr "1. Chick Selection and Rearing:"
+
+#: app/website/templates/iaying_hen.html:154
+msgid "• انتخاب نژادهای برتر با راندمان تولید بالا و مقاوم در برابر بیماری‌ها"
+msgstr "* Selection of high-yielding and disease-resistant breeds"
+
+#: app/website/templates/iaying_hen.html:155
+msgid "• پرورش مرغ‌ها در شرایط کاملاً استاندارد و نظارت بر رشد و سلامت آن‌ها"
+msgstr ""
+"* Rearing of chickens in a completely standard environment and monitoring "
+"their growth and health"
+
+#: app/website/templates/iaying_hen.html:156
+msgid "• برنامه‌های تغذیه‌ای و واکسیناسیون دقیق برای بهبود عملکرد تولیدی"
+msgstr ""
+"* Precise feeding and vaccination programs to improve production performance"
+
+#: app/website/templates/iaying_hen.html:167
+msgid "2. دوره تولید و تخم‌گذاری:"
+msgstr "2. Production and Egg-Laying Period:"
+
+#: app/website/templates/iaying_hen.html:169
+msgid "• رسیدن مرغ‌های تخم‌گذار به سن 16-18 هفتگی و آغاز تخم‌گذاری"
+msgstr ""
+"* Egg-laying hens reaching the age of 16-18 weeks and the onset of egg-laying"
+
+#: app/website/templates/iaying_hen.html:170
+msgid ""
+"• مدیریت شرایط محیطی سالن‌ها شامل نور، دما، رطوبت و تهویه برای افزایش تولید"
+msgstr ""
+"* Management of the environmental conditions of the houses including light, "
+"temperature, humidity, and ventilation to increase production"
+
+#: app/website/templates/iaying_hen.html:171
+msgid "• کنترل کیفیت تخم‌ها و جمع‌آوری آن‌ها به‌صورت خودکار"
+msgstr "* Quality control of eggs and their automatic collection"
+
+#: app/website/templates/iaying_hen.html:173
+msgid "3. بسته‌بندی و توزیع:"
+msgstr "3. Packaging and Distribution:"
+
+#: app/website/templates/iaying_hen.html:175
+msgid "• دسته‌بندی تخم‌مرغ‌ها بر اساس وزن، کیفیت و استانداردهای بهداشتی"
+msgstr ""
+"* Classification of eggs based on weight, quality, and health standards"
+
+#: app/website/templates/iaying_hen.html:176
+msgid "• بسته‌بندی در کارتن‌های استاندارد و مقاوم برای حمل‌ونقل بهینه"
+msgstr "* Packaging in standard and durable cartons for optimal transportation"
+
+#: app/website/templates/iaying_hen.html:177
+msgid "• توزیع محصول از طریق شبکه‌های فروشگاهی، رستوران‌ها و صادرات"
+msgstr ""
+"* Distribution of the product through retail networks, restaurants, and "
+"exports"
+
+#: app/website/templates/iaying_hen.html:188
+#: app/website/templates/mother_chicken_farm.html:187
+msgid "تحلیل بازار و رقابت"
+msgstr "Market and Competition Analysis"
+
+#: app/website/templates/iaying_hen.html:190
+msgid "افزایش تقاضای داخلی:"
+msgstr "Increasing Domestic Demand:"
+
+#: app/website/templates/iaying_hen.html:191
+msgid ""
+"سرانه مصرف تخم‌مرغ در ایران حدود 12 کیلوگرم در سال است که این میزان رو به "
+"افزایش است."
+msgstr ""
+"Per capita egg consumption in Iran is approximately 12 kilograms per year, "
+"and this amount is increasing."
+
+#: app/website/templates/iaying_hen.html:193
+msgid "ظرفیت صادراتی:"
+msgstr "Export Capacity:"
+
+#: app/website/templates/iaying_hen.html:194
+msgid ""
+"کشورهای همسایه، به‌ویژه عراق، افغانستان و امارات، از واردکنندگان بزرگ تخم‌مرغ "
+"هستند."
+msgstr ""
+"Neighboring countries, especially Iraq, Afghanistan, and the UAE, are major "
+"importers of eggs."
+
+#: app/website/templates/iaying_hen.html:205
+#: app/website/templates/mother_chicken_farm.html:202
+msgid "مزیت‌های رقابتی مزرعه خوشاب:"
+msgstr "Competitive Advantages of Khooshab Farm:"
+
+#: app/website/templates/iaying_hen.html:207
+msgid "1. استفاده از تکنولوژی‌های نوین و کاهش تلفات"
+msgstr "1. Utilization of modern technologies and reduction of losses"
+
+#: app/website/templates/iaying_hen.html:208
+msgid "2. تولید تخم‌مرغ باکیفیت و ارگانیک"
+msgstr "2. Production of high-quality and organic eggs"
+
+#: app/website/templates/iaying_hen.html:209
+msgid "3. قیمت رقابتی به دلیل کاهش هزینه‌های تولید"
+msgstr "3. Competitive pricing due to reduced production costs"
+
+#: app/website/templates/iaying_hen.html:220
+#: app/website/templates/mother_chicken_farm.html:221
+msgid "مزایای اقتصادی و اشتغال‌زایی"
+msgstr "Economic and Employment Benefits"
+
+#: app/website/templates/iaying_hen.html:222
+msgid "1. اشتغال مستقیم برای بیش از 150 نفر در بخش‌های تولید، بسته‌بندی و مدیریت"
+msgstr ""
+"1. Direct employment for over 150 people in production, packaging, and "
+"management departments"
+
+#: app/website/templates/iaying_hen.html:223
+msgid ""
+"2. اشتغال غیرمستقیم برای بیش از 500 نفر در حوزه‌های حمل‌ونقل، فروش و توزیع"
+msgstr ""
+"2. Indirect employment for over 500 people in transportation, sales, and "
+"distribution sectors"
+
+#: app/website/templates/iaying_hen.html:224
+msgid "3. افزایش بهره‌وری در صنعت مرغداری و کاهش هزینه‌های تولید تخم‌مرغ"
+msgstr ""
+"3. Increased productivity in the poultry industry and reduced egg production "
+"costs"
+
+#: app/website/templates/iaying_hen.html:225
+msgid "4. کمک به تثبیت قیمت تخم‌مرغ در بازار و کاهش نوسانات قیمت"
+msgstr ""
+"4. Helps stabilize egg prices in the market and reduce price fluctuations"
+
+#: app/website/templates/iaying_hen.html:236
+msgid "چالش‌ها و راهکارها"
+msgstr "Challenges and Solutions"
+
+#: app/website/templates/iaying_hen.html:238
+msgid "1. کنترل بیماری‌ها: احداث قرنطینه‌های استاندارد و پایش سلامت گله‌ها"
+msgstr ""
+"1. Control of Diseases:Establishing standard quarantine facilities and "
+"monitoring the health of the flock."
+
+#: app/website/templates/iaying_hen.html:239
+msgid "2. تأمین نهاده‌های دامی: ایجاد کارخانه خوراک اختصاصی برای کاهش وابستگی"
+msgstr ""
+"2. Provision of Livestock Feed:Establishing a dedicated feed factory to "
+"reduce dependence."
+
+#: app/website/templates/iaying_hen.html:240
+msgid ""
+"3. نوسانات قیمت بازار: انعقاد قراردادهای پایدار با خریداران داخلی و خارجی"
+msgstr ""
+"3. Market Price Fluctuations:Signing stable contracts with domestic and "
+"foreign buyers.​​​​​​​"
+
+#: app/website/templates/iaying_hen.html:251
+#: app/website/templates/plant_refinery.html:192
+#: app/website/templates/supplying_livestock.html:215
+msgid "نتیجه‌گیری"
+msgstr "Conclusion"
+
+#: app/website/templates/iaying_hen.html:253
+msgid ""
+"پروژه (بزرگ‌ترین مجموعه مرغ تخم‌گذار کشور در خوشاب) تحولی عظیم در صنعت طیور "
+"ایران ایجاد خواهد کرد. با احداث این مزرعه:"
+msgstr ""
+"The “Largest Egg-Laying Poultry Complex in Khoshab” project will bring about "
+"a major transformation in Iran’s poultry industry.​​​​​​​ With the construction of "
+"this farm:"
+
+#: app/website/templates/iaying_hen.html:255
+msgid "1. ظرفیت تولید تخم‌مرغ کشور به‌طور چشمگیری افزایش می‌یابد"
+msgstr "1. The country’s egg production capacity will increase significantly"
+
+#: app/website/templates/iaying_hen.html:256
+msgid "2. وابستگی به واردات کاهش یافته و توان صادراتی ایران تقویت می‌شود"
+msgstr ""
+"2. Dependence on imports will decrease, and Iran’s export capabilities will "
+"be strengthened"
+
+#: app/website/templates/iaying_hen.html:257
+msgid "3. امنیت غذایی کشور تضمین شده و قیمت تخم‌مرغ در بازار تثبیت میشود"
+msgstr ""
+"3. The country’s food security will be ensured, and the price of eggs in the "
+"market will stabilize"
+
+#: app/website/templates/iaying_hen.html:258
+msgid "4. اشتغال‌زایی قابل‌توجهی در منطقه ایجاد شده و اقتصاد محلی رشد می‌کند"
+msgstr ""
+"4. Significant employment opportunities will be created in the region, and "
+"the local economy will grow"
+
+#: app/website/templates/iaying_hen.html:260
+msgid ""
+"اجرای این پروژه، ایران را به یکی از بزرگ‌ترین تولیدکنندگان و صادرکنندگان "
+"تخم‌مرغ در منطقه تبدیل خواهد کرد."
+msgstr ""
+"The implementation of this project will transform Iran into one of the "
+"largest producers and exporters of eggs in the region."
+
+#: app/website/templates/index.html:25
+msgid "صفحه درباره ما"
+msgstr "About"
+
+#: app/website/templates/index.html:47
+msgid "اخبار"
+msgstr "News"
+
+#: app/website/templates/index.html:49
+msgid "اخرین اخبار"
+msgstr "Latest news"
+
+#: app/website/templates/index.html:76
+msgid "مشاهده همه ی اخبار ها ..."
+msgstr "View all news ..."
+
+#: app/website/templates/index.html:88
+msgid "توسعه پایدار حاصل بهره‌وری بهینه از تمام ظرفیت‌هاست..."
+msgstr ""
+"Sustainable development is the result of optimal utilization of all "
+"capacities ..."
+
+#: app/website/templates/index.html:104
+msgid "مدیر فروش"
+msgstr "sales manager"
+
+#: app/website/templates/index.html:109
+msgid "رضا دشتی"
+msgstr "Reza Dashti"
+
+#: app/website/templates/index.html:123 app/website/templates/index.html:142
+#: app/website/templates/index.html:161 app/website/templates/index.html:180
+msgid "کارشناس فروش"
+msgstr "Sales expert"
+
+#: app/website/templates/index.html:128
+msgid "فاطمه خوشبخت"
+msgstr "Fatima Khoshbakht"
+
+#: app/website/templates/index.html:147
+msgid "زهرا مرادی"
+msgstr "Zahra Moradi"
+
+#: app/website/templates/index.html:166
+msgid "عاطفه شهربویه"
+msgstr "Atefeh Shahrboyeh"
+
+#: app/website/templates/index.html:185
+msgid "فائزه شهربویه"
+msgstr "Faezeh Shahrboyeh"
+
+#: app/website/templates/index.html:227 app/website/templates/index.html:250
+msgid "قیمت:"
+msgstr "Price:"
+
+#: app/website/templates/index.html:227 app/website/templates/index.html:250
+msgid "تومان"
+msgstr "Tomans"
+
+#: app/website/templates/index.html:229 app/website/templates/index.html:252
+msgid "خرید"
+msgstr "shopping"
+
+#: app/website/templates/index.html:268
+msgid "پروژه‌ها"
+msgstr "Projects"
+
+#: app/website/templates/index.html:270
+msgid "با همت و تلاش ، ایرانی آباد خواهیم ساخت"
+msgstr "We will build Iran Abad with hard work"
+
+#: app/website/templates/index.html:301
+msgid "بزرگترین مزرعه مرغ مادر و جوجه یک روزه کشور"
+msgstr "​The biggest mother hen and day-old chick farm in the country"
+
+#: app/website/templates/index.html:316
+msgid "بزرگترین مجموعه مرغ تخم گذار کشور"
+msgstr "The largest laying hen complex in the country"
+
+#: app/website/templates/index.html:331
+msgid "تامین و عرضه نهاده های دامی"
+msgstr "Supply and distribution of livestock inputs"
+
+#: app/website/templates/index.html:361
+#: app/website/templates/plant_refinery.html:24
+msgid "اولین پالایشگاه گیاهان دارویی کشور"
+msgstr "The first medicinal herb refinery in the country"
+
+#: app/website/templates/investment.html:32
+msgid ""
+"برای سرمایه گذاری در پروژه های مختلف شرکت راه ابریشم نو، فرم زیر را تکمیل "
+"نمایید"
+msgstr ""
+"To invest in various projects of New Silk Road Company, please fill out the "
+"form below"
+
+#: app/website/templates/investment.html:33
+msgid "همکاران ما در اسرع وقت برای مشاوره و راهنمایی با شما تماس خواهند گرفت"
+msgstr ""
+"Our colleagues will contact you as soon as possible for consultation and "
+"guidance"
+
+#: app/website/templates/investment.html:58
+msgid "شهر"
+msgstr "City"
+
+#: app/website/templates/investment.html:65
+msgid "شغل شما چیست؟"
+msgstr "What is your job"
+
+#: app/website/templates/investment.html:66
+msgid "آزاد"
+msgstr "Free"
+
+#: app/website/templates/investment.html:67
+msgid "بیکار"
+msgstr "Unemployed"
+
+#: app/website/templates/investment.html:68
+msgid "کارمند"
+msgstr "Employee"
+
+#: app/website/templates/investment.html:69
+msgid "بازنشسته"
+msgstr "Retired"
+
+#: app/website/templates/investment.html:70
+msgid "دیگر مشاغل"
+msgstr "Other occupations"
+
+#: app/website/templates/investment.html:79
+msgid "میزان سرمایه شما چقدر است؟"
+msgstr "How much capital do you have"
+
+#: app/website/templates/investment.html:80
+msgid "کمتر از 200 میلیون تومان"
+msgstr "Less than 200 million tomans"
+
+#: app/website/templates/investment.html:81
+msgid "بین 200 تا 500 میلیون تومان"
+msgstr "Between 200 to 500 million tomans"
+
+#: app/website/templates/investment.html:82
+msgid "بین 500 میلیون تومان تا یک میلیارد تومان"
+msgstr "Between 500 million to 1 billion tomans"
+
+#: app/website/templates/investment.html:83
+msgid "بیشتر از یک میلیارد تومان"
+msgstr "More than 1 billion tomans"
+
+#: app/website/templates/investment.html:92
+msgid "نظرات"
+msgstr "Please write your message here"
+
+#: app/website/templates/investment.html:97
+msgid "ثبت درخواست"
+msgstr "Submit a request"
+
+#: app/website/templates/mother_chicken_farm.html:23
+msgid "بزرگ‌ترین مزرعه مرغ مادر و جوجه یک‌روزه کشور​​​​​​​"
+msgstr "​The biggest mother hen and day-old chick farm in the country"
+
+#: app/website/templates/mother_chicken_farm.html:34
+msgid ""
+"با رشد جمعیت و افزایش تقاضا برای محصولات پروتئینی، صنعت پرورش طیور به یکی از "
+"ارکان مهم تأمین امنیت غذایی کشور تبدیل شده است. در این میان، تأمین جوجه "
+"یک‌روزه باکیفیت و مقاوم، تأثیر مستقیمی بر عملکرد مزارع پرورش مرغ گوشتی و "
+"تخم‌گذار دارد. (بزرگ‌ترین مزرعه مرغ مادر و تولید جوجه یک‌روزه کشور در خوشاب) یک "
+"پروژه ملی و استراتژیک است که با هدف تأمین نیاز داخلی و توسعه ظرفیت صادراتی "
+"کشور طراحی شده است. این مزرعه در شهرک صنعتی شهرستان خوشاب احداث خواهد شد و "
+"با بهره‌گیری از دانش فنی روز و زیرساخت‌های پیشرفته، نقش مهمی در تأمین زنجیره "
+"تولید گوشت مرغ و تخم‌مرغ کشور ایفا خواهد کرد."
+msgstr ""
+"With population growth and increasing demand for protein products, the "
+"poultry industry has become a crucial pillar of ensuring food security in "
+"the country. Meanwhile, the supply of high-quality and resilient day-old "
+"chicks has a direct impact on the performance of broiler and layer farms. "
+"The “Largest Grandparent Poultry Farm and Day-Old Chick Production Facility "
+"in Khoshab” is a national and strategic project designed to meet domestic "
+"demand and expand the country’s export capacity. This farm will be built in "
+"the industrial park of Khoshab city and, by utilizing state-of-the-art "
+"technical knowledge and advanced infrastructure, will play an important role "
+"in supplying the country’s chicken meat and egg production chain."
+
+#: app/website/templates/mother_chicken_farm.html:46
+msgid ""
+"ایران یکی از بزرگ‌ترین تولیدکنندگان گوشت مرغ در منطقه است، اما تأمین جوجه "
+"یک‌روزه باکیفیت همواره یکی از چالش‌های اساسی این صنعت بوده است. وابستگی برخی "
+"مزارع به واردات جوجه یک‌روزه و نوسانات قیمتی، تولیدکنندگان را با مشکلات "
+"متعددی مواجه کرده است. در این شرایط، احداث مزرعه‌ای بزرگ و مدرن برای تولید "
+"جوجه یک‌روزه مقاوم، سالم و استاندارد، نه‌تنها نیاز داخلی را تأمین می‌کند، بلکه "
+"امکان توسعه صادرات به کشورهای منطقه را نیز فراهم می‌سازد."
+msgstr ""
+"Iran is one of the largest producers of chicken meat in the region, but the "
+"supply of high-quality day-old chicks has always been a major challenge for "
+"the industry. The dependence of some farms on imports of day-old chicks and "
+"price fluctuations has created numerous problems for producers. In this "
+"situation, the construction of a large and modern farm for the production of "
+"resistant, healthy, and standard day-old chicks not only meets domestic "
+"demand but also enables the expansion of exports to countries in the region."
+
+#: app/website/templates/mother_chicken_farm.html:58
+msgid "اهداف کوتاه‌مدت"
+msgstr "Short term goals:"
+
+#: app/website/templates/mother_chicken_farm.html:60
+msgid "1. احداث یک مجموعه مدرن و صنعتی برای پرورش مرغ مادر"
+msgstr "1. Establish a modern and industrial complex for raising breeder hens"
+
+#: app/website/templates/mother_chicken_farm.html:61
+msgid "2. تجهیز مزرعه به سیستم‌های پیشرفته کنترل شرایط محیطی و بهداشتی"
+msgstr ""
+"2. Equip the farm with advanced environmental control and sanitary systems"
+
+#: app/website/templates/mother_chicken_farm.html:62
+msgid "3. تولید جوجه یک‌روزه با نژادهای اصلاح‌شده و مقاوم در برابر بیماری‌ها"
+msgstr ""
+"3. Produce day-old chicks with improved breeds that are resistant to diseases"
+
+#: app/website/templates/mother_chicken_farm.html:63
+msgid ""
+"4. راه‌اندازی آزمایشگاه کنترل کیفیت و سیستم‌های مدیریت ژنتیکی برای بهبود "
+"عملکرد گله‌های مادر"
+msgstr ""
+"4. Establish a quality control laboratory and genetic management systems to "
+"improve the performance of breeder flocks"
+
+#: app/website/templates/mother_chicken_farm.html:74
+msgid "مزایای اجرای این پروژه"
+msgstr "Benefits of Implementing this Project:"
+
+#: app/website/templates/mother_chicken_farm.html:76
+msgid "1. کاهش وابستگی به واردات جوجه یک‌روزه و تأمین نیاز مزارع داخلی"
+msgstr ""
+"1. Reducing dependence on imports of day-old chicks and meeting the needs of "
+"domestic farms"
+
+#: app/website/templates/mother_chicken_farm.html:77
+msgid "2. افزایش بهره‌وری صنعت طیور از طریق تولید جوجه‌های مقاوم و استاندارد"
+msgstr ""
+"2. Increasing the productivity of the poultry industry through the "
+"production of resistant and standard chicks"
+
+#: app/website/templates/mother_chicken_farm.html:78
+msgid "3. ایجاد اشتغال پایدار در منطقه خوشاب و توسعه اقتصادی محلی"
+msgstr ""
+"3. Creating sustainable employment in the Khoshab region and promoting local "
+"economic development"
+
+#: app/website/templates/mother_chicken_farm.html:79
+msgid "4. افزایش توان رقابتی ایران در بازارهای منطقه‌ای و بین‌المللی"
+msgstr ""
+"4. Increasing Iran’s competitiveness in regional and international markets"
+
+#: app/website/templates/mother_chicken_farm.html:80
+msgid "5. بهبود امنیت غذایی کشور و کاهش نوسانات بازار مرغ و تخم‌مرغ"
+msgstr ""
+"5. Improving the country’s food security and reducing fluctuations in the "
+"chicken and egg market"
+
+#: app/website/templates/mother_chicken_farm.html:92
+msgid "اهداف بلندمدت"
+msgstr "Long-Term Goals:"
+
+#: app/website/templates/mother_chicken_farm.html:94
+msgid "1. تأمین حدود 30 درصد از نیاز داخلی به جوجه یک‌روزه"
+msgstr "1. Supply approximately 30% of the domestic demand for day-old chicks"
+
+#: app/website/templates/mother_chicken_farm.html:95
+msgid ""
+"2. توسعه ظرفیت صادرات جوجه یک‌روزه به کشورهای منطقه مانند عراق، افغانستان، "
+"ترکمنستان و سایر کشورهای حاشیه خلیج فارس"
+msgstr ""
+"2. Expand the export capacity of day-old chicks to countries in the region "
+"such as Iraq, Afghanistan, Turkmenistan, and other Persian Gulf countries"
+
+#: app/website/templates/mother_chicken_farm.html:96
+msgid ""
+"3. کاهش هزینه‌های تولید گوشت مرغ و تخم‌مرغ از طریق افزایش کیفیت جوجه‌های تولیدی"
+msgstr ""
+"3. Reduce the production costs of chicken meat and eggs by increasing the "
+"quality of the produced chicks"
+
+#: app/website/templates/mother_chicken_farm.html:97
+msgid ""
+"4. ایجاد یک زنجیره پایدار تولید شامل مزرعه مرغ مادر، واحد جوجه‌کشی، و کارخانه "
+"تولید خوراک اختصاصی"
+msgstr ""
+"4. Create a sustainable production chain including a breeder hen farm, "
+"hatchery unit, and dedicated feed production plant"
+
+#: app/website/templates/mother_chicken_farm.html:98
+msgid ""
+"5. مشارکت در تحقیقات اصلاح نژاد و توسعه سویه‌های جدید طیور برای بهبود عملکرد "
+"و کاهش مصرف دان"
+msgstr ""
+"5. Participate in breeding research and development of new poultry strains "
+"to improve performance and reduce feed consumption"
+
+#: app/website/templates/mother_chicken_farm.html:109
+msgid "فرآیند مرغ‌ها و مشخصات فنی پروژه"
+msgstr "Process Project Technical Specifications"
+
+#: app/website/templates/mother_chicken_farm.html:111
+msgid "ظرفیت تولید"
+msgstr "Production Capacity:"
+
+#: app/website/templates/mother_chicken_farm.html:112
+msgid "1. بیش از 500 هزار قطعه مرغ مادر در دوره"
+msgstr "More than 500,000 breeder hens per cycle."
+
+#: app/website/templates/mother_chicken_farm.html:113
+msgid "2. تولید سالانه حدود 100 میلیون قطعه جوجه یک‌روزه"
+msgstr "Annual production of approximately 100 million day-old chicks."
+
+#: app/website/templates/mother_chicken_farm.html:115
+msgid "زیرساخت‌های پروژه"
+msgstr "Project Infrastructure:"
+
+#: app/website/templates/mother_chicken_farm.html:116
+msgid "1. زمین مورد نیاز: بیش از 20 هکتار زمین در شهرک صنعتی خوشاب"
+msgstr "1. Land required: Over 20 hectares of land in Khoshab Industrial Park"
+
+#: app/website/templates/mother_chicken_farm.html:117
+msgid ""
+"2. سالن‌های پرورش: چندین سالن مجهز به سیستم‌های تهویه، گرمایش و سرمایش هوشمند"
+msgstr ""
+"2. Breeding halls: Several halls equipped with intelligent ventilation, "
+"heating, and cooling systems"
+
+#: app/website/templates/mother_chicken_farm.html:118
+msgid ""
+"3. واحدهای جوجه‌کشی: با ظرفیت تولید بالا و استفاده از دستگاه‌های پیشرفته هچری"
+msgstr ""
+"3. Hatchery units: With high production capacity and using advanced hatchery "
+"equipment"
+
+#: app/website/templates/mother_chicken_farm.html:119
+msgid ""
+"4. آزمایشگاه ژنتیک و کنترل کیفیت: برای پایش سلامت و بهبود ویژگی‌های نژادی "
+"مرغ‌های مادر"
+msgstr ""
+"4. Genetics and quality control laboratory: To monitor health and improve "
+"the breed characteristics of breeder hens"
+
+#: app/website/templates/mother_chicken_farm.html:120
+msgid "5. بخش مدیریت و آموزش: جهت تربیت نیروی متخصص در زمینه مدیریت پرورش طیور"
+msgstr ""
+"5. Management and training section: To train specialized personnel in the "
+"field of poultry management"
+
+#: app/website/templates/mother_chicken_farm.html:131
+msgid "فناوری‌های مورد استفاده"
+msgstr "Technologies Used"
+
+#: app/website/templates/mother_chicken_farm.html:133
+msgid ""
+"1. سیستم‌های اتوماسیون: استفاده از سیستم‌های خودکار برای کنترل دما، رطوبت و "
+"تهویه در سالن‌های پرورش"
+msgstr ""
+"1. Automation Systems: Use of automated systems to control temperature, "
+"humidity, and ventilation in the breeding halls"
+
+#: app/website/templates/mother_chicken_farm.html:134
+msgid ""
+"2. دستگاه‌های جوجه‌کشی پیشرفته: این دستگاه‌ها با دقت بالا، شرایط بهینه برای رشد "
+"جنین را فراهم می‌کنند"
+msgstr ""
+"2. Advanced Hatchery Equipment: These devices provide optimal conditions for "
+"embryo development with high precision"
+
+#: app/website/templates/mother_chicken_farm.html:135
+msgid ""
+"3. مدیریت هوشمند: استفاده از نرم‌افزارهای مدیریتی برای نظارت بر عملکرد مرغ‌های "
+"مادر و جوجه‌ها"
+msgstr ""
+"3. Intelligent Management: Use of management software to monitor the "
+"performance of breeder hens and chicks"
+
+#: app/website/templates/mother_chicken_farm.html:136
+msgid ""
+"4. فناوری‌های زیست‌محیطی: سیستم‌های تصفیه هوا و مدیریت پسماند برای کاهش آلایندگی"
+msgstr ""
+"4. Environmental Technologies: Air purification and waste management systems "
+"to reduce pollution"
+
+#: app/website/templates/mother_chicken_farm.html:147
+msgid "فرآیند تولید جوجه یک‌روزه"
+msgstr "Day-Old Chick Production Process"
+
+#: app/website/templates/mother_chicken_farm.html:149
+msgid ""
+"تولید جوجه یک‌روزه یک فرآیند چندمرحله‌ای است که از انتخاب مرغ‌های مادر تا "
+"انتقال جوجه‌ها به بازار ادامه دارد."
+msgstr ""
+"The production of day-old chicks is a multi-stage process that extends from "
+"the selection of breeder hens to the transfer of chicks to the market."
+
+#: app/website/templates/mother_chicken_farm.html:151
+msgid "1. انتخاب و پرورش مرغ‌های مادر"
+msgstr "1. Selection and Raising of Breeder Hens:"
+
+#: app/website/templates/mother_chicken_farm.html:152
+msgid ""
+"انتخاب نژادهای با عملکرد بالا، مقاومت ژنتیکی مناسب و راندمان تولیدی برتر"
+msgstr ""
+"* Selection of high-performance breeds with suitable genetic resistance and "
+"superior production efficiency"
+
+#: app/website/templates/mother_chicken_farm.html:153
+msgid "پرورش مرغ‌های مادر در شرایط کاملاً استاندارد و نظارت‌شده"
+msgstr ""
+"* Raising breeder hens under fully standardized and monitored conditions"
+
+#: app/website/templates/mother_chicken_farm.html:154
+msgid "تنظیم برنامه‌های تغذیه‌ای و بهداشتی برای بهبود کیفیت تخم‌های نطفه‌دار"
+msgstr ""
+"* Adjusting nutritional and health programs to improve the quality of "
+"fertile eggs"
+
+#: app/website/templates/mother_chicken_farm.html:156
+msgid "2. جمع‌آوری و ذخیره‌سازی تخم‌های نطفه‌دار"
+msgstr "2. Collection and Storage of Fertile Eggs:"
+
+#: app/website/templates/mother_chicken_farm.html:157
+msgid "جمع‌آوری روزانه تخم‌های نطفه‌دار از سالن‌های مرغ مادر"
+msgstr "* Daily collection of fertile eggs from breeder hen halls"
+
+#: app/website/templates/mother_chicken_farm.html:158
+msgid "ذخیره‌سازی در شرایط استاندارد دما و رطوبت برای حفظ قابلیت جوجه‌کشی"
+msgstr ""
+"* Storage under standard temperature and humidity conditions to maintain "
+"hatchability"
+
+#: app/website/templates/mother_chicken_farm.html:169
+msgid "3. فرآیند جوجه‌کشی"
+msgstr "3. Hatching Process:"
+
+#: app/website/templates/mother_chicken_farm.html:170
+msgid "قرار دادن تخم‌های نطفه‌دار در دستگاه‌های ستر و هچر"
+msgstr "* Placing fertile eggs in incubators and hatchers"
+
+#: app/website/templates/mother_chicken_farm.html:171
+msgid "کنترل دما، رطوبت و تهویه برای افزایش درصد جوجه‌درآوری"
+msgstr ""
+"* Controlling temperature, humidity, and ventilation to increase the "
+"percentage of hatchability"
+
+#: app/website/templates/mother_chicken_farm.html:172
+msgid "پایش سلامت و کیفیت جوجه‌ها قبل از انتقال به بازار"
+msgstr ""
+"* Monitoring the health and quality of chicks before being transferred to "
+"the market"
+
+#: app/website/templates/mother_chicken_farm.html:174
+msgid "4. انتقال و توزیع جوجه‌های یک‌روزه"
+msgstr "4. Transfer and Distribution of Day-Old Chicks:"
+
+#: app/website/templates/mother_chicken_farm.html:175
+msgid "بسته‌بندی استاندارد و حمل‌ونقل جوجه‌ها به مزارع پرورش گوشتی و تخم‌گذار"
+msgstr ""
+"* Standard packaging and transportation of chicks to broiler and layer farms"
+
+#: app/website/templates/mother_chicken_farm.html:176
+msgid "ارائه تضمین کیفیت برای اطمینان از سلامت و عملکرد مناسب جوجه‌ها"
+msgstr ""
+"* Standard packaging and transportation of chicks to broiler and layer farms"
+
+#: app/website/templates/mother_chicken_farm.html:189
+msgid ""
+"با توجه به افزایش تقاضا برای گوشت مرغ و تخم‌مرغ، تولید جوجه یک‌روزه از اهمیت "
+"ویژه‌ای برخوردار است."
+msgstr ""
+"Given the increasing demand for poultry meat and eggs, the production of day-"
+"old chicks is of particular importance."
+
+#: app/website/templates/mother_chicken_farm.html:191
+msgid ""
+"در حال حاضر، بسیاری از مزارع داخلی وابسته به تولیدکنندگان محدود داخلی یا "
+"واردات هستند که این وابستگی مشکلاتی از قبیل نوسانات قیمت و محدودیت‌های "
+"بهداشتی را ایجاد کرده است."
+msgstr ""
+"Currently, many domestic farms are reliant on a limited number of domestic "
+"producers or on imports. This dependency creates problems such as price "
+"fluctuations and health restrictions."
+
+#: app/website/templates/mother_chicken_farm.html:204
+msgid "1. استفاده از نژادهای اصلاح‌شده و مقاوم در برابر بیماری‌ها"
+msgstr "1. Utilizing improved and disease-resistant breeds"
+
+#: app/website/templates/mother_chicken_farm.html:206
+msgid "2. افزایش ظرفیت تولید و پاسخگویی به نیاز داخلی و صادراتی"
+msgstr ""
+"2. Increasing production capacity and meeting domestic and export demands"
+
+#: app/website/templates/mother_chicken_farm.html:208
+msgid "3. بهره‌گیری از فناوری‌های پیشرفته جوجه‌کشی و کاهش تلفات"
+msgstr "3. Employing advanced chick hatching technologies and reducing losses"
+
+#: app/website/templates/mother_chicken_farm.html:210
+msgid "4. کنترل کیفیت و نظارت بهداشتی دقیق برای افزایش راندمان جوجه‌های تولیدی"
+msgstr ""
+"4. Implementing rigorous quality control and health monitoring to increase "
+"the efficiency of produced chicks"
+
+#: app/website/templates/mother_chicken_farm.html:223
+msgid "1. اشتغال مستقیم برای بیش از 100 نفر در بخش‌های تولید، جوجه‌کشی و مدیریت"
+msgstr ""
+"1. Direct employment for over 100 people in production, incubation, and "
+"management departments."
+
+#: app/website/templates/mother_chicken_farm.html:225
+msgid "2. اشتغال غیرمستقیم برای بیش از 500 نفر در بخش‌های حمل‌ونقل، توزیع و فروش"
+msgstr ""
+"2. Indirect employment for over 500 people in transportation, distribution, "
+"and sales departments."
+
+#: app/website/templates/mother_chicken_farm.html:227
+msgid "3. افزایش بهره‌وری صنعت مرغداری کشور و کاهش هزینه‌های تولید"
+msgstr ""
+"3. Increased efficiency in the country’s poultry industry and reduced "
+"production costs."
+
+#: app/website/templates/mother_chicken_farm.html:229
+msgid "4. حفظ و تقویت جایگاه ایران در بازارهای منطقه‌ای"
+msgstr "4. Maintaining and strengthening Iran’s position in regional markets."
+
+#: app/website/templates/mother_chicken_farm.html:240
+msgid "چالش ها و راهکارها"
+msgstr "Challenges and Solutions:"
+
+#: app/website/templates/mother_chicken_farm.html:242
+msgid "1. کنترل بیماری‌ها: احداث قرنطینه‌های استاندارد و پایش دقیق سلامت گله‌ها"
+msgstr ""
+"1. Disease Control: Establishing standard quarantine facilities and rigorous "
+"monitoring of flock health."
+
+#: app/website/templates/mother_chicken_farm.html:244
+msgid "2. تأمین نهاده‌های دامی: تولید بخشی از خوراک طیور در زنجیره تأمین داخلی"
+msgstr ""
+"2. Supply of Feed Ingredients: Producing a portion of poultry feed within "
+"the domestic supply chain."
+
+#: app/website/templates/mother_chicken_farm.html:246
+msgid ""
+"3. نوسانات بازار: انعقاد قراردادهای پایدار با تولیدکنندگان داخلی و خارجی"
+msgstr ""
+"3. Market Fluctuations: Entering into stable contracts with domestic and "
+"foreign producers."
+
+#: app/website/templates/mother_chicken_farm.html:259
+msgid ""
+"پروژه (بزرگ‌ترین مزرعه مرغ مادر و جوجه یک‌روزه کشور در خوشاب) یکی از مهم‌ترین "
+"گام‌ها در توسعه صنعت طیور ایران است. با احداث این مزرعه، ظرفیت تولید جوجه "
+"یک‌روزه به میزان قابل‌توجهی افزایش یافته و نیاز داخلی به‌طور کامل تأمین خواهد "
+"شد. علاوه بر این، ظرفیت صادراتی کشور تقویت شده و ایران می‌تواند به یکی از "
+"صادرکنندگان بزرگ منطقه در حوزه جوجه یک‌روزه تبدیل شود."
+msgstr ""
+"The “Largest Mother Hen and Day-Old Chick Farm in Khoshab” project is one of "
+"the most significant steps in the development of Iran’s poultry industry. "
+"With the construction of this farm, the production capacity of day-old "
+"chicks will increase significantly, and domestic demand will be fully met. "
+"Furthermore, the country’s export capacity will be strengthened, and Iran "
+"can become one of the largest exporters in the region in the field of day-"
+"old chicks."
+
+#: app/website/templates/mother_chicken_farm.html:261
+msgid "1. افزایش بهره‌وری در صنعت طیور"
+msgstr "1. Increased efficiency in the poultry industry"
+
+#: app/website/templates/mother_chicken_farm.html:262
+msgid "2. ایجاد اشتغال پایدار"
+msgstr "2. Creation of sustainable employment"
+
+#: app/website/templates/mother_chicken_farm.html:263
+msgid "3. کاهش وابستگی به واردات"
+msgstr "3. Reduced dependence on imports"
+
+#: app/website/templates/mother_chicken_farm.html:264
+msgid "4. توسعه صادرات و ارزآوری برای کشور"
+msgstr ""
+"4. Development of exports and foreign currency earnings for the country"
+
+#: app/website/templates/mother_chicken_farm.html:266
+msgid ""
+"اجرای این پروژه، تحولی اساسی در صنعت مرغداری ایران ایجاد کرده و امنیت غذایی "
+"کشور را بیش‌ازپیش تقویت خواهد کرد."
+msgstr ""
+"The implementation of this project will create a fundamental transformation "
+"in Iran’s poultry industry and will strengthen the country’s food security "
+"more than ever."
+
+#: app/website/templates/organic_products.html:28
+msgid "خدمات ارئه شده"
+msgstr "Services provided"
+
+#: app/website/templates/organic_products_detail.html:59
+#: app/website/templates/purchase_livestock_detail.html:58
+msgid "وزن مورد نظر (حدقل 10 هزار کیلو)"
+msgstr "Desired weight (minimum 10,000 kg)"
+
+#: app/website/templates/organic_products_detail.html:65
+#: app/website/templates/purchase_livestock_detail.html:64
+msgid "افزودن به صبد خرید"
+msgstr "Add to cart"
+
+#: app/website/templates/plant_refinery.html:34
+msgid ""
+"ایران با داشتن بیش از ۸۰۰۰ گونه گیاهی، از جمله غنی‌ترین کشورهای جهان در حوزه "
+"گیاهان دارویی محسوب می‌شود. استان خراسان شمالی با اقلیم متنوع و شرایط "
+"آب‌و‌هوایی مناسب، یکی از قطب‌های بالقوه تولید گیاهان دارویی در کشور است. با این "
+"حال، عدم وجود زیرساخت‌های فرآوری مدرن باعث شده که بخش قابل‌توجهی از این گیاهان "
+"به‌صورت خام صادر شده یا به دلیل نبود روش‌های نگهداری و فرآوری مناسب، از بین "
+"بروند."
+msgstr ""
+"With more than 8,000 plant species, Iran is one of the richest countries in "
+"the world in the field of medicinal plants. North Khorasan Province, with "
+"its diverse climate and favorable weather conditions, is one of the "
+"potential hubs for the production of medicinal plants in the country. "
+"However, the lack of modern processing infrastructure has caused a "
+"significant portion of these plants to be exported in raw form or lost due "
+"to the absence of proper storage and processing methods."
+
+#: app/website/templates/plant_refinery.html:36
+msgid ""
+"با توجه به نیاز فزاینده صنایع دارویی، آرایشی و بهداشتی و غذایی به عصاره‌ها و "
+"ترکیبات مؤثره گیاهان دارویی، ایجاد اولین پالایشگاه مدرن گیاهان دارویی در "
+"استان خراسان شمالی می‌تواند نقش حیاتی در تحول این صنعت، افزایش بهره‌وری و "
+"ایجاد ارزش افزوده بالا در این حوزه داشته باشد."
+msgstr ""
+"Due to the increasing need of the pharmaceutical, cosmetics and food "
+"industries for extracts and active compounds of medicinal plants, the "
+"establishment of the first modern refinery of medicinal plants in North "
+"Khorasan province can play a vital role in the transformation of this "
+"industry, increase productivity and create high added value in this field.​​​​​​​"
+
+#: app/website/templates/plant_refinery.html:47
+msgid "۱. ضرورت راه‌اندازی پالایشگاه گیاهان دارویی"
+msgstr "1. The necessity of setting up a medicinal plants refinery"
+
+#: app/website/templates/plant_refinery.html:49
+msgid "افزایش بهره‌وری از ظرفیت‌های گیاهان دارویی کشور"
+msgstr "Increasing the productivity of the country's medicinal plants"
+
+#: app/website/templates/plant_refinery.html:50
+msgid "جلوگیری از خام‌فروشی گیاهان دارویی و تبدیل آن‌ها به محصولات نهایی"
+msgstr ""
+"Preventing the raw sale of medicinal plants and converting them into "
+"finished products"
+
+#: app/website/templates/plant_refinery.html:51
+msgid ""
+"افزایش کیفیت و استانداردسازی محصولات گیاهی برای بازارهای داخلی و صادراتی"
+msgstr ""
+"Increasing the quality and standardization of herbal products for domestic "
+"and export markets"
+
+#: app/website/templates/plant_refinery.html:52
+msgid "ایجاد اشتغال پایدار و توسعه اقتصادی در منطقه"
+msgstr "Creating sustainable employment and economic development in the region"
+
+#: app/website/templates/plant_refinery.html:53
+msgid "کاهش وابستگی کشور به واردات عصاره‌ها و ترکیبات مؤثره گیاهی"
+msgstr ""
+"Reducing the country's dependence on imports of plant extracts and active "
+"compounds"
+
+#: app/website/templates/plant_refinery.html:55
+msgid ""
+"در حال حاضر، بسیاری از فرآورده‌های گیاهی مورد نیاز صنایع دارویی و آرایشی در "
+"ایران وارداتی هستند. این پالایشگاه می‌تواند نیاز داخلی را تأمین کرده و ایران "
+"را به یکی از بازیگران اصلی صنعت گیاهان دارویی در منطقه تبدیل کند."
+msgstr ""
+"Currently, many of the herbal products needed by the pharmaceutical and "
+"cosmetic industries in Iran are imported. This refinery can meet domestic "
+"needs and turn Iran into one of the main players in the medicinal plants "
+"industry in the region."
+
+#: app/website/templates/plant_refinery.html:66
+msgid "۲. ظرفیت و بخش‌های مختلف پالایشگاه"
+msgstr "2. Capacity and different parts of the refinery"
+
+#: app/website/templates/plant_refinery.html:70
+msgid "فرآوری سالانه بیش از 5000 تن گیاه دارویی"
+msgstr "Annual processing of more than 5,000 tons of medicinal plants"
+
+#: app/website/templates/plant_refinery.html:71
+msgid "استخراج و تولید بیش از 100 نوع عصاره و ترکیب مؤثره گیاهی"
+msgstr ""
+"Extraction and production of more than 100 types of plant extracts and "
+"active compounds"
+
+#: app/website/templates/plant_refinery.html:72
+msgid "تولید محصولات متنوع برای صنایع دارویی، آرایشی و بهداشتی و غذایی"
+msgstr ""
+"Production of various products for the pharmaceutical, cosmetics and food "
+"industries"
+
+#: app/website/templates/plant_refinery.html:76
+msgid "واحد عصاره‌گیری و استخراج مواد مؤثره گیاهی"
+msgstr "Plant Active Ingredient Extraction and Extraction Unit"
+
+#: app/website/templates/plant_refinery.html:77
+msgid "واحد تقطیر و جداسازی ترکیبات فعال گیاهی"
+msgstr "Distillation and separation unit of active plant compounds"
+
+#: app/website/templates/plant_refinery.html:78
+msgid "واحد خشک‌سازی و فرآوری گیاهان دارویی"
+msgstr "Drying and processing unit of medicinal plants"
+
+#: app/website/templates/plant_refinery.html:79
+msgid "واحد تولید اسانس‌های طبیعی"
+msgstr "Natural Essential Oil Production Unit"
+
+#: app/website/templates/plant_refinery.html:80
+msgid "واحد بسته‌بندی و استانداردسازی محصولات گیاهی"
+msgstr "Packaging and standardization unit of plant products"
+
+#: app/website/templates/plant_refinery.html:81
+msgid "واحد تحقیق و توسعه (R&D) برای بهینه‌سازی فرآیندها و تولید محصولات جدید"
+msgstr ""
+"Research and Development (R&D) unit to optimize processes and develop new "
+"products"
+
+#: app/website/templates/plant_refinery.html:94
+msgid "۳.۱. واحد عصاره‌گیری و استخراج مواد مؤثره گیاهی"
+msgstr "3.1. Plant Extraction and Extraction Unit"
+
+#: app/website/templates/plant_refinery.html:96
+msgid ""
+"استخراج ترکیبات مؤثره از گیاهان دارویی با روش‌های مدرن مانند استخراج با حلال، "
+"آب، بخار و اولتراسوند"
+msgstr ""
+"Extraction of active compounds from medicinal plants by modern methods such "
+"as solvent extraction, water, steam and ultrasound"
+
+#: app/website/templates/plant_refinery.html:98
+msgid "حفظ کیفیت مواد مؤثره با استفاده از دمای کنترل‌شده و فرآیندهای بهینه‌شده"
+msgstr ""
+"Maintaining the quality of the active ingredients using controlled "
+"temperature and optimized processes"
+
+#: app/website/templates/plant_refinery.html:100
+msgid "کاربرد در تولید داروهای گیاهی، مکمل‌های غذایی و محصولات آرایشی"
+msgstr ""
+"Application in the production of herbal medicines, dietary supplements and "
+"cosmetic products"
+
+#: app/website/templates/plant_refinery.html:102
+msgid "۳.۲. واحد تقطیر و جداسازی ترکیبات فعال گیاهی"
+msgstr "3.2. Distillation and Separation of Active Plant Compounds"
+
+#: app/website/templates/plant_refinery.html:104
+msgid "استخراج روغن‌های فرار و ترکیبات معطر از گیاهان دارویی"
+msgstr ""
+"Extraction of Volatile Oils and Aromatic Compounds from Medicinal Plants"
+
+#: app/website/templates/plant_refinery.html:106
+msgid "تولید اسانس‌های طبیعی برای صنایع غذایی، آرایشی و دارویی"
+msgstr ""
+"Production of Natural Essential Oils for Food, Cosmetics and Pharmaceutical "
+"Industries"
+
+#: app/website/templates/plant_refinery.html:117
+msgid "۳.۳. واحد خشک‌سازی و فرآوری گیاهان دارویی"
+msgstr "3.3. Drying and Processing Unit of Medicinal Plants"
+
+#: app/website/templates/plant_refinery.html:119
+msgid "استفاده از تکنولوژی‌های مدرن خشک‌سازی برای حفظ خواص درمانی گیاهان"
+msgstr ""
+"Using modern drying technologies to preserve the healing properties of plants"
+
+#: app/website/templates/plant_refinery.html:121
+msgid "بسته‌بندی و نگهداری استاندارد برای جلوگیری از افت کیفیت"
+msgstr "Standard packaging and storage to avoid quality loss"
+
+#: app/website/templates/plant_refinery.html:123
+msgid "۳.۴. واحد تولید اسانس‌های طبیعی"
+msgstr "3.4. Natural Essential Oil Production Unit"
+
+#: app/website/templates/plant_refinery.html:125
+msgid "استخراج اسانس‌های با خلوص بالا برای کاربرد در صنایع مختلف"
+msgstr ""
+"Extraction of high-purity essential oils for application in various "
+"industries"
+
+#: app/website/templates/plant_refinery.html:127
+msgid "فرآوری گیاهان معطر مانند اسطوخودوس، گل محمدی، بابونه، نعناع و آویشن"
+msgstr ""
+"Processing of aromatic plants such as lavender, rosehip, chamomile, mint and "
+"thyme"
+
+#: app/website/templates/plant_refinery.html:140
+msgid "تبدیل تمام اجزای دام به محصولات قابل فروش و کاهش هدررفت منابع"
+msgstr ""
+"Converting all livestock components into marketable products, reducing waste "
+"of resources"
+
+#: app/website/templates/plant_refinery.html:146
+msgid ""
+"جایگزینی واردات ژلاتین، پودر خون، نخ بخیه و چرم فرآوری‌شده با تولید داخلی"
+msgstr ""
+"Import Replacement of Gelatin, Blood Powder, Suture Thread and Processed "
+"Leather"
+
+#: app/website/templates/plant_refinery.html:154
+msgid "توسعه صنعت فرآوری دام و تقویت زنجیره ارزش دامپروری در کشور"
+msgstr ""
+"Developing the livestock processing industry and enhancing the value of "
+"livestock farming in the country"
+
+#: app/website/templates/plant_refinery.html:167
+msgid "چالش‌ها"
+msgstr "Challenges:"
+
+#: app/website/templates/plant_refinery.html:173
+msgid "چالش در توسعه بازارهای صادراتی برای فرآورده‌های جانبی دامی"
+msgstr "The challenge in developing existing markets for animal by-products"
+
+#: app/website/templates/plant_refinery.html:175
+msgid "راهکارها"
+msgstr "Solutions:"
+
+#: app/website/templates/plant_refinery.html:194
+msgid ""
+"پالایشگاه دام سبک و سنگین با ظرفیت ۱۰۰۰ رأس دام سبک و ۱۰۰ رأس دام سنگین، یک "
+"پروژه ملی در راستای مدرن‌سازی صنعت دامپروری، افزایش بهره‌وری و کاهش ضایعات "
+"دامی محسوب می‌شود. تولید فرآورده‌های جانبی با ارزش افزوده بالا مانند ژلاتین، "
+"نخ بخیه، پودر خون، چرم و سوسیس و کالباس، نه‌تنها بازار داخلی را تأمین می‌کند "
+"بلکه ظرفیت بالایی برای صادرات دارد."
+msgstr ""
+"The light and heavy livestock refinery with a capacity of 1,000 light "
+"livestock and 100 heavy livestock is a national project in order to "
+"modernize the livestock industry, increase productivity and reduce livestock "
+"waste. The production of high-value-added by-products such as gelatin, "
+"suture thread, blood powder, leather and sausages, and sausages, not only "
+"supplies the domestic market, but also has a high capacity for export"
+
+#: app/website/templates/purchase_livestock.html:27
+msgid "نهاده های دامی باکیفیت تضمین کننده رونق تولید"
+msgstr "High-quality livestock feed ensures strong and sustainable production"
+
+#: app/website/templates/purchase_livestock.html:28
+msgid ""
+"تامین نهاد های دامی با کیفیت ستون فقرات صنعت دامپروری است . ذرت و جو و "
+"کنجاله سویا و منابع تغزیه دام نقشه حیاتی در تولید شیر و گوشت با کیفیت دارن . "
+"ما با اراِه بهترین نهاد ها به سلامتی دام و رونق کسب و کار شما می اندیشیم"
+msgstr ""
+"Providing high-quality livestock feed is the backbone of the animal "
+"husbandry industry. Corn, barley, soybean meal, and other nutritional "
+"sources play a vital role in producing high-quality milk and meat. By "
+"supplying the best feed ingredients, we support both the health of your "
+"livestock and the growth of your business."
+
+#: app/website/templates/purchase_livestock.html:56
+msgid ""
+"شرکت راه ابریشم نو (شناسه ۱۴۰۱۲۸۴۲۹۱۲) در آذرماه ۱۴۰۲ با هدف تحول در صنعت "
+"کشاورزی و دامپروری و با سرمایه دو هزار میلیارد ریال تأسیس شد.​​​​​​​این شرکت، که "
+"تنها عامل رسمی فروش نهاده‌های دامی در سبزوار است، با دریافت مجوز از وزارت "
+"جهاد کشاورزی و بانک کشاورزی فعالیت خود را آغاز کرد"
+msgstr ""
+"New Silk Road Company (ID 14012842912) was established in December 2023 with "
+"the aim of transforming the agriculture and livestock industry, with an "
+"initial capital of 2 trillion IRR. As the only official distributor of "
+"livestock feed in Sabzevar, the company began its operations after receiving "
+"authorization from the Ministry of Agriculture and Agricultural Bank."
+
+#: app/website/templates/purchase_livestock.html:59
+msgid "نکات کلیدی فعالیت:"
+msgstr "Key Activity Highlights:"
+
+#: app/website/templates/purchase_livestock.html:60
+msgid ""
+"تثبیت جایگاه: در مدت کوتاهی توانسته است با تکیه بر تیم حرفه‌ای، جایگاهی ثابت "
+"در زنجیره تأمین نهاده‌های دامی در شرق و شمال شرق کشور به دست آورد"
+msgstr ""
+"Position Stabilization: In a short period, the company has established a "
+"solid position in the livestock feed supply chain across eastern and "
+"northeastern Iran, relying on its professional team."
+
+#: app/website/templates/purchase_livestock.html:62
+msgid ""
+"همکاری‌های استراتژیک: با بزرگترین واردکنندگان نهاده‌ها (مانند آوا تجارت صبا "
+"مدلل) قرارداد همکاری امضا کرده و نهاده‌های وارداتی را با قیمت رقابتی و کیفیت "
+"تضمین‌شده توزیع می‌کند."
+msgstr ""
+"Strategic Collaborations: The company has signed partnership agreements with "
+"major importers of livestock inputs (such as Ava Tejarat Saba Modallal) and "
+"distributes imported products with competitive prices and guaranteed quality."
+
+#: app/website/templates/purchase_livestock.html:64
+msgid ""
+"مشتریان گسترده: خدمات خود را به اتحادیه‌ها، تعاونی‌ها، کارخانجات و دامداران/"
+"مرغداران در استان‌های مختلف (از جمله خراسان رضوی، شمالی، فارس، سمنان و "
+"آذربایجان غربی) ارائه می‌دهد که این گستردگی نشان‌دهنده رضایتمندی بالا از خدمات "
+"است."
+msgstr ""
+"Wide range of customers: It provides its services to unions, cooperatives, "
+"factories, and livestock/poultry farmers across various provinces (including "
+"Razavi Khorasan, North Khorasan, Fars, Semnan, and West Azerbaijan). This "
+"broad coverage indicates a high level of satisfaction with its services."
+
+#: app/website/templates/purchase_livestock.html:66
+msgid "برنامه‌های آینده و چشم‌انداز:"
+msgstr "Future Plans and Vision:"
+
+#: app/website/templates/purchase_livestock.html:67
+msgid ""
+"برنامه اصلی شرکت، توسعه زنجیره ارزش یکپارچه دام و طیور است که شامل تأمین "
+"نهاده‌ها تا بازاریابی و حتی صادرات محصولات نهایی (گوشت، شیر، تخم مرغ) می‌شود. "
+"همچنین، شرکت خدمات مشاوره فنی، دامپزشکی و تغذیه‌ای را برای افزایش بهره‌وری "
+"تولیدکنندگان فراهم می‌کند. چشم‌انداز آینده شامل توسعه جغرافیایی، افزایش ظرفیت "
+"انبار و حمل و نقل، گسترش صادرات و مشارکت در پروژه‌های ملی است."
+msgstr ""
+"The company’s main plan is to develop an integrated livestock and poultry "
+"value chain, covering everything from supplying feed to marketing and even "
+"the export of final products (meat, milk, and eggs). The company also "
+"provides technical, veterinary, and nutritional consulting services to "
+"enhance producer efficiency. Its future vision includes geographic "
+"expansion, increasing storage and transportation capacity, expanding export "
+"operations, and participating in national projects."
+
+#: app/website/templates/purchase_livestock.html:69
+msgid ""
+"شرکت راه ابریشم نو با تأکید بر شفافیت، کیفیت و نوآوری، برای همکاری گسترده در "
+"سطح ملی و بین‌المللی آماده است."
+msgstr ""
+"New Silk Road Company, with an emphasis on transparency, quality, and "
+"innovation, is ready for extensive collaboration at both national and "
+"international levels."
+
+#: app/website/templates/supplying_livestock.html:24
+msgid "تامین و عرضه نهادهای دامی"
+msgstr "Supply and distribution of livestock inputs"
+
+#: app/website/templates/supplying_livestock.html:34
+msgid ""
+"شرکت راه ابریشم نو مسیر توسعه تحول جهانی با شناسه ملی ۱۴۰۱۲۸۴۲۹۱۲، به‌عنوان "
+"یکی از فعالان برجسته در حوزه بازرگانی، تأمین، واردات و توزیع نهاده‌های دامی، "
+"نقش مهمی در تأمین نیاز صنعت دام، طیور و آبزیان کشور ایفا می‌کند. این شرکت با "
+"بهره‌گیری از تجربه گسترده، شبکه تأمین قوی و استراتژی‌های نوین بازرگانی، "
+"توانسته است زنجیره‌ای کارآمد برای واردات، تأمین و توزیع نهاده‌های دامی ایجاد "
+"کند که ضمن کاهش هزینه‌های تولیدکنندگان داخلی، امنیت تأمین خوراک دام را افزایش "
+"می‌دهد."
+msgstr ""
+"New Silk Road Route for Global Development Transformation Co., with National "
+"ID 14012842912, is a prominent player in the trade, procurement, import, and "
+"distribution of livestock feed and inputs. It plays a crucial role in "
+"supplying the needs of the country’s livestock, poultry, and aquaculture "
+"industries. Leveraging extensive experience, a strong supply network, and "
+"innovative trading strategies, the company has established an efficient "
+"supply chain for the import, procurement, and distribution of livestock feed "
+"and inputs. This reduces production costs for domestic producers while "
+"enhancing the security of animal feed supply."
+
+#: app/website/templates/supplying_livestock.html:36
+msgid ""
+"نهاده‌های دامی به‌عنوان یکی از مهم‌ترین عناصر در پرورش دام، طیور و آبزیان، "
+"تأثیر مستقیمی بر کیفیت و هزینه تولید محصولات پروتئینی دارند. تأمین پایدار و "
+"باکیفیت این نهاده‌ها، اهمیت استراتژیک بالایی در صنعت کشاورزی و دامپروری دارد. "
+"در این گزارش، فعالیت‌های شرکت راه ابریشم نو در حوزه واردات، تأمین و توزیع "
+"نهاده‌های دامی به‌طور جامع بررسی خواهد شد."
+msgstr ""
+"Livestock inputs are critical elements in raising livestock, poultry, and "
+"aquaculture, directly impacting the quality and cost of protein production. "
+"The sustainable and high-quality supply of these inputs is of strategic "
+"importance to the agricultural and livestock farming industries. This report "
+"will comprehensively examine the activities of New Silk Road Route in the "
+"import, procurement, and distribution of livestock feed and inputs."
+
+#: app/website/templates/supplying_livestock.html:47
+msgid "اهمیت تأمین و واردات نهاده‌های دامی"
+msgstr "The Importance of Supplying and Importing Livestock Feed Inputs"
+
+#: app/website/templates/supplying_livestock.html:49
+msgid ""
+"نهاده‌های دامی شامل ذرت، سویا، جو، کنجاله سویا، سبوس، مکمل‌های معدنی و "
+"ویتامینی، پودر ماهی و سایر مواد غذایی مورد نیاز دام و طیور هستند. ایران به "
+"دلیل محدودیت‌های اقلیمی و کاهش منابع داخلی تولید نهاده‌های دامی، وابستگی زیادی "
+"به واردات این محصولات دارد. بر همین اساس، شرکت راه ابریشم نو با هدف تأمین "
+"پایدار و اقتصادی نهاده‌های دامی، در حوزه واردات و توزیع این محصولات فعالیت "
+"گسترده‌ای دارد."
+msgstr ""
+"Livestock feed inputs include corn, soybeans, barley, soybean meal, bran, "
+"mineral and vitamin supplements, fishmeal, and other feedstuffs required for "
+"livestock and poultry. Due to climatic limitations and reduced domestic "
+"production of livestock feed inputs, Iran heavily relies on imports. "
+"Therefore, New Silk Road Route actively works in the import and distribution "
+"of these products with the goal of ensuring a stable and economical supply "
+"of livestock feed inputs."
+
+#: app/website/templates/supplying_livestock.html:60
+msgid "مشکلات تأمین نهاده‌های دامی در کشور"
+msgstr "Challenges in Supplying Livestock Feed Inputs in the Country:"
+
+#: app/website/templates/supplying_livestock.html:62
+msgid "1. کمبود تولید داخلی و وابستگی به واردات"
+msgstr "1. Shortage of domestic production and reliance on imports"
+
+#: app/website/templates/supplying_livestock.html:63
+msgid "2. نوسانات قیمت جهانی نهاده‌ها و تأثیر آن بر هزینه‌های تولید"
+msgstr ""
+"2. Fluctuations in global prices of feed inputs and their impact on "
+"production costs"
+
+#: app/website/templates/supplying_livestock.html:64
+msgid "3. مشکلات ارزی و انتقال پول در تجارت بین‌المللی"
+msgstr "3. Currency issues and challenges in international money transfers"
+
+#: app/website/templates/supplying_livestock.html:65
+msgid "4. چالش‌های حمل‌ونقل و لجستیک در تأمین پایدار نهاده‌ها"
+msgstr ""
+"4. Transportation and logistics challenges in ensuring a stable supply of "
+"inputs"
+
+#: app/website/templates/supplying_livestock.html:66
+msgid "5. وجود واسطه‌ها و عدم شفافیت در توزیع"
+msgstr "5. Presence of intermediaries and lack of transparency in distribution"
+
+#: app/website/templates/supplying_livestock.html:67
+msgid ""
+"شرکت راه ابریشم نو با استفاده از استراتژی‌های هوشمندانه و همکاری با "
+"تأمین‌کنندگان معتبر بین‌المللی، این چالش‌ها را مدیریت کرده و توانسته است زنجیره "
+"تأمین کارآمدی ایجاد کند."
+msgstr ""
+"By utilizing smart strategies and collaborating with reputable international "
+"suppliers, New Silk Road Route has managed these challenges and successfully "
+"established an efficient supply chain."
+
+#: app/website/templates/supplying_livestock.html:79
+msgid "حوزه‌های فعالیت شرکت راه ابریشم نو در تأمین نهاده‌های دامی"
+msgstr ""
+"Areas of Operation for New Silk Road Route in Livestock Feed Input Supply"
+
+#: app/website/templates/supplying_livestock.html:81
+msgid ""
+"فعالیت‌های این شرکت در سه حوزه اصلی واردات، تأمین و توزیع نهاده‌های دامی "
+"متمرکز است."
+msgstr ""
+"The company’s activities are mainly concentrated in the following three "
+"areas:"
+
+#: app/website/templates/supplying_livestock.html:83
+msgid "واردات نهاده‌های دامی"
+msgstr "1. Import of Livestock Feed Inputs"
+
+#: app/website/templates/supplying_livestock.html:85
+msgid "واردات از کشورهای تولیدکننده برتر:"
+msgstr "Importations from top-producing countries include:"
+
+#: app/website/templates/supplying_livestock.html:86
+msgid "ذرت، سویا و جو از کشورهای برزیل، آرژانتین، روسیه و قزاقستان"
+msgstr ""
+"* Corn, soybeans, and barley from Brazil, Argentina, Russia, and Kazakhstan"
+
+#: app/website/templates/supplying_livestock.html:87
+msgid "کنجاله سویا از هند و اوکراین"
+msgstr "* Soybean meal from India and Ukraine"
+
+#: app/website/templates/supplying_livestock.html:88
+msgid "پودر ماهی از پرو و چین"
+msgstr "* Fishmeal powder from Peru and China"
+
+#: app/website/templates/supplying_livestock.html:89
+msgid "مکمل‌های ویتامینی و معدنی از اروپا و چین"
+msgstr "* Vitamin and mineral supplements from Europe and China"
+
+#: app/website/templates/supplying_livestock.html:100
+msgid "همکاری با تأمین‌کنندگان معتبر بین‌المللی"
+msgstr "Collaboration with Reputable International Suppliers:"
+
+#: app/website/templates/supplying_livestock.html:102
+msgid ""
+"شرکت راه ابریشم نو مستقیماً با تولیدکنندگان و صادرکنندگان بزرگ همکاری می‌کند "
+"تا نهاده‌های دامی را بدون واسطه و با قیمت رقابتی تأمین کند."
+msgstr ""
+"New Silk Road Route directly collaborates with major producers and exporters "
+"to supply livestock feed inputs without intermediaries and at competitive "
+"prices."
+
+#: app/website/templates/supplying_livestock.html:104
+msgid "مدیریت فرآیندهای گمرکی و ترخیص کالا"
+msgstr "Management of Customs Processes and Goods Clearance:"
+
+#: app/website/templates/supplying_livestock.html:106
+msgid ""
+"این شرکت تخصص ویژه‌ای در مدیریت امور گمرکی و ترخیص سریع نهاده‌های دامی از "
+"بنادر کشور دارد که باعث کاهش زمان تأمین و افزایش بهره‌وری زنجیره تأمین می‌شود."
+msgstr ""
+"The company has specialized expertise in managing customs affairs and the "
+"rapid clearance of livestock feed inputs from the country’s ports, which "
+"reduces supply time and increases supply chain efficiency."
+
+#: app/website/templates/supplying_livestock.html:108
+msgid "نظارت بر کیفیت و استانداردهای بهداشتی"
+msgstr "Quality Control and Health Standards Monitoring:"
+
+#: app/website/templates/supplying_livestock.html:110
+msgid ""
+"تمامی نهاده‌های وارداتی از نظر کیفیت، سلامت و استانداردهای بهداشتی بررسی "
+"می‌شوند تا اطمینان حاصل شود که محصولات وارداتی مطابق با الزامات دامپزشکی و "
+"استانداردهای ملی و بین‌المللی هستند."
+msgstr ""
+"All imported inputs are inspected for quality, health, and hygiene standards "
+"to ensure that imported products comply with veterinary requirements and "
+"national and international standards."
+
+#: app/website/templates/supplying_livestock.html:122
+msgid "تأمین و ذخیره‌سازی نهاده‌های دامی"
+msgstr "Supply and Storage of Livestock Feed Inputs"
+
+#: app/website/templates/supplying_livestock.html:124
+msgid ""
+"ایجاد انبارهای استراتژیک در نقاط مختلف کشور: شرکت راه ابریشم نو دارای "
+"انبارهای ذخیره‌سازی در استان‌های کلیدی کشور است که به افزایش امنیت غذایی و "
+"پایداری تأمین نهاده‌های دامی کمک می‌کند."
+msgstr ""
+"Creating strategic warehouses in different parts of the country: Abrisham No "
+"Company has storage warehouses in key provinces of the country, which helps "
+"increase food security and the sustainability of livestock operations."
+
+#: app/website/templates/supplying_livestock.html:126
+msgid "برنامه‌ریزی تأمین متناسب با نیاز بازار:"
+msgstr "Supply planning tailored to market needs:"
+
+#: app/website/templates/supplying_livestock.html:127
+msgid "پیش‌بینی نیاز فصلی بازار و تأمین به‌موقع نهاده‌ها"
+msgstr "Forecasting seasonal market needs and providing inputs on time"
+
+#: app/website/templates/supplying_livestock.html:128
+msgid "مدیریت ذخایر استراتژیک برای جلوگیری از کمبود و نوسانات قیمت"
+msgstr ""
+"Strategic inventory management to prevent shortages and price fluctuations"
+
+#: app/website/templates/supplying_livestock.html:129
+msgid "همکاری با اتحادیه‌ها و تشکل‌های دامداری و مرغداری برای تأمین پایدار"
+msgstr ""
+"Cooperation with livestock and poultry farming unions and organizations for "
+"sustainable supply"
+
+#: app/website/templates/supplying_livestock.html:131
+msgid ""
+"تأمین خوراک اختصاصی برای واحدهای تولیدی بزرگ: این شرکت علاوه بر تأمین عمومی، "
+"خوراک دام و طیور را متناسب با نیازهای خاص واحدهای پرورشی تأمین می‌کند تا "
+"عملکرد تولیدی بهینه شود."
+msgstr ""
+"Supply of Specialized Feed for Large Production Units : ​​​​​​​In addition to "
+"general supply, the company provides livestock and poultry feed tailored to "
+"the specific needs of breeding units to optimize production performance."
+
+#: app/website/templates/supplying_livestock.html:142
+msgid "توزیع و فروش نهاده‌های دامی"
+msgstr "3. Distribution and Sale of Livestock Feed Inputs"
+
+#: app/website/templates/supplying_livestock.html:144
+msgid "توزیع سراسری از طریق شبکه فروش گسترده:"
+msgstr "Nationwide Distribution through an Extensive Sales Network:"
+
+#: app/website/templates/supplying_livestock.html:145
+msgid ""
+"شرکت راه ابریشم نو دارای شبکه توزیع گسترده‌ای در سطح کشور است که امکان تحویل "
+"سریع و به‌موقع نهاده‌های دامی را برای دامداران، مرغداران و آبزی‌پروران فراهم "
+"می‌کند."
+msgstr ""
+"New Silk Road Route has an extensive distribution network across the "
+"country, which enables the rapid and timely delivery of livestock feed "
+"inputs to livestock farmers, poultry farmers, and aquaculturists."
+
+#: app/website/templates/supplying_livestock.html:147
+msgid "فروش مستقیم به تولیدکنندگان و حذف واسطه‌ها:"
+msgstr "Direct Sales to Producers and Elimination of Intermediaries:"
+
+#: app/website/templates/supplying_livestock.html:148
+msgid ""
+"یکی از مزیت‌های اصلی این شرکت فروش مستقیم نهاده‌های دامی به واحدهای تولیدی "
+"بزرگ و متوسط است که باعث کاهش هزینه‌های تمام‌شده و افزایش بهره‌وری تولیدکنندگان "
+"می‌شود."
+msgstr ""
+"One of the main advantages of this company is the direct sale of livestock "
+"feed inputs to large and medium-sized production units, which reduces the "
+"total cost and increases the productivity of the producers."
+
+#: app/website/templates/supplying_livestock.html:160
+msgid "ارائه تسهیلات و شرایط ویژه برای مشتریان:"
+msgstr "Provision of Facilities and Special Conditions for Customers:"
+
+#: app/website/templates/supplying_livestock.html:162
+msgid "فروش اعتباری و تسهیلات خرید برای تولیدکنندگان عمده"
+msgstr "* Credit sales and purchase facilities for major producers"
+
+#: app/website/templates/supplying_livestock.html:163
+msgid "مشاوره تغذیه‌ای برای انتخاب مناسب‌ترین نهاده‌های دامی"
+msgstr ""
+"* Nutritional advice for selecting the most appropriate livestock feed inputs"
+
+#: app/website/templates/supplying_livestock.html:164
+msgid "امکان خرید عمده و تأمین پایدار برای قراردادهای بلندمدت"
+msgstr ""
+"* The possibility of bulk purchase and sustainable supply for long-term "
+"contracts"
+
+#: app/website/templates/supplying_livestock.html:176
+msgid "مزایای رقابتی شرکت راه ابریشم نو در تأمین نهاده‌های دامی"
+msgstr ""
+"Competitive Advantages of New Silk Road Route Company in Supplying Livestock "
+"Feed Inputs:"
+
+#: app/website/templates/supplying_livestock.html:178
+msgid "تأمین مستقیم از تولیدکنندگان معتبر جهانی و حذف واسطه‌ها"
+msgstr ""
+"1. Direct sourcing from reputable global producers and elimination of "
+"intermediaries"
+
+#: app/website/templates/supplying_livestock.html:179
+msgid "مدیریت حرفه‌ای زنجیره تأمین و کاهش هزینه‌های واردات"
+msgstr "2. Professional supply chain management and reduced import costs"
+
+#: app/website/templates/supplying_livestock.html:180
+msgid "استفاده از شبکه توزیع گسترده و تحویل سریع نهاده‌ها به تولیدکنندگان"
+msgstr ""
+"3. Utilization of an extensive distribution network and rapid delivery of "
+"inputs to producers"
+
+#: app/website/templates/supplying_livestock.html:181
+msgid "نظارت دقیق بر کیفیت محصولات و رعایت استانداردهای بهداشتی"
+msgstr ""
+"4. Strict quality control of products and adherence to health standards"
+
+#: app/website/templates/supplying_livestock.html:182
+msgid "ایجاد انبارهای استراتژیک برای مدیریت بهتر عرضه و تقاضا"
+msgstr ""
+"5. Establishment of strategic warehouses for better supply and demand "
+"management"
+
+#: app/website/templates/supplying_livestock.html:183
+msgid "پشتیبانی و ارائه مشاوره تغذیه‌ای به تولیدکنندگان دام، طیور و آبزیان"
+msgstr ""
+"6. Support and provision of nutritional advice to livestock, poultry, and "
+"aquaculture producers"
+
+#: app/website/templates/supplying_livestock.html:195
+msgid "چالش‌های بازار نهاده‌های دامی و راهکارهای شرکت راه ابریشم نو"
+msgstr ""
+"Livestock inputs market challenges and New Silk Road​​​​​​​ company's solutions"
+
+#: app/website/templates/supplying_livestock.html:197
+msgid "محدودیت‌های وارداتی و قوانین گمرکی:"
+msgstr "The problem of global and domestic price fluctuations:"
+
+#: app/website/templates/supplying_livestock.html:198
+msgid ""
+"پیگیری مستمر قوانین تجارت و همکاری با سازمان‌های دولتی برای تسهیل فرآیندهای "
+"واردات."
+msgstr ""
+"The company manages this risk by concluding long-term contracts and "
+"providing strategic reserves."
+
+#: app/website/templates/supplying_livestock.html:200
+msgid "مشکلات ارزی و نقل‌وانتقال مالی:"
+msgstr "Currency and financial transfer problems:"
+
+#: app/website/templates/supplying_livestock.html:201
+msgid ""
+"استفاده از روش‌های تأمین مالی متنوع و همکاری با بانک‌های بین‌المللی برای کاهش "
+"ریسک ارزی."
+msgstr ""
+"Using various financing methods and cooperation with international banks to "
+"reduce currency risk"
+
+#: app/website/templates/supplying_livestock.html:203
+msgid "مشکل نوسانات قیمت جهانی و داخلی:"
+msgstr "Import restrictions and customs laws:"
+
+#: app/website/templates/supplying_livestock.html:204
+msgid ""
+"شرکت با انعقاد قراردادهای بلندمدت و تأمین ذخایر استراتژیک، این ریسک را "
+"مدیریت می‌کند."
+msgstr ""
+"Continuous pursuit of trade laws and cooperation with government agencies to "
+"facilitate import processes"
+
+#: app/website/templates/supplying_livestock.html:217
+msgid ""
+"شرکت راه ابریشم نو یکی از بازیگران کلیدی در تأمین، واردات و توزیع نهاده‌های "
+"دامی در کشور است. با بهره‌گیری از مدیریت کارآمد، شبکه تأمین قدرتمند و "
+"استراتژی‌های نوین تجاری، این شرکت نقش مهمی در تأمین پایدار نهاده‌های دامی، "
+"کاهش وابستگی به واسطه‌ها، افزایش بهره‌وری تولیدکنندگان و ایجاد امنیت غذایی "
+"کشور ایفا می‌کند."
+msgstr ""
+"New Silk Road Route Company is one of the key players in the supply, import, "
+"and distribution of livestock feed inputs in the country. With efficient "
+"management, a robust supply chain, and innovative business strategies, this "
+"company plays a crucial role in ensuring the sustainable supply of livestock "
+"feed inputs, reducing dependence on intermediaries, increasing producer "
+"productivity, and contributing to the country’s food security."
+
+#: app/website/templates/supplying_livestock.html:219
+msgid ""
+"این شرکت با توسعه فعالیت‌های خود و گسترش همکاری‌های بین‌المللی، می‌تواند به یکی "
+"از بزرگ‌ترین تأمین‌کنندگان نهاده‌های دامی در منطقه تبدیل شود."
+msgstr ""
+"By expanding its activities and fostering international collaborations, the "
+"company has the potential to become one of the largest suppliers of "
+"livestock feed inputs in the region."
+
+#, fuzzy
+#~| msgid "خوراک دام خوشاب"
+#~ msgid "معرفی طرح خوشاب"
+#~ msgstr "Khoshab animal feed"

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -8,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">پالایشگاه گیاهان دارویی</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "پالایشگاه گیاهان دارویی" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "home" %}">صفحه خانه</a></li>
-            <li class="current">پالایشگاه گیاهان دارویی</li>
+            <li><a href="{% url "home" %}">{% trans "صفحه خانه" %}</a></li>
+            <li class="current">{% trans "پالایشگاه گیاهان دارویی" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,22 +21,185 @@
 
     <!-- Offers Section -->
     <section id="offers" class="offers section">
-      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;">اولین پالایشگاه گیاهان دارویی کشور</h1>
+      <h1 style="text-align: center;  padding: 20px 0; margin-bottom: 40px;">{% trans "اولین پالایشگاه گیاهان دارویی کشور" %}</h1>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          {% for obj in plant_refinery %}
+          
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="offer-card">
               <div class="offer-image">
-                <img src="{% if obj.product_photo %}{{ obj.product_photo.url }}{% else %}{% static 'assets/img/DefaultImg/DefaultNews.png' %}{% endif %}" alt="Special Offer" class="img-fluid">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
               </div>
-              <div class="offer-content rtl">
-                <h3>{{ obj.title }}</h3>
-                <p>{{ obj.description }}</p>
-              </div>
-            </div><!-- End Offer Card -->
+                <div class="offer-content">
+                  <p>{% trans "ایران با داشتن بیش از ۸۰۰۰ گونه گیاهی، از جمله غنی‌ترین کشورهای جهان در حوزه گیاهان دارویی محسوب می‌شود. استان خراسان شمالی با اقلیم متنوع و شرایط آب‌و‌هوایی مناسب، یکی از قطب‌های بالقوه تولید گیاهان دارویی در کشور است. با این حال، عدم وجود زیرساخت‌های فرآوری مدرن باعث شده که بخش قابل‌توجهی از این گیاهان به‌صورت خام صادر شده یا به دلیل نبود روش‌های نگهداری و فرآوری مناسب، از بین بروند." %}</p>
+
+                  <p>{% trans "با توجه به نیاز فزاینده صنایع دارویی، آرایشی و بهداشتی و غذایی به عصاره‌ها و ترکیبات مؤثره گیاهان دارویی، ایجاد اولین پالایشگاه مدرن گیاهان دارویی در استان خراسان شمالی می‌تواند نقش حیاتی در تحول این صنعت، افزایش بهره‌وری و ایجاد ارزش افزوده بالا در این حوزه داشته باشد." %}</p>
+                </div>
+            </div>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "۱. ضرورت راه‌اندازی پالایشگاه گیاهان دارویی" %}</h4>
+
+                  <p>{% trans "افزایش بهره‌وری از ظرفیت‌های گیاهان دارویی کشور" %}</p>
+                  <p>{% trans "جلوگیری از خام‌فروشی گیاهان دارویی و تبدیل آن‌ها به محصولات نهایی" %}</p>
+                  <p>{% trans "افزایش کیفیت و استانداردسازی محصولات گیاهی برای بازارهای داخلی و صادراتی" %}</p>
+                  <p>{% trans "ایجاد اشتغال پایدار و توسعه اقتصادی در منطقه" %}</p>
+                  <p>{% trans "کاهش وابستگی کشور به واردات عصاره‌ها و ترکیبات مؤثره گیاهی" %}</p>
+
+                  <p>{% trans "در حال حاضر، بسیاری از فرآورده‌های گیاهی مورد نیاز صنایع دارویی و آرایشی در ایران وارداتی هستند. این پالایشگاه می‌تواند نیاز داخلی را تأمین کرده و ایران را به یکی از بازیگران اصلی صنعت گیاهان دارویی در منطقه تبدیل کند." %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "۲. ظرفیت و بخش‌های مختلف پالایشگاه" %}</h4>
+
+                  <h6>{% trans "ظرفیت تولید:" %}</h6>
+
+                  <p>{% trans "فرآوری سالانه بیش از 5000 تن گیاه دارویی" %}</p>
+                  <p>{% trans "استخراج و تولید بیش از 100 نوع عصاره و ترکیب مؤثره گیاهی" %}</p>
+                  <p>{% trans "تولید محصولات متنوع برای صنایع دارویی، آرایشی و بهداشتی و غذایی" %}</p>
+
+                  <h6>{% trans "بخش‌های اصلی پالایشگاه:" %}</h6>
+
+                  <p>{% trans "واحد عصاره‌گیری و استخراج مواد مؤثره گیاهی" %}</p>
+                  <p>{% trans "واحد تقطیر و جداسازی ترکیبات فعال گیاهی" %}</p>
+                  <p>{% trans "واحد خشک‌سازی و فرآوری گیاهان دارویی" %}</p>
+                  <p>{% trans "واحد تولید اسانس‌های طبیعی" %}</p>
+                  <p>{% trans "واحد بسته‌بندی و استانداردسازی محصولات گیاهی" %}</p>
+                  <p>{% trans "واحد تحقیق و توسعه (R&D) برای بهینه‌سازی فرآیندها و تولید محصولات جدید" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "۳. جزئیات فرآوری در بخش‌های مختلف پالایشگاه" %}</h4>
+
+                  <h6>{% trans "۳.۱. واحد عصاره‌گیری و استخراج مواد مؤثره گیاهی" %}</h6>
+
+                  <p>{% trans "استخراج ترکیبات مؤثره از گیاهان دارویی با روش‌های مدرن مانند استخراج با حلال، آب، بخار و اولتراسوند" %}</p>
+
+                  <p>{% trans "حفظ کیفیت مواد مؤثره با استفاده از دمای کنترل‌شده و فرآیندهای بهینه‌شده" %}</p>
+
+                  <p>{% trans "کاربرد در تولید داروهای گیاهی، مکمل‌های غذایی و محصولات آرایشی" %}</p>
+
+                  <h6>{% trans "۳.۲. واحد تقطیر و جداسازی ترکیبات فعال گیاهی" %}</h6>
+
+                  <p>{% trans "استخراج روغن‌های فرار و ترکیبات معطر از گیاهان دارویی" %}</p>
+
+                  <p>{% trans "تولید اسانس‌های طبیعی برای صنایع غذایی، آرایشی و دارویی" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h6>{% trans "۳.۳. واحد خشک‌سازی و فرآوری گیاهان دارویی" %}</h6>
+
+                  <p>{% trans "استفاده از تکنولوژی‌های مدرن خشک‌سازی برای حفظ خواص درمانی گیاهان" %}</p>
+
+                  <p>{% trans "بسته‌بندی و نگهداری استاندارد برای جلوگیری از افت کیفیت" %}</p>
+
+                  <h6>{% trans "۳.۴. واحد تولید اسانس‌های طبیعی" %}</h6>
+
+                  <p>{% trans "استخراج اسانس‌های با خلوص بالا برای کاربرد در صنایع مختلف" %}</p>
+
+                  <p>{% trans "فرآوری گیاهان معطر مانند اسطوخودوس، گل محمدی، بابونه، نعناع و آویشن" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h6>{% trans "۴.۱. کاهش ضایعات و افزایش بهره‌وری" %}</h6>
+
+                  <p>{% trans "تبدیل تمام اجزای دام به محصولات قابل فروش و کاهش هدررفت منابع" %}</p>
+
+                  <p>{% trans "افزایش درآمد دامداران از طریق فرآوری کامل دام" %}</p>
+
+                  <h6>{% trans "۴.۲. کاهش وابستگی به واردات و توسعه صادرات" %}</h6>
+
+                  <p>{% trans "جایگزینی واردات ژلاتین، پودر خون، نخ بخیه و چرم فرآوری‌شده با تولید داخلی" %}</p>
+
+                  <p>{% trans "افزایش صادرات فرآورده‌های گوشتی بسته‌بندی‌شده" %}</p>
+
+                  <h6>{% trans "۴.۳. ایجاد اشتغال و توسعه منطقه‌ای" %}</h6>
+
+                  <p>{% trans "اشتغال‌زایی مستقیم و غیرمستقیم برای صدها نفر در منطقه" %}</p>
+
+                  <p>{% trans "توسعه صنعت فرآوری دام و تقویت زنجیره ارزش دامپروری در کشور" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "۵. چالش‌های احتمالی و راهکارها" %}</h4>
+
+                  <h6>{% trans "چالش‌ها" %}</h6>
+
+                  <p>{% trans "مشکلات تأمین دام زنده برای کشتار روزانه" %}</p>
+
+                  <p>{% trans "نیاز به سرمایه‌گذاری اولیه بالا برای راه‌اندازی پالایشگاه" %}</p>
+
+                  <p>{% trans "چالش در توسعه بازارهای صادراتی برای فرآورده‌های جانبی دامی" %}</p>
+
+                  <h6>{% trans "راهکارها" %}</h6>
+
+                  <p>{% trans "ایجاد زنجیره تأمین دام سبک و سنگین از دامداران داخلی" %}</p>
+
+                  <p>{% trans "جذب سرمایه‌گذاری دولتی و خصوصی برای تأمین مالی پروژه" %}</p>
+
+                  <p>{% trans "بازاریابی بین‌المللی و همکاری با شرکت‌های صادرکننده" %}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="{% static 'assets/img/DefaultImg/DefaultNews.png' %}" alt="Special Offer" class="img-fluid">
+              </div>
+                <div class="offer-content">
+                  <h4>{% trans "نتیجه‌گیری" %}</h4>
+
+                  <p>{% trans "پالایشگاه دام سبک و سنگین با ظرفیت ۱۰۰۰ رأس دام سبک و ۱۰۰ رأس دام سنگین، یک پروژه ملی در راستای مدرن‌سازی صنعت دامپروری، افزایش بهره‌وری و کاهش ضایعات دامی محسوب می‌شود. تولید فرآورده‌های جانبی با ارزش افزوده بالا مانند ژلاتین، نخ بخیه، پودر خون، چرم و سوسیس و کالباس، نه‌تنها بازار داخلی را تأمین می‌کند بلکه ظرفیت بالایی برای صادرات دارد." %}</p>
+
+                  <p>{% trans "این پالایشگاه می‌تواند الگوی صنعتی برای سایر مناطق کشور باشد و به توسعه پایدار صنعت دامپروری و فرآوری دامی کمک کند." %}</p>
+
+                  <p>{% trans "با اجرای این پروژه، ایران می‌تواند در تولید محصولات گوشتی و فرآورده‌های جانبی، به یکی از بازیگران اصلی منطقه تبدیل شود." %}</p>
+                </div>
+            </div>
+          </div>
+         
         </div>
 
       </div>

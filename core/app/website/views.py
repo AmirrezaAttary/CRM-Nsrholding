@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
-from django.shortcuts import redirect
+from django.shortcuts import redirect, HttpResponse
+from django.utils import translation
 from core.settings import EMAIL_HOST_USER
 from .forms import ContactForm, ContactRequestForm
 from .models import (News, PurchaseLivestock, OrganicProducts, AnimalFeedKhoshab,

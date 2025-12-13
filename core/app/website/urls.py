@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls.i18n import i18n_patterns
 from app.website import views
 
 
@@ -22,4 +23,5 @@ urlpatterns = [
     path('animal_refinery/', views.animal_refinery_view, name='animal_refinery'),
     path('plant_refinery/', views.plant_refinery_view, name='plant_refinery'),
     path('accounts/', include('app.website.accounts.urls', namespace='website_accounts')),
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
